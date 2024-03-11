@@ -53,6 +53,9 @@
     "gulp-webp": "^5.0.0",
     "gulp-webp-html-nosvg": "^1.1.1",
     "gulp-webpcss": "^1.1.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^10.0.1",
     "sass": "^1.71.1",
     "webpack": "^5.90.3",
     "webpack-stream": "^7.0.0"
