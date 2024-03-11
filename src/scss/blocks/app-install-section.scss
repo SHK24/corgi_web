@@ -1,0 +1,40 @@
+.app-install-section__wrapper {
+  display: flex;
+  min-height: 620px;
+  position: relative;
+  align-items: center;
+
+  @include tablet {
+    flex-direction: column;
+    justify-content: end;
+  }
+}
+
+.app-install-section__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/corgi-coconut.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 77% auto;
+  z-index: -1;
+
+  @include retina {
+    background-image: url(../img/corgi-coconut@2x.png);
+  }
+
+  @include tablet {
+    order: -1;
+  }
+}
+
+.app-install-content {
+  flex-basis: 45%;
+}
+
+.app-install-section__title {
+  color: $white;
+}

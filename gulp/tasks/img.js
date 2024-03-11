@@ -1,7 +1,7 @@
 /* global app, */
 
 import webp from 'gulp-webp';
-import imagemin from 'gulp-imagemin';
+import imagemin, {mozjpeg, optipng, svgo} from 'gulp-imagemin';
 
 export const img = () => {
   return app.gulp
@@ -21,14 +21,23 @@ export const img = () => {
     .pipe(app.plugins.if(app.isBuild, app.plugins.newer(app.path.build.img)))
     .pipe(
       app.plugins.if(
-        app.isBuild,
-        imagemin({
-          progressive: true,
-          // eslint-disable-next-line object-curly-spacing
-          svgoPlugins: [{ removeViewBox: false }],
-          interlaced: true,
-          optimizationLevel: 3,
-        }),
+        false,
+        imagemin([
+          optipng({optimizationLevel: 5}),
+          mozjpeg({quality: 75, progressive: true}),
+          svgo({
+            plugins: [
+              {
+                name: 'removeViewBox',
+                active: true
+              },
+              {
+                name: 'cleanupIDs',
+                active: false
+              }
+            ]
+          })
+        ])
       ),
     )
     .pipe(app.gulp.dest(app.path.build.img))

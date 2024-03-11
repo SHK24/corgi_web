@@ -1,0 +1,117 @@
+.install-link {
+  text-decoration: none;
+  color: $white;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: max-content;
+  min-width: 208px;
+  padding: 17px;
+  font-size: $medium-text;
+  line-height: $medium-text-height;
+  border: 2px solid $border-button;
+  border-radius: 60px;
+  position: relative;
+  transition: color 500ms;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate3d(50%, -50%, 0);
+    background-position: center;
+    border-radius: 100px;
+    z-index: -1;
+    transition: 500ms;
+  }
+
+  &::before {
+    width: 93%;
+    height: 87%;
+    background: linear-gradient(180deg, #b0ec71 0%, #83c83a 100%);
+  }
+
+  &::after {
+    background-color: $green;
+    width: 86%;
+    height: 70%;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      width: 100%;
+      height: 100%;
+    }
+
+    &::after {
+      width: 95%;
+      height: 90%;
+    }
+  }
+
+  &:active {
+    color: $light-green;
+
+    &::after {
+      background-color: $transparent;
+    }
+  }
+}
+
+.install-link--white {
+  color: $grey;
+  border: none;
+
+  &::before {
+    width: 100%;
+    height: 100%;
+    background: white;
+  }
+  &::after {
+    display: none;
+  }
+
+  .install-link__icon {
+    background-color: $icon-blue;
+    color: $white;
+  }
+
+  .install-link__text-bold {
+    color: $dark-grey;
+  }
+
+  &:active {
+    color: $grey;
+    &::before {
+      background: $light-grey;
+    }
+  }
+}
+
+.install-link__icon {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  border-radius: 50%;
+  object-fit: contain;
+  color: $green;
+}
+
+.install-link__text {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.install-link__text-bold {
+  color: $white;
+  font-weight: $extra-bold;
+  font-size: $text;
+  line-height: $medium-text-height;
+  letter-spacing: $text-letter-spacing;
+}

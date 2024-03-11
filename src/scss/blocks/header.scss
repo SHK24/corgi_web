@@ -1,0 +1,117 @@
+.header__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header__logo {
+  padding-top: 6px;
+
+  img {
+    width: 109px;
+    height: 48px;
+  }
+}
+
+.authorization-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  min-width: 160px;
+  padding: 0;
+}
+
+.authorization-button__text {
+  font-size: $medium-text;
+  line-height: $medium-text-height;
+  text-align: end;
+  flex-grow: 1;
+  color: $white;
+  opacity: 40%;
+  transition-duration: 500ms;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.authorization-button__icon-wrapper {
+  display: flex;
+  gap: 8px;
+  padding: 7px 6px;
+  min-height: 60px;
+  border: 2px solid $border-button;
+  border-radius: 60px;
+}
+
+.authorization-button__icon {
+  display: inline-flex;
+  border-radius: 100px;
+  min-width: 56px;
+  min-height: 44px;
+  width: 100%;
+  transition-duration: 500ms;
+  background-image: url('img/icons/icons.svg#sign-out-icon');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.authorization-button__user-icon {
+  width: 44px;
+  height: auto;
+  object-fit: cover;
+}
+
+.authorization-button--in {
+  .authorization-button__user-icon {
+    display: none;
+  }
+
+  .authorization-button__text {
+    opacity: 100%;
+  }
+
+  .authorization-button__icon {
+    background-color: white;
+    background-image: url('@img/icons/icons.svg#sign-in-icon');
+    background-size: 62px;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    .authorization-button__icon {
+      scale: 1.15 1.2;
+      background-size: 62px;
+    }
+  }
+}
+
+.authorization-button--out {
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    .authorization-button__text {
+      opacity: 100%;
+    }
+
+    .authorization-button__icon {
+      background-color: $white;
+      background-image: url('@img/icons/icons.svg#sign-out-icon-blue');
+    }
+  }
+
+  &:active {
+    .authorization-button__text {
+      opacity: 60%;
+    }
+
+    .authorization-button__icon {
+      opacity: 40%;
+    }
+  }
+}

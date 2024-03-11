@@ -1,0 +1,16 @@
+// Global
+@import "global/mixins.scss";
+@import "global/fonts.scss";
+@import "global/variables.scss";
+@import "global/global.scss";
+@import "global/visually-hidden.scss";
+
+//Blocks
+@import "blocks/wrapper.scss";
+@import "blocks/header.scss";
+@import "blocks/install-link.scss";
+@import "blocks/promo.scss";
+@import "blocks/user-feedback.scss";
+@import "blocks/corgi-ai.scss";
+@import "blocks/app-install-section.scss";
+@import "blocks/review.scss";
