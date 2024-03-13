@@ -1,0 +1,36 @@
+.corgi-trainer__wrapper {
+  display: flex;
+  position: relative;
+  padding-bottom: 375px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -23%;
+    width: 45%;
+    height: 1000px;
+    transform: translate3d(0, -41%, 0);
+    background-image: url(@img/china.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    z-index: -1;
+
+    @include retina {
+      background-image: url(@img/china@2x.png);
+    }
+  }
+}
+
+.corgi-trainer__wrapper {
+  &::before {
+    background-image: url(@img/corgi-suitcase.png);
+    background-size: 45% 60%;
+    transform: translate3d(-5%, -20%, 0);
+
+    @include retina {
+      background-image: url(@img/corgi-suitcase@2x.png);
+    }
+  }
+}

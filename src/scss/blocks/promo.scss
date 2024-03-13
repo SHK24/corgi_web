@@ -1,9 +1,9 @@
 .promo__wrapper {
-  padding-top: 50px;
   display: flex;
   flex-direction: column;
   color: $white;
-  padding-bottom: 190px;
+  padding-bottom: 233px;
+  padding-top: 50px;
 }
 
 .promo__main-content {
@@ -18,28 +18,29 @@
 
 .promo__title {
   margin: 0;
-  padding-bottom: 25px;
+  padding-bottom: 22px;
 }
 
 .promo__text-content {
   max-width: 450px;
+  align-self: center;
 }
 
 .promo__text-wrapper {
   display: block;
   text-align: end;
   padding-right: 36px;
-  padding-bottom: 25px;
+  padding-bottom: 24px;
 }
 
-.gpt {
+.promo__text-background {
   display: inline-flex;
   justify-content: center;
-  margin-left: 14px;
   align-items: center;
+  margin-left: 14px;
+  padding: 10px 24px;
   background-color: $border-button;
   border-radius: 0 100px 100px;
-  padding: 13px 24px;
   position: relative;
 
   &::before {
@@ -59,10 +60,46 @@
   font-size: $text;
   line-height: $text-height;
   margin: 0;
-  padding-bottom: 40px;
+  padding-bottom: 41px;
+  align-self: center;
 }
 
 .promo__animation-wrapper {
   flex-basis: 48.5%;
   flex-shrink: 0;
+}
+
+.promo__countries-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 42px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 47px;
+}
+
+.promo__countries-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.promo__countries-text {
+  font-size: $medium-text;
+  line-height: $medium-text-height;
+  font-weight: $extra-bold;
+
+  &--background {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center ;
+    padding: 15px 24px;
+    background-color: $border-button;
+    border-radius: 100px;
+  }
+
+  &--light {
+    opacity: 60%;
+  }
 }

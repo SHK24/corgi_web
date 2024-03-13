@@ -1,7 +1,7 @@
 /* global app, */
 
 import webp from 'gulp-webp';
-import imagemin, {mozjpeg, optipng, svgo} from 'gulp-imagemin';
+import imagemin, { mozjpeg, optipng, svgo } from 'gulp-imagemin';
 
 export const img = () => {
   return app.gulp
@@ -11,8 +11,8 @@ export const img = () => {
         app.plugins.notify.onError({
           title: 'IMAGES',
           message: 'Error: <%= error.message %>',
-        }),
-      ),
+        })
+      )
     )
     .pipe(app.plugins.newer(app.path.build.img))
     .pipe(app.plugins.if(app.isBuild, webp()))
@@ -23,22 +23,22 @@ export const img = () => {
       app.plugins.if(
         false,
         imagemin([
-          optipng({optimizationLevel: 5}),
-          mozjpeg({quality: 75, progressive: true}),
+          optipng({ optimizationLevel: 5 }),
+          mozjpeg({ quality: 75, progressive: true }),
           svgo({
             plugins: [
               {
                 name: 'removeViewBox',
-                active: true
+                active: true,
               },
               {
                 name: 'cleanupIDs',
-                active: false
-              }
-            ]
-          })
+                active: false,
+              },
+            ],
+          }),
         ])
-      ),
+      )
     )
     .pipe(app.gulp.dest(app.path.build.img))
     .pipe(app.gulp.src(app.path.src.svg))

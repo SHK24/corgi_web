@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Главная</title>
-  <link rel="stylesheet" href="css/style.min.css?_v=20240311214500">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.3/lottie.min.js?_v=20240311214500"></script>
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.3/lottie.min.js"></script>
 </head>
 
 
@@ -74,7 +74,7 @@
             <div class="promo__text-content">
               <span class="promo__text-wrapper"
                 >Powered by
-                <span class="gpt">Chat GPT</span>
+                <span class="promo__text-background">Chat GPT</span>
               </span>
               <h1 class="promo__title main-title">
                 Fluent in&nbsp;a&nbsp;flash with Corgi
@@ -100,7 +100,50 @@
               id="promo-lottie-animation"
             ></div>
           </div>
-          <ul class="promo__countries-list"></ul>
+          <div class="promo__countries-list">
+            <li>
+              <img src="img/usa-flag.png" srcset="img/usa-flag@2x.png 2x" />
+            </li>
+            <li>
+              <img src="img/italy-flag.png" srcset="img/italy-flag@2x.png 2x" />
+            </li>
+            <li>
+              <img src="img/france-flag.png" srcset="img/france-flag@2x.png 2x" />
+            </li>
+            <li>
+              <img src="img/spain-flag.png" srcset="img/spain-flag@2x.png 2x" />
+            </li>
+            <li>
+              <img src="img/germany-flag.png" srcset="img/germany-flag@2x.png 2x" />
+            </li>
+            <li>
+              <img src="img/brazil-flag.png" srcset="img/brazil-flag@2x.png 2x" />
+            </li>
+            <li>
+              <img src="img/india-flag.png" srcset="img/india-flag@2x.png 2x" />
+            </li>
+            <li>
+              <img src="img/russia-flags.png" srcset="img/russia-flags@2x.png 2x" />
+            </li>
+            <li>
+              <img src="img/china-flags.png" srcset="img/china-flags@2x.png 2x" />
+            </li>
+            <li class="promo__countries-item">
+              <span
+                class="promo__countries-text promo__countries-text--background"
+              >
+                +7
+              </span>
+              <span class="promo__countries-text"
+                ><span
+                  class="promo__countries-text promo__countries-text--light"
+                >
+                  And
+                </span>
+                Other</span
+              >
+            </li>
+          </div>
         </div>
       </section>
       <section class="user-feedback">
@@ -111,7 +154,7 @@
           <ul class="user-feedback__list">
             <li class="user-feedback__item">
               <div class="user-feedback__image linear-gradient-bg">
-                <picture><source srcset="img/25k.webp" type="image/webp"><img src="img/25k.png" alt="" /></picture>
+                <img src="img/25k.png" srcset="img/25k@2x.png 2x" />
               </div>
               <div class="user-feedback__text">
                 <p>Users worldwide</p>
@@ -120,7 +163,7 @@
             </li>
             <li class="user-feedback__item">
               <div class="user-feedback__image linear-gradient-bg">
-                <picture><source srcset="img/big-star.webp" type="image/webp"><img src="img/big-star.png" alt="" loading="lazy" /></picture>
+                <img src="img/big-star.png" srcset="img/big-star@2x.png 2x" />
               </div>
               <div class="user-feedback__text">
                 <p>Rating in Google Chrome</p>
@@ -171,7 +214,7 @@
             </li>
             <li class="user-feedback__item">
               <div class="user-feedback__image linear-gradient-bg">
-                <picture><source srcset="img/big-google-icon.webp" type="image/webp"><img src="img/big-google-icon.png" alt="" /></picture>
+                <img src="img/big-google-icon.png" srcset="img/big-google-icon@2x.png 2x" />
               </div>
               <div class="user-feedback__text">
                 <p>Editor's Choice</p>
@@ -181,17 +224,53 @@
           </ul>
         </div>
       </section>
-      <section class="corgi-ai">
-        <div class="corgi-ai__wrapper">
+      <section class="left-animation corgi-ai">
+        <div class="left-animation__wrapper corgi-ai__wrapper">
           <div
-            class="corgi-ai__animation-wrapper"
+            class="left-animation__animation-wrapper corgi-ai__animation-wrapper"
             id="ai-lottie-animation"
           ></div>
-          <div class="corgi-ai__text-content">
-            <h2 class="corgi-ai__title main-title">
+          <div class="left-animation__text-content corgi-ai__text-content">
+            <h2 class="left-animation__title">
               Master a language by speaking It
             </h2>
-            <p class="corgi-ai__text">
+            <p class="left-animation__text">
+              Corgi AI&nbsp;is&nbsp;your very own language tutor, available
+              anytime, anywhere. Practice speaking on&nbsp;diverse topics and
+              receive immediate feedback.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="language-learner">
+        <div class="language-learner__wrapper wrapper">
+          <div class="language-learner__text-content">
+            <h2 class="language-learner__title main-title">
+              Read, translate, and memorize
+            </h2>
+            <p class="language-learner__text">
+              Dive into a&nbsp;new language through news, blogs, tweets, and
+              more. Translate words and sentences effortlessly, incorporating
+              them into your daily study.
+            </p>
+          </div>
+          <div
+            class="language-learner__animation-wrapper"
+            id="language-lottie-animation"
+          ></div>
+        </div>
+      </section>
+      <section class="left-animation corgi-trainer">
+        <div class="left-animation__wrapper corgi-trainer__wrapper">
+          <div
+            class="left-animation__animation-wrapper corgi-trainer__animation-wrapper"
+            id="trainer-lottie-animation"
+          ></div>
+          <div class="left-animation__text-content">
+            <h2 class="left-animation__title main-title">
+              Learn at your convenience
+            </h2>
+            <p class="left-animation__text">
               Corgi AI&nbsp;is&nbsp;your very own language tutor, available
               anytime, anywhere. Practice speaking on&nbsp;diverse topics and
               receive immediate feedback.
@@ -387,6 +466,36 @@
         </div>
       </section>
     </main>
+    <footer class="footer">
+  <div class="footer__wrapper wrapper">
+    <div class="footer__links-wrapper">
+      <ul class="footer__list">
+        <li><a class="footer__link" href="#">Plans</a></li>
+        <li><a class="footer__link" href="#">Privacy Policy</a></li>
+        <li><a class="footer__link" href="#">Terms of Use</a></li>
+      </ul>
+      <a class="footer__link footer__link--icon" href="#">
+        <svg width="32" height="32" viewBox="0 0 32 32">
+          <use xlink:href="img/icons/icons.svg#x-icon"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="footer__copyright-wrapper">
+      <a class="footer__logo" href="#">
+        <img
+          src="img/icons/icons.svg#logo-website"
+          width="108"
+          height="48"
+        />
+      </a>
+      <p class="footer__copyright">
+        <span>Copyright 2024 Corgi.</span>
+        <span>All rights reserved</span>
+      </p>
+    </div>
+  </div>
+</footer>
+
   </body>
-  <script src="js/app.min.js?_v=20240311214500"></script>
+  <script src="js/app.min.js"></script>
 </html>

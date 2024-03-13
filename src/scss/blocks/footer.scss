@@ -1,0 +1,132 @@
+.footer {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-image: url(@img/footer-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    z-index: -1;
+
+    @include retina {
+      background-image: url(@img/footer-bg@2x.png);
+    }
+  }
+}
+
+.footer__wrapper {
+  max-width: 1263px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 410px;
+  padding-bottom: 42px;
+  gap: 69px;
+}
+
+.footer__links-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 48%;
+  justify-content: space-between;
+}
+
+.footer__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 46px;
+  transition-duration: 500ms;
+  font-size: $medium-text;
+  line-height: $medium-text-height;
+  font-weight: $medium;
+  text-decoration: none;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    background-color: $border-button;
+  }
+
+  &:active {
+    background-color: $transparent;
+    color: $active-white-link;
+  }
+
+  &--icon {
+    min-width: 196px;
+    min-height: 88px;
+    color: $white;
+    border: 4px solid $border-button;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 50%;
+      top: 50%;
+      transform: translate3d(50%, -50%, 0);
+      background-position: center;
+      border-radius: 100px;
+      z-index: -1;
+      transition-duration: 500ms;
+      background-color: $transparent;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $transparent;
+      color: $icon-blue;
+      &::before {
+        background-color: $white;
+      }
+    }
+
+    &:active {
+      background-color: $transparent;
+      color: $icon-blue;
+      &::before {
+        width: 95%;
+        height: 90%;
+        background: $light-grey;
+      }
+    }
+  }
+}
+
+.footer__copyright-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 374px;
+  padding: 0 16px;
+}
+
+.footer__copyright {
+  display: flex;
+  flex-direction: column;
+  font-size: $small-text;
+  line-height: $text-height;
+  font-weight: $medium;
+  color: $empty-star;
+}

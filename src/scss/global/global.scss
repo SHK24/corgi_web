@@ -25,22 +25,31 @@ body {
     position: absolute;
     right: 50%;
     width: 100%;
-    max-width: 1900px;
+    max-width: 1920px;
     height: 100%;
     transform: translate3d(50%, 0, 0);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     z-index: -5;
   }
 
   &::before {
-    background-image: url(@img/bg-up.png);
+    background: url(@img/bg-up.png);
     top: 0;
+
+    @include retina {
+      background: url(@img/bg-up@2x.png);
+    }
   }
 
-  &::after {
-    background-image: url(@img/bg-down.png);
+  &::after  {
+    background: url(@img/bg-down.png);
+    background-position: bottom;
     bottom: 0;
+
+    @include retina {
+      background: url(@img/bg-down@2x.png);
+    }
   }
 }
 

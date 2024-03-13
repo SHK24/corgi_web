@@ -1,3 +1,31 @@
+.review__wrapper {
+  position: relative;
+  padding-bottom: 178px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    z-index: -1;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    width: 46%;
+    height: 700px;
+    transform: translate3d(-109%, -25%, 0);
+    background-image: url(@img/hindi.png);
+
+    @include retina {
+      background-image: url(@img/hindi@2x.png);
+    }
+  }
+}
 .review__title {
   margin: 0;
   padding-bottom: 25px;
@@ -46,7 +74,7 @@
     left: 0;
     width: 20px;
     height: 20px;
-    background-image: url(../img/icons/icons.svg#star-background);
+    background-image: url(@img/icons/icons.svg#star-background);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
