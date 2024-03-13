@@ -1,46 +1,10 @@
 .corgi-ai__wrapper {
-  display: flex;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding-bottom: 190px;
-  position: relative;
 
   &::before {
-    content: "";
-    position: absolute;
-    right: 35%;
-    width: 40vw;
-    height: 100%;
-    bottom: 0px;
-    background-image: url(../img/corgi-ai.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    z-index: 1;
+    background-image: url(@img/corgi-ai.png);
+
+    @include retina {
+      background-image: url(@img/corgi-ai@2x.png);
+    }
   }
-}
-
-.corgi-ai__animation-wrapper {
-  flex-basis: 50%;
-
-}
-
-.corgi-ai__text-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-basis: 50%;
-  padding-left: 50px;
-}
-
-.corgi-ai__title {
-  margin: 0;
-  max-width: 560px;
-}
-
-.corgi-ai__text {
-  margin: 0;
-  color: $white;
-  max-width: 560px;
 }
