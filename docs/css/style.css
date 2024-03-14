@@ -513,6 +513,10 @@ img {
   height: 100%;
 }
 
+.user-feedback__image img {
+  width: 100%;
+}
+
 .user-feedback__text {
   color: #dbe7fb;
   font-size: 20px;
