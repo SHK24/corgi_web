@@ -22,6 +22,14 @@
       background-image: url(@img/background-ball1@2x.png);
     }
   }
+
+  @include tablet {
+    padding-bottom: 198px;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .user-feedback__title {
@@ -33,8 +41,13 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(373px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 34px;
+  }
 }
 
 .user-feedback__item {
@@ -42,10 +55,21 @@
   flex-direction: column;
   justify-content: flex-end;
   flex-grow: 1;
+
+  @include tablet {
+    &:nth-of-type(2n) {
+      grid-row: span 2;
+      justify-content: center;
+    }
+  }
 }
 
 .user-feedback__image {
   height: 100%;
+
+  @include tablet {
+    height: auto;
+  }
 }
 
 .user-feedback__text {

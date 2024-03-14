@@ -19,10 +19,29 @@
     background-position: center bottom;
     z-index: 1;
   }
+
+  @include tablet {
+    flex-direction: column;
+
+    &::before {
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-37%, -58%, 0);
+      background-size: auto;
+      background-position: bottom;
+      min-height: 700px;
+    }
+  }
 }
 
 .left-animation__animation-wrapper {
   flex-basis: 42%;
+
+  @include tablet {
+    position: static;
+    transform: translate3d(-50%, 0, 0);
+    width: 107%;
+  }
 }
 
 .left-animation__text-content {
@@ -31,6 +50,11 @@
   justify-content: center;
   align-items: flex-start;
   padding-left: 10%;
+
+  @include tablet {
+    align-items: center;
+    padding: 196px 40px 0 0;
+  }
 }
 
 .left-animation__title {

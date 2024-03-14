@@ -7,6 +7,8 @@
   @include tablet {
     flex-direction: column;
     justify-content: end;
+    padding-top: 94%;
+    padding-bottom: 192px;
   }
 }
 
@@ -28,6 +30,8 @@
 
   @include tablet {
     order: -1;
+    background-position: top right 39px;
+    background-size: auto;
   }
 }
 

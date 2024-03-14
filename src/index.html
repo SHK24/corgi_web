@@ -3,37 +3,6 @@
   @@include('./html/head.html', { 'title': 'Главная' })
 
   <body>
-    <svg
-      aria-hidden="true"
-      focusable="false"
-      width="0"
-      height="0"
-      viewBox="0 0 24 24"
-    >
-      <path
-        id="star"
-        d="M16.498 6.7h0c.053.108.18.262.37.402s.376.218.5.239l-.87-.64Zm0 0-.002-.005-1.76-3.518v-.001c-.53-1.064-1.356-1.848-2.402-1.848-1.045 0-1.875.783-2.41 1.846v.001l-1.76 3.52h0l-.003.006c-.053.108-.179.261-.37.402a1.272 1.272 0 0 1-.492.238l-3.187.53h0c-1.15.192-2.116.751-2.43 1.731-.312.98.15 1.996.973 2.819l2.48 2.48c.097.098.207.281.275.521.068.238.074.454.043.593v.002l-.709 3.064s0 0 0 0c-.295 1.278-.193 2.546.716 3.21.909.662 2.149.375 3.278-.295l2.984-1.767.002-.001c.134-.078.355-.137.615-.137s.477.06.604.135h0l2.99 1.77h0c1.13.668 2.371.96 3.28.298.91-.663 1.007-1.934.713-3.212h0l-.71-3.065v-.002a1.284 1.284 0 0 1 .044-.593 1.25 1.25 0 0 1 .275-.521l2.478-2.478.001-.001c.829-.823 1.291-1.84.976-2.82-.315-.98-1.282-1.54-2.432-1.731h0l-3.19-.53-.87-.64Z"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        d="m14.065 3.51 1.76 3.52c.24.49.88.96 1.42 1.05l3.19.53c2.04.34 2.52 1.82 1.05 3.28l-2.48 2.48c-.42.42-.65 1.23-.52 1.81l.71 3.07c.56 2.43-.73 3.37-2.88 2.1l-2.99-1.77c-.54-.32-1.43-.32-1.98 0l-2.99 1.77c-2.14 1.27-3.44.32-2.88-2.1l.71-3.07c.13-.58-.1-1.39-.52-1.81l-2.48-2.48c-1.46-1.46-.99-2.94 1.05-3.28l3.19-.53c.53-.09 1.17-.56 1.41-1.05l1.76-3.52c.96-1.91 2.52-1.91 3.47 0Z"
-      />
-      <defs>
-        <linearGradient
-          id="half"
-          x1="22.335"
-          y1="12.001"
-          x2="2.335"
-          y2="12.001"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop offset=".499" stop-color="#0159FF" />
-          <stop offset=".508" stop-color="#FFBA54" />
-        </linearGradient>
-      </defs>
-    </svg>
     @@include('./html/header.html', {})
     <main>
       <section class="promo">
@@ -63,28 +32,52 @@
               <img src="@img/usa-flag.png" srcset="@img/usa-flag@2x.png 2x" />
             </li>
             <li>
-              <img src="@img/italy-flag.png" srcset="@img/italy-flag@2x.png 2x" />
+              <img
+                src="@img/italy-flag.png"
+                srcset="@img/italy-flag@2x.png 2x"
+              />
             </li>
             <li>
-              <img src="@img/france-flag.png" srcset="@img/france-flag@2x.png 2x" />
+              <img
+                src="@img/france-flag.png"
+                srcset="@img/france-flag@2x.png 2x"
+              />
             </li>
             <li>
-              <img src="@img/spain-flag.png" srcset="@img/spain-flag@2x.png 2x" />
+              <img
+                src="@img/spain-flag.png"
+                srcset="@img/spain-flag@2x.png 2x"
+              />
             </li>
             <li>
-              <img src="@img/germany-flag.png" srcset="@img/germany-flag@2x.png 2x" />
+              <img
+                src="@img/germany-flag.png"
+                srcset="@img/germany-flag@2x.png 2x"
+              />
             </li>
             <li>
-              <img src="@img/brazil-flag.png" srcset="@img/brazil-flag@2x.png 2x" />
+              <img
+                src="@img/brazil-flag.png"
+                srcset="@img/brazil-flag@2x.png 2x"
+              />
             </li>
             <li>
-              <img src="@img/india-flag.png" srcset="@img/india-flag@2x.png 2x" />
+              <img
+                src="@img/india-flag.png"
+                srcset="@img/india-flag@2x.png 2x"
+              />
             </li>
             <li>
-              <img src="@img/russia-flags.png" srcset="@img/russia-flags@2x.png 2x" />
+              <img
+                src="@img/russia-flags.png"
+                srcset="@img/russia-flags@2x.png 2x"
+              />
             </li>
             <li>
-              <img src="@img/china-flags.png" srcset="@img/china-flags@2x.png 2x" />
+              <img
+                src="@img/china-flags.png"
+                srcset="@img/china-flags@2x.png 2x"
+              />
             </li>
             <li class="promo__countries-item">
               <span
@@ -92,7 +85,7 @@
               >
                 +7
               </span>
-              <span class="promo__countries-text"
+              <span class="promo__countries-text promo__countries-text--not-background"
                 ><span
                   class="promo__countries-text promo__countries-text--light"
                 >
@@ -172,7 +165,10 @@
             </li>
             <li class="user-feedback__item">
               <div class="user-feedback__image linear-gradient-bg">
-                <img src="@img/big-google-icon.png" srcset="@img/big-google-icon@2x.png 2x" />
+                <img
+                  src="@img/big-google-icon.png"
+                  srcset="@img/big-google-icon@2x.png 2x"
+                />
               </div>
               <div class="user-feedback__text">
                 <p>Editor's Choice</p>
@@ -204,7 +200,7 @@
         <div class="language-learner__wrapper wrapper">
           <div class="language-learner__text-content">
             <h2 class="language-learner__title main-title">
-              Read, translate, and memorize
+              Read, translate, and&nbsp;memorize
             </h2>
             <p class="language-learner__text">
               Dive into a&nbsp;new language through news, blogs, tweets, and
@@ -272,5 +268,37 @@
     </main>
     @@include('./html/footer.html', {})
   </body>
+  <svg
+    aria-hidden="true"
+    focusable="false"
+    width="0"
+    height="0"
+    viewBox="0 0 24 24"
+    class="visually-hidden"
+  >
+    <path
+      id="star"
+      d="M16.498 6.7h0c.053.108.18.262.37.402s.376.218.5.239l-.87-.64Zm0 0-.002-.005-1.76-3.518v-.001c-.53-1.064-1.356-1.848-2.402-1.848-1.045 0-1.875.783-2.41 1.846v.001l-1.76 3.52h0l-.003.006c-.053.108-.179.261-.37.402a1.272 1.272 0 0 1-.492.238l-3.187.53h0c-1.15.192-2.116.751-2.43 1.731-.312.98.15 1.996.973 2.819l2.48 2.48c.097.098.207.281.275.521.068.238.074.454.043.593v.002l-.709 3.064s0 0 0 0c-.295 1.278-.193 2.546.716 3.21.909.662 2.149.375 3.278-.295l2.984-1.767.002-.001c.134-.078.355-.137.615-.137s.477.06.604.135h0l2.99 1.77h0c1.13.668 2.371.96 3.28.298.91-.663 1.007-1.934.713-3.212h0l-.71-3.065v-.002a1.284 1.284 0 0 1 .044-.593 1.25 1.25 0 0 1 .275-.521l2.478-2.478.001-.001c.829-.823 1.291-1.84.976-2.82-.315-.98-1.282-1.54-2.432-1.731h0l-3.19-.53-.87-.64Z"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="m14.065 3.51 1.76 3.52c.24.49.88.96 1.42 1.05l3.19.53c2.04.34 2.52 1.82 1.05 3.28l-2.48 2.48c-.42.42-.65 1.23-.52 1.81l.71 3.07c.56 2.43-.73 3.37-2.88 2.1l-2.99-1.77c-.54-.32-1.43-.32-1.98 0l-2.99 1.77c-2.14 1.27-3.44.32-2.88-2.1l.71-3.07c.13-.58-.1-1.39-.52-1.81l-2.48-2.48c-1.46-1.46-.99-2.94 1.05-3.28l3.19-.53c.53-.09 1.17-.56 1.41-1.05l1.76-3.52c.96-1.91 2.52-1.91 3.47 0Z"
+    />
+    <defs>
+      <linearGradient
+        id="half"
+        x1="22.335"
+        y1="12.001"
+        x2="2.335"
+        y2="12.001"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset=".499" stop-color="#0159FF" />
+        <stop offset=".508" stop-color="#FFBA54" />
+      </linearGradient>
+    </defs>
+  </svg>
   <script src="js/app.min.js"></script>
 </html>

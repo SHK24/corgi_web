@@ -52,7 +52,6 @@
     "gulp-version-number": "^0.1.6",
     "gulp-webp": "^5.0.0",
     "gulp-webp-html-nosvg": "^1.1.1",
-    "gulp-webpcss": "^1.1.1",
     "imagemin-mozjpeg": "^10.0.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^10.0.1",
