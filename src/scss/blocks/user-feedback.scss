@@ -67,6 +67,10 @@
 .user-feedback__image {
   height: 100%;
 
+  img {
+    width: 100%;
+  }
+
   @include tablet {
     height: auto;
   }
