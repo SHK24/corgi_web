@@ -4,7 +4,7 @@
 
   &::before,
   &::after {
-    content: "";
+    content: '';
     position: absolute;
 
     background-repeat: no-repeat;
@@ -108,6 +108,7 @@
 
   @include tablet {
     grid-template-columns: repeat(auto-fill, minmax(312px, 1fr));
+    row-gap: 62px;
   }
 }
 

@@ -19,6 +19,12 @@
       background-image: url(@img/footer-bg@2x.png);
     }
   }
+
+  @include tablet {
+    &::before {
+      background-size: cover;
+    }
+  }
 }
 
 .footer__wrapper {
@@ -29,6 +35,13 @@
   min-height: 410px;
   padding-bottom: 42px;
   gap: 69px;
+
+  @include tablet {
+    min-height: 462px;
+    justify-content: flex-start;
+    padding-left: 22px;
+    gap: 54px;
+  }
 }
 
 .footer__links-wrapper {
@@ -36,6 +49,11 @@
   justify-content: space-between;
   align-items: center;
   padding-right: 20px;
+
+  @include tablet {
+    padding-right: 0;
+    padding-top: 22px;
+  }
 }
 
 .footer__list {
@@ -46,6 +64,10 @@
   flex-wrap: wrap;
   flex-basis: 48%;
   justify-content: space-between;
+
+  @include tablet {
+    flex-basis: 58%;
+  }
 }
 
 .footer__link {
@@ -60,6 +82,7 @@
   font-weight: $medium;
   text-decoration: none;
   color: $white;
+  letter-spacing: $text-letter-spacing;
 
   &:hover,
   &:focus {
@@ -112,6 +135,12 @@
       }
     }
   }
+
+  @include tablet {
+    &--icon {
+      min-width: 102px;
+    }
+  }
 }
 
 .footer__copyright-wrapper {
@@ -120,6 +149,10 @@
   justify-content: space-between;
   max-width: 374px;
   padding: 0 16px;
+
+  @include tablet {
+    max-width: 434px;
+  }
 }
 
 .footer__copyright {
@@ -129,4 +162,13 @@
   line-height: $text-height;
   font-weight: $medium;
   color: $empty-star;
+}
+
+.footer__logo {
+  @include tablet {
+    img {
+      width: 135px;
+      height: 60px;
+    }
+  }
 }

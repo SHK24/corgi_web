@@ -4,6 +4,11 @@
   color: $white;
   padding-bottom: 233px;
   padding-top: 50px;
+
+  @include tablet {
+    padding-top: 95px;
+    padding-bottom: 138px;
+  }
 }
 
 .promo__main-content {
@@ -13,17 +18,27 @@
 
   @include tablet {
     flex-direction: column;
+    gap: 80px;
   }
 }
 
 .promo__title {
   margin: 0;
   padding-bottom: 22px;
+
+  @include tablet {
+    max-width: 450px;
+  }
 }
 
 .promo__text-content {
   max-width: 450px;
   align-self: center;
+
+  @include tablet {
+    align-self: flex-start;
+    max-width: 100%;
+  }
 }
 
 .promo__text-wrapper {
@@ -31,6 +46,10 @@
   text-align: end;
   padding-right: 36px;
   padding-bottom: 24px;
+
+  @include tablet {
+    max-width: 450px;
+  }
 }
 
 .promo__text-background {
@@ -59,14 +78,20 @@
 .promo__text {
   font-size: $text;
   line-height: $text-height;
+  font-weight: $medium;
   margin: 0;
   padding-bottom: 41px;
   align-self: center;
+  color: $light-blue;
 }
 
 .promo__animation-wrapper {
   flex-basis: 48.5%;
   flex-shrink: 0;
+
+  @include tablet {
+    max-width: 78vw;
+  }
 }
 
 .promo__countries-list {
@@ -77,6 +102,15 @@
   margin: 0;
   padding: 0;
   padding-top: 47px;
+
+  @include tablet {
+    padding-top: 34px;
+    gap: 26px;
+
+    img {
+      width: 60px;
+    }
+  }
 }
 
 .promo__countries-item {
@@ -93,7 +127,7 @@
   &--background {
     display: inline-flex;
     justify-content: center;
-    align-items: center ;
+    align-items: center;
     padding: 15px 24px;
     background-color: $border-button;
     border-radius: 100px;
@@ -101,5 +135,18 @@
 
   &--light {
     opacity: 60%;
+  }
+
+  @include tablet {
+    &--background {
+      min-width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      padding: 0;
+    }
+
+    &--not-background {
+      display: none;
+    }
   }
 }

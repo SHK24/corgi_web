@@ -3,6 +3,10 @@
   flex-direction: row;
   justify-content: space-between;
   padding-top: 23px;
+
+  @include tablet {
+    padding-top: 20px;
+  }
 }
 
 .header__logo {
@@ -34,6 +38,11 @@
   color: $white;
   opacity: 40%;
   transition-duration: 500ms;
+  letter-spacing: $text-letter-spacing;
+
+  @include tablet {
+    padding-bottom: 5px;
+  }
 
   @include mobile {
     display: none;

@@ -1,5 +1,9 @@
 .language-learner {
   padding-bottom: 180px;
+
+  @include tablet {
+    padding-bottom: 190px;
+  }
 }
 
 .language-learner__wrapper {
@@ -41,6 +45,10 @@
       background-image: url(@img/dot-circle@2x.png);
     }
   }
+
+  @include tablet {
+    flex-direction: column;
+  }
 }
 
 .language-learner__text-content {
@@ -49,6 +57,15 @@
   top: 50%;
   left: 0;
   transform: translate3d(12%, -35%, 10px);
+
+  @include tablet {
+    max-width: 505px;
+    position: static;
+    order: 2;
+    padding-top: 208px;
+    align-self: center;
+    transform: none;
+  }
 }
 
 .language-learner__title {
@@ -75,7 +92,7 @@
     position: absolute;
     bottom: -50%;
     left: 50%;
-    transform: translate3d(-35%, -25%, 10px);
+    transform: translate3d(-35%, -25%, 0);
     width: 72%;
     height: 100%;
     background-image: url(@img/corgi-keyboard.png);
@@ -86,6 +103,18 @@
 
     @include retina {
       background-image: url(@img/corgi-keyboard@2x.png);
+    }
+  }
+
+  @include tablet {
+    position: static;
+    transform: translate3d(-38%, 0, 0);
+    width: 170%;
+
+    &::before {
+      width: 100%;
+      min-height: 700px;
+      transform: translate3d(-41%, -17%, 0);
     }
   }
 }

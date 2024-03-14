@@ -34,21 +34,21 @@ body {
   }
 
   &::before {
-    background: url(@img/bg-up.png);
+    background-image: url(@img/bg-up.png);
     top: 0;
 
     @include retina {
-      background: url(@img/bg-up@2x.png);
+      background-image: url(@img/bg-up@2x.png);
     }
   }
 
   &::after  {
-    background: url(@img/bg-down.png);
+    background-image: url(@img/bg-down.png);
     background-position: bottom;
     bottom: 0;
 
     @include retina {
-      background: url(@img/bg-down@2x.png);
+      background-image: url(@img/bg-down@2x.png);
     }
   }
 }
