@@ -9,6 +9,10 @@
     padding-top: 95px;
     padding-bottom: 138px;
   }
+
+  @include mobile {
+    padding-bottom: 185px;
+  }
 }
 
 .promo__main-content {
@@ -19,6 +23,10 @@
   @include tablet {
     flex-direction: column;
     gap: 80px;
+  }
+
+  @include mobile {
+    gap: 99px;
   }
 }
 
@@ -49,6 +57,10 @@
 
   @include tablet {
     max-width: 450px;
+  }
+
+  @include mobile {
+    padding-right: 0;
   }
 }
 
@@ -92,6 +104,10 @@
   @include tablet {
     max-width: 78vw;
   }
+
+  @include mobile {
+    max-width: 100%;
+  }
 }
 
 .promo__countries-list {
@@ -110,6 +126,12 @@
     img {
       width: 60px;
     }
+  }
+
+  @include mobile {
+    padding-top: 55px;
+    gap: 18px;
+    row-gap: 11px;
   }
 }
 

@@ -491,6 +491,7 @@ img {
 
 .user-feedback__title {
   max-width: 700px;
+  margin: 0;
 }
 
 .user-feedback__list {
@@ -563,26 +564,25 @@ img {
   max-width: 1920px;
   margin: 0 auto;
   padding-bottom: 179px;
-  position: relative;
-}
-
-.left-animation__wrapper::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  top: 0;
-  transform: translate3d(-5%, 8%, 0);
-  width: 100%;
-  height: auto;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  z-index: 1;
 }
 
 .left-animation__animation-wrapper {
   flex-basis: 42%;
+  position: relative;
+}
+
+.left-animation__animation-wrapper::before {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  transform: translate3d(5%, -21%, 0);
+  width: 104%;
+  height: 108%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  z-index: 1;
 }
 
 .left-animation__text-content {
@@ -611,7 +611,7 @@ img {
   padding-bottom: 6px;
 }
 
-.corgi-ai__wrapper::before {
+.corgi-ai__animation-wrapper::before {
   background-image: url(../img/corgi-ai.png);
 }
 
@@ -716,10 +716,10 @@ img {
   z-index: -1;
 }
 
-.corgi-trainer__wrapper::before {
+.corgi-trainer__animation-wrapper::before {
+  transform: translate3d(4%, -29%, 0);
+  height: 94%;
   background-image: url(../img/corgi-suitcase.png);
-  background-size: 45%;
-  transform: translate3d(-5%, -20%, 0);
 }
 
 .app-install-section__wrapper {
@@ -1107,19 +1107,13 @@ img {
     flex-direction: column;
   }
 
-  .left-animation__wrapper::before {
-    left: 50%;
-    top: 50%;
-    transform: translate3d(-37%, -58%, 0);
-    background-size: auto;
-    background-position: bottom;
-    min-height: 700px;
-  }
-
   .left-animation__animation-wrapper {
-    position: static;
     transform: translate3d(-50%, 0, 0);
     width: 107%;
+  }
+
+  .left-animation__animation-wrapper::before {
+    transform: translate3d(7%, -19%, 0);
   }
 
   .left-animation__text-content {
@@ -1162,11 +1156,6 @@ img {
 
   .corgi-trainer__wrapper::after {
     display: none;
-  }
-
-  .corgi-trainer__wrapper::before {
-    top: 0;
-    transform: translate3d(-37%, -33%, 0);
   }
 
   .app-install-section__wrapper {
@@ -1222,8 +1211,177 @@ img {
 }
 
 @media (max-width: 743px) {
+  .main-title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .wrapper {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .authorization-button {
+    flex-direction: row-reverse;
+  }
+
   .authorization-button__text {
     display: none;
+  }
+
+  .promo__wrapper {
+    padding-bottom: 185px;
+  }
+
+  .promo__main-content {
+    gap: 99px;
+  }
+
+  .promo__text-wrapper {
+    padding-right: 0;
+  }
+
+  .promo__animation-wrapper {
+    max-width: 100%;
+  }
+
+  .promo__countries-list {
+    padding-top: 55px;
+    gap: 18px;
+    row-gap: 11px;
+  }
+
+  .user-feedback__list {
+    grid-template-columns: 1fr;
+    padding-top: 47px;
+    row-gap: 41px;
+  }
+
+  .left-animation__wrapper {
+    padding-bottom: 214px;
+  }
+
+  .left-animation__animation-wrapper {
+    width: 154%;
+    transform: translate3d(-35%, 0, 0);
+  }
+
+  .left-animation__animation-wrapper::before {
+    bottom: 0;
+    transform: translate3d(-37%, 54%, 0);
+    width: 104%;
+    height: 108%;
+  }
+
+  .left-animation__text-content {
+    padding: 91% 32px 0;
+    align-items: flex-start;
+  }
+
+  .left-animation__title {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .language-learner__wrapper::after {
+    right: 0;
+    width: 200%;
+    height: 700px;
+    transform: translate3d(44%, -44%, 0);
+  }
+
+  .language-learner__text-content {
+    padding-top: 332px;
+  }
+
+  .language-learner__title {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .language-learner__animation-wrapper {
+    transform: translate3d(-40%, 0, 0);
+    width: 180%;
+  }
+
+  .language-learner__animation-wrapper::before {
+    width: 113%;
+    transform: translate3d(-34%, 4%, 0);
+  }
+
+  .corgi-trainer__animation-wrapper::before {
+    height: 83%;
+    transform: translate3d(-35%, 57%, 0);
+  }
+
+  .app-install-section__wrapper {
+    padding-top: 190px;
+    gap: 83px;
+  }
+
+  .app-install-section__image {
+    position: static;
+    min-height: 293px;
+    background-position: top right -11px;
+    background-size: cover;
+  }
+
+  .review__wrapper {
+    padding: 0 0 0 32px;
+  }
+
+  .review__list {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .review__item {
+    width: 71vw;
+    flex-shrink: 0;
+  }
+
+  .footer::before {
+    background-size: auto;
+  }
+
+  .footer__wrapper {
+    padding-left: 32px;
+    padding-right: 32px;
+    gap: 109px;
+    min-height: 693px;
+  }
+
+  .footer__links-wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 39px;
+    gap: 50px;
+  }
+
+  .footer__list {
+    gap: 39px;
+    width: 100%;
+  }
+
+  .footer__link {
+    padding: 10px 0;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .footer__link:hover,
+  .footer__link:focus {
+    background-color: transparent;
+  }
+
+  .footer__link--icon {
+    width: 100%;
+  }
+
+  .footer__copyright-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
   }
 }
 
@@ -1240,7 +1398,7 @@ img {
     background-image: url(../img/background-ball1@2x.png);
   }
 
-  .corgi-ai__wrapper::before {
+  .corgi-ai__animation-wrapper::before {
     background-image: url(../img/corgi-ai@2x.png);
   }
 
@@ -1260,7 +1418,7 @@ img {
     background-image: url(../img/china@2x.png);
   }
 
-  .corgi-trainer__wrapper::before {
+  .corgi-trainer__animation-wrapper::before {
     background-image: url(../img/corgi-suitcase@2x.png);
   }
 

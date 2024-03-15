@@ -10,6 +10,11 @@
     padding-top: 94%;
     padding-bottom: 192px;
   }
+
+  @include mobile {
+    padding-top: 190px;
+    gap: 83px
+  }
 }
 
 .app-install-section__image {
@@ -32,6 +37,13 @@
     order: -1;
     background-position: top right 39px;
     background-size: auto;
+  }
+
+  @include mobile {
+    position: static;
+    min-height: 293px;
+    background-position: top right -11px;
+    background-size: cover;
   }
 }
 
