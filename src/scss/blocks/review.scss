@@ -25,6 +25,10 @@
       background-image: url(@img/hindi@2x.png);
     }
   }
+
+  @include mobile {
+    padding: 0 0 0 32px;
+  }
 }
 .review__title {
   margin: 0;
@@ -110,12 +114,22 @@
     grid-template-columns: repeat(auto-fill, minmax(312px, 1fr));
     row-gap: 62px;
   }
+
+  @include mobile {
+    display: flex;
+    overflow-x: auto ;
+  }
 }
 
 .review__item {
   min-height: 200px;
   padding: 40px 40px 20px 0;
   border-radius: 0 32px 32px 0;
+
+  @include mobile {
+    width: 71vw;
+    flex-shrink: 0;
+  }
 }
 
 .review__name {

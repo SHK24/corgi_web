@@ -63,6 +63,11 @@ img {
   line-height: $main-title-size;
   font-weight: $extra-bold;
   color: $white;
+
+  @include mobile {
+    font-size: $mobile-main-title-size;
+    line-height: $mobile-main-title-size;
+  }
 }
 
 .linear-gradient-bg {

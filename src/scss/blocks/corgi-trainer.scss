@@ -31,21 +31,22 @@
   }
 }
 
-.corgi-trainer__wrapper {
+.corgi-trainer__animation-wrapper {
   &::before {
+    transform: translate3d(4%, -29%, 0);
+    height: 94%;
     background-image: url(@img/corgi-suitcase.png);
-    background-size: 45%;
-    transform: translate3d(-5%, -20%, 0);
 
     @include retina {
       background-image: url(@img/corgi-suitcase@2x.png);
     }
   }
 
-  @include tablet {
+  @include mobile {
+
     &::before {
-      top: 0;
-      transform: translate3d(-37%, -33%, 0);
+      height: 83%;
+      transform: translate3d(-35%, 57%, 0);
     }
   }
 }

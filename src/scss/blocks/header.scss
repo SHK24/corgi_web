@@ -28,6 +28,10 @@
   cursor: pointer;
   min-width: 160px;
   padding: 0;
+
+  @include mobile {
+    flex-direction: row-reverse;
+  }
 }
 
 .authorization-button__text {

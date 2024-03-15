@@ -34,6 +34,7 @@
 
 .user-feedback__title {
   max-width: 700px;
+  margin: 0;
 }
 
 .user-feedback__list {
@@ -47,6 +48,12 @@
   @include tablet {
     grid-template-columns: 1fr 1fr;
     row-gap: 34px;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    padding-top: 47px;
+    row-gap: 41px;
   }
 }
 

@@ -11,4 +11,9 @@
     padding-right: $tablet-padding;
     margin: 0;
   }
+
+  @include mobile {
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+  }
 }
