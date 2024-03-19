@@ -39,7 +39,6 @@ function handleTabletChange(e) {
       autoplay: true,
       path: '../files/practice.json',
     });
-
   } else {
     lottie.destroy();
 
@@ -81,6 +80,8 @@ function handleTabletChange(e) {
   }
 }
 
-// Register event listener
-mediaQuery.addListener(handleTabletChange);
-handleTabletChange(mediaQuery);
+document.getElementById('lottie-web')?.addEventListener('load', () => {
+  // Register event listener
+  mediaQuery.addListener(handleTabletChange);
+  handleTabletChange(mediaQuery);
+});
