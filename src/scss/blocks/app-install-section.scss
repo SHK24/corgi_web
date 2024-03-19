@@ -25,8 +25,8 @@
   height: 100%;
   background-image: url(@img/corgi-coconut.png);
   background-repeat: no-repeat;
-  background-position: top right;
-  background-size: 77% auto;
+  background-position: top right -17px;
+  background-size: 79% auto;
   z-index: -1;
 
   @include retina {
@@ -35,8 +35,9 @@
 
   @include tablet {
     order: -1;
+    width: 133%;
     background-position: top right 39px;
-    background-size: auto;
+    background-size: contain;
   }
 
   @include mobile {
@@ -56,3 +57,4 @@
   margin: 0;
   padding-bottom: 43px;
 }
+

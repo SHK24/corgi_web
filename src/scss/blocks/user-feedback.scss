@@ -40,9 +40,9 @@
 .user-feedback__list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 48px 0 0;
   display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
 
   @include tablet {
@@ -88,11 +88,8 @@
   font-size: $text;
   line-height: $text-height;
   font-weight: $medium;
-  padding-top: 36px;
-
-  p {
-    margin: 0;
-  }
+  padding-top: 31px;
+  margin: 0;
 }
 
 .user-feedback__big-text {
@@ -101,21 +98,22 @@
   line-height: $title;
   font-weight: $extra-bold;
   margin: 0;
-  padding-top: 14px;
+  padding-top: 17px;
+  padding-bottom: 4px;
 }
 
 .user-feedback__rate-wrapper {
   display: flex;
   align-items: end;
   gap: 16px;
-  padding-top: 4px;
 }
 
 .user-feedback__rate {
   background-color: $border-button;
   border-radius: 100px;
-  padding: 16px 20px 13px;
+  padding: 15px 20px;
   width: max-content;
+  min-height: 56px;
   display: flex;
   justify-content: center;
   align-items: center;
