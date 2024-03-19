@@ -7,7 +7,7 @@
 
   @include tablet {
     padding-top: 95px;
-    padding-bottom: 138px;
+    padding-bottom: 186px;
   }
 
   @include mobile {
@@ -113,7 +113,7 @@
   }
 
   @include mobile {
-    max-width: 100%;
+    max-width: 83vw;
   }
 }
 

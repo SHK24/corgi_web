@@ -45,7 +45,6 @@
 
   span {
     font-weight: inherit;
-
   }
 }
 
@@ -123,7 +122,11 @@ span.review__text-light {
 
   @include mobile {
     display: flex;
-    overflow-x: auto ;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 

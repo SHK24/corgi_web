@@ -28,7 +28,9 @@
 
   @include mobile {
     &::before {
-      background-size: auto;
+      left: 50%;
+      transform: translate3d(-50%, 0, 0);
+      background-size: 1845px;
     }
   }
 }

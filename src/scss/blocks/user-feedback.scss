@@ -30,6 +30,10 @@
       display: none;
     }
   }
+
+  @include mobile {
+    padding-bottom: 193px;
+  }
 }
 
 .user-feedback__title {

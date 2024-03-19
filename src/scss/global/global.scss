@@ -3,6 +3,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+	position:relative;
+	overflow-x:hidden;
+}
+
 *,
 *::before,
 *::after {
@@ -19,9 +24,7 @@ html {
 body {
   margin: 0;
   height: 100%;
-  overflow-x: hidden;
   background-color: $blue;
-  position: relative;
 
   &::before,
   &::after {
@@ -32,7 +35,7 @@ body {
     max-width: 1920px;
     height: 100%;
     transform: translate3d(50%, 0, 0);
-    background-size: 122%;
+    background-size: 1920px;
     background-repeat: no-repeat;
     z-index: -5;
   }
@@ -48,6 +51,22 @@ body {
     background-position: bottom;
     background-size: 100%;
     bottom: 0;
+  }
+
+  @include desktop {
+    &::before,
+    &::after {
+      background-size: 122%;
+    }
+  }
+
+  @include tablet {
+    &::before {
+      background-size: 2231px;
+    }
+    &::after {
+      background-size: 1982px;
+    }
   }
 }
 

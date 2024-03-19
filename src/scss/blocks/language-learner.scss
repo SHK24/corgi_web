@@ -51,11 +51,16 @@
   }
 
   @include mobile {
+    &::before {
+      display: none;
+    }
+
     &::after {
       right: 0;
       width: 200%;
       height: 700px;
       transform: translate3d(44%, -44%, 0);
+      z-index: -4;
     }
   }
 }
@@ -77,7 +82,7 @@
   }
 
   @include mobile {
-    padding-top: 332px;
+    padding-top: 113%;
   }
 }
 
@@ -139,7 +144,7 @@
 
   @include mobile {
     transform: translate3d(-40%, 0, 0);
-    width: 180%;
+    width: 185%;
 
     &::before {
       width: 113%;
