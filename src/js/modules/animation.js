@@ -27,7 +27,7 @@ function handleTabletChange(e) {
   }
 }
 
-document.getElementById('lottie-web')?.addEventListener('load', () => {
+window.addEventListener('load', () => {
   // Register event listener
   mediaQuery.addListener(handleTabletChange);
   handleTabletChange(mediaQuery);
