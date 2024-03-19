@@ -35,6 +35,12 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
 *,
 *::before,
 *::after {
@@ -51,9 +57,7 @@ html {
 body {
   margin: 0;
   height: 100%;
-  overflow-x: hidden;
   background-color: #0167ff;
-  position: relative;
 }
 
 body::before,
@@ -65,7 +69,7 @@ body::after {
   max-width: 1920px;
   height: 100%;
   transform: translate3d(50%, 0, 0);
-  background-size: 122%;
+  background-size: 1920px;
   background-repeat: no-repeat;
   z-index: -5;
 }
@@ -142,48 +146,6 @@ img {
 
 .header {
   padding-top: 38px;
-}
-
-.header--sticky {
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-  -webkit-backdrop-filter: blur(5%);
-          backdrop-filter: blur(5%);
-  padding: 16px;
-  animation: slideDown 0.5s ease-in-out forwards;
-  border-bottom: 2px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 49.99%, rgba(255, 255, 255, 0) 100%);
-  background: linear-gradient(270deg, rgba(0, 87, 255, 0) 0%, rgba(0, 87, 255, 0.96) 18.75%, rgba(0, 87, 255, 0.96) 81.25%, rgba(0, 87, 255, 0) 100%);
-}
-
-.header--sticky .header__authorization-button {
-  display: none;
-}
-
-.header--sticky .header__install-link-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.header--sticky .install-link {
-  background-color: #ffffff;
-}
-
-.header--sticky .install-link:active {
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-.header--sticky .header__install-close-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  background-image: url("../img/icons/icons.svg#close-icon");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 @keyframes slideDown {
@@ -1170,20 +1132,35 @@ span.review__text-light {
      object-fit: cover;
 }
 
+@media (min-width: 1024px) {
+  body::before,
+  body::after {
+    background-size: 122%;
+  }
+}
+
 @media (max-width: 1023px) {
+  body::before {
+    background-size: 2231px;
+  }
+
+  body::after {
+    background-size: 1982px;
+  }
+
   .wrapper {
     padding-left: 40px;
     padding-right: 40px;
     margin: 0;
   }
 
-  .header__wrapper {
+  .header {
     padding-top: 20px;
   }
 
   .promo__wrapper {
     padding-top: 95px;
-    padding-bottom: 138px;
+    padding-bottom: 186px;
   }
 
   .promo__main-content {
@@ -1261,11 +1238,12 @@ span.review__text-light {
 
   .left-animation__animation-wrapper::before {
     transform: translate3d(7%, -19%, 0);
+    height: 113%;
   }
 
   .left-animation__text-content {
     align-items: center;
-    padding: 196px 40px 0 0;
+    padding: 192px 40px 0 0;
   }
 
   .language-learner {
@@ -1298,25 +1276,34 @@ span.review__text-light {
   }
 
   .corgi-trainer__wrapper {
-    padding-bottom: 184px;
+    padding-bottom: 189px;
   }
 
   .corgi-trainer__wrapper::after {
     display: none;
   }
 
+  .corgi-trainer__animation-wrapper::before {
+    transform: translate3d(5%, -30%, 0);
+    height: 92%;
+  }
+
   .app-install-section__wrapper {
     flex-direction: column;
     justify-content: end;
-    padding-top: 94%;
-    padding-bottom: 192px;
+    padding-top: 99%;
+    padding-bottom: 195px;
   }
 
   .app-install-section__image {
     order: -1;
-    width: 133%;
-    background-position: top right 39px;
+    width: 138%;
+    background-position: top right 12px;
     background-size: contain;
+  }
+
+  .app-install-section__title {
+    padding-bottom: 39px;
   }
 
   .review__list {
@@ -1369,12 +1356,8 @@ span.review__text-light {
     padding-right: 32px;
   }
 
-  .header--sticky .header__logo {
-    display: none;
-  }
-
-  .header--sticky .header__install-link-wrapper {
-    margin-left: auto;
+  .header {
+    padding-top: 1px;
   }
 
   .authorization-button {
@@ -1398,13 +1381,17 @@ span.review__text-light {
   }
 
   .promo__animation-wrapper {
-    max-width: 100%;
+    max-width: 83vw;
   }
 
   .promo__countries-list {
     padding-top: 55px;
     gap: 18px;
     row-gap: 11px;
+  }
+
+  .user-feedback__wrapper {
+    padding-bottom: 193px;
   }
 
   .user-feedback__list {
@@ -1418,7 +1405,7 @@ span.review__text-light {
   }
 
   .left-animation__animation-wrapper {
-    width: 154%;
+    width: 153%;
     transform: translate3d(-35%, 0, 0);
   }
 
@@ -1430,7 +1417,7 @@ span.review__text-light {
   }
 
   .left-animation__text-content {
-    padding: 91% 32px 0;
+    padding: 92% 32px 0;
     align-items: flex-start;
   }
 
@@ -1439,15 +1426,20 @@ span.review__text-light {
     line-height: 36px;
   }
 
+  .language-learner__wrapper::before {
+    display: none;
+  }
+
   .language-learner__wrapper::after {
     right: 0;
     width: 200%;
     height: 700px;
     transform: translate3d(44%, -44%, 0);
+    z-index: -4;
   }
 
   .language-learner__text-content {
-    padding-top: 332px;
+    padding-top: 113%;
   }
 
   .language-learner__title {
@@ -1457,12 +1449,16 @@ span.review__text-light {
 
   .language-learner__animation-wrapper {
     transform: translate3d(-40%, 0, 0);
-    width: 180%;
+    width: 185%;
   }
 
   .language-learner__animation-wrapper::before {
     width: 113%;
     transform: translate3d(-34%, 4%, 0);
+  }
+
+  .corgi-trainer__wrapper {
+    padding-bottom: 184px;
   }
 
   .corgi-trainer__animation-wrapper::before {
@@ -1471,15 +1467,21 @@ span.review__text-light {
   }
 
   .app-install-section__wrapper {
-    padding-top: 190px;
-    gap: 83px;
+    padding: 150px 0 198px;
+    gap: 68px;
   }
 
   .app-install-section__image {
     position: static;
-    min-height: 293px;
-    background-position: top right -11px;
+    min-height: 85vw;
+    width: 100%;
+    background-position: top right 11px;
     background-size: cover;
+  }
+
+  .app-install-content {
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   .review__wrapper {
@@ -1491,13 +1493,19 @@ span.review__text-light {
     overflow-x: auto;
   }
 
+  .review__list::-webkit-scrollbar {
+    display: none;
+  }
+
   .review__item {
     width: 71vw;
     flex-shrink: 0;
   }
 
   .footer::before {
-    background-size: auto;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    background-size: 1845px;
   }
 
   .footer__wrapper {
