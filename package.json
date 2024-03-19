@@ -29,6 +29,7 @@
     "eslint-plugin-import": "^2.29.1",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
+    "gulp-webpcss": "^1.1.1",
     "webp-converter": "^2.2.3"
   },
   "dependencies": {

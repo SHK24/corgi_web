@@ -62,7 +62,6 @@
 }
 
 .install-link--white {
-  color: $grey;
   border: none;
 
   &::before {
@@ -77,6 +76,10 @@
   .install-link__icon {
     background-color: $icon-blue;
     color: $white;
+  }
+
+  .install-link__text {
+    color: $grey;
   }
 
   .install-link__text-bold {
@@ -106,6 +109,8 @@
 .install-link__text {
   display: inline-flex;
   flex-direction: column;
+  font-weight: $bold;
+  color: $light-green;
 }
 
 .install-link__text-bold {

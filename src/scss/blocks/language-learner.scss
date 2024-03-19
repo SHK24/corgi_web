@@ -104,6 +104,7 @@
   position: relative;
   flex-basis: 100%;
   flex-shrink: 0;
+  z-index: -1;
 
   &::before {
     content: '';

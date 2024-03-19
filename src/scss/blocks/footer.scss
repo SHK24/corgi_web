@@ -38,9 +38,10 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 410px;
-  padding-bottom: 42px;
-  gap: 69px;
+  min-height: 464px;
+  padding-bottom: 41px;
+  gap: 63px;
+  margin-top: -53px;
 
   @include tablet {
     min-height: 462px;
@@ -204,13 +205,20 @@
 .footer__copyright {
   display: flex;
   flex-direction: column;
-  font-size: $small-text;
-  line-height: $text-height;
-  font-weight: $medium;
-  color: $empty-star;
+  span {
+    font-size: $small-text;
+    line-height: $medium-text-height;
+    font-weight: $medium;
+    color: $empty-star;
+  }
 }
 
 .footer__logo {
+  img {
+    height: 48px;
+    object-fit: cover;
+  }
+
   @include tablet {
     img {
       width: 135px;

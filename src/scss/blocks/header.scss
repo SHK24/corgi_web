@@ -1,8 +1,92 @@
+.header {
+  padding-top: 38px;
+}
+
+.header--sticky {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  backdrop-filter: blur(5%);
+  padding: 16px;
+  animation: slideDown 0.5s ease-in-out forwards;
+  border-bottom: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 49.99%, rgba(255, 255, 255, 0) 100%);
+
+  background: linear-gradient(
+    270deg,
+    rgba(0, 87, 255, 0) 0%,
+    rgba(0, 87, 255, 0.96) 18.75%,
+    rgba(0, 87, 255, 0.96) 81.25%,
+    rgba(0, 87, 255, 0) 100%
+  );
+
+  .header__authorization-button {
+    display: none;
+  }
+
+  .header__install-link-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .install-link {
+    background-color: $white;
+
+    &:active {
+      background-color: $active-white-link;
+    }
+  }
+
+  .header__install-close-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid $border-button;
+    background-image: url('@img/icons/icons.svg#close-icon');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include mobile {
+    .header__logo {
+      display: none;
+    }
+
+    .header__install-link-wrapper {
+      margin-left: auto;
+    }
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.header__install-link-wrapper {
+  display: none;
+}
+
 .header__wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 23px;
+  align-items: center;
 
   @include tablet {
     padding-top: 20px;
@@ -37,16 +121,13 @@
 .authorization-button__text {
   font-size: $medium-text;
   line-height: $medium-text-height;
+  font-weight: $bold;
   text-align: end;
   flex-grow: 1;
   color: $white;
   opacity: 40%;
-  transition-duration: 500ms;
   letter-spacing: $text-letter-spacing;
-
-  @include tablet {
-    padding-bottom: 5px;
-  }
+  transition-duration: 500ms;
 
   @include mobile {
     display: none;
@@ -56,8 +137,7 @@
 .authorization-button__icon-wrapper {
   display: flex;
   gap: 8px;
-  padding: 7px 6px;
-  min-height: 60px;
+  align-items: center;
   border: 2px solid $border-button;
   border-radius: 60px;
 }
@@ -65,18 +145,31 @@
 .authorization-button__icon {
   display: inline-flex;
   border-radius: 100px;
-  min-width: 56px;
-  min-height: 44px;
   width: 100%;
-  transition-duration: 500ms;
-  background-image: url('img/icons/icons.svg#sign-out-icon');
+  background-image: url('@img/icons/icons.svg#sign-out-icon');
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 24px auto;
+  transition-duration: 500ms;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    background-color: $white;
+    transform: translate3d(50%, -50%, 0);
+    background-position: center;
+    border-radius: 100px;
+    z-index: -1;
+    transition-duration: 600ms;
+  }
 }
 
 .authorization-button__user-icon {
-  width: 44px;
-  height: auto;
+  flex-shrink: 0;
+  height: 44px;
   object-fit: cover;
 }
 
@@ -90,32 +183,65 @@
   }
 
   .authorization-button__icon {
-    background-color: white;
+    min-width: 68px;
+    min-height: 56px;
     background-image: url('@img/icons/icons.svg#sign-in-icon');
-    background-size: 62px;
+
+    &::before {
+      width: 83%;
+      height: 78%;
+    }
   }
 
   &:hover,
   &:focus {
     cursor: pointer;
+
     .authorization-button__icon {
-      scale: 1.15 1.2;
-      background-size: 62px;
+      &::before {
+        width: 90%;
+        height: 90%;
+      }
+    }
+  }
+
+  &:active {
+    .authorization-button__icon {
+      &::before {
+        background-color: $active-white-link;
+      }
     }
   }
 }
 
 .authorization-button--out {
+  .authorization-button__icon-wrapper {
+    padding: 6px 7px;
+  }
+
+  .authorization-button__icon {
+    min-width: 64px;
+    min-height: 52px;
+
+    &::before {
+      background-color: $transparent;
+    }
+  }
+
   &:hover,
   &:focus {
-    cursor: pointer;
     .authorization-button__text {
       opacity: 100%;
     }
 
     .authorization-button__icon {
-      background-color: $white;
       background-image: url('@img/icons/icons.svg#sign-out-icon-blue');
+
+      &::before {
+        background-color: $white;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
@@ -125,7 +251,11 @@
     }
 
     .authorization-button__icon {
-      opacity: 40%;
+      &::before {
+        opacity: 40%;
+        width: 93%;
+        height: 87%;
+      }
     }
   }
 }

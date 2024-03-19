@@ -9,14 +9,18 @@ html {
   box-sizing: inherit;
 }
 
+* {
+  font-family: $family-muller;
+  font-size: $medium-text;
+  line-height: $medium-text-height;
+  font-weight: $medium;
+}
+
 body {
   margin: 0;
   height: 100%;
   overflow-x: hidden;
   background-color: $blue;
-  font-family: $family-muller;
-  font-size: $medium-text;
-  line-height: $medium-text-height;
   position: relative;
 
   &::before,
@@ -28,28 +32,22 @@ body {
     max-width: 1920px;
     height: 100%;
     transform: translate3d(50%, 0, 0);
-    background-size: contain;
+    background-size: 122%;
     background-repeat: no-repeat;
     z-index: -5;
   }
 
   &::before {
-    background-image: url(@img/bg-up.png);
+    background-image: url('@img/icons/icons.svg#bg-up');
+    background-position: top;
     top: 0;
-
-    @include retina {
-      background-image: url(@img/bg-up@2x.png);
-    }
   }
 
-  &::after  {
-    background-image: url(@img/bg-down.png);
+  &::after {
+    background-image: url('@img/icons/icons.svg#bg-down');
     background-position: bottom;
+    background-size: 100%;
     bottom: 0;
-
-    @include retina {
-      background-image: url(@img/bg-down@2x.png);
-    }
   }
 }
 
