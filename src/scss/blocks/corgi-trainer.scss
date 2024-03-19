@@ -23,11 +23,15 @@
   }
 
   @include tablet {
-    padding-bottom: 184px;
+    padding-bottom: 189px;
 
     &::after {
       display: none;
     }
+  }
+
+  @include mobile {
+    padding-bottom: 184px;
   }
 }
 
@@ -42,6 +46,12 @@
     }
   }
 
+  @include tablet {
+    &::before {
+      transform: translate3d(5%, -30%, 0);
+      height: 92%;
+    }
+  }
   @include mobile {
 
     &::before {

@@ -1,64 +1,72 @@
 .header {
   padding-top: 38px;
-}
 
-.header--sticky {
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-  backdrop-filter: blur(5%);
-  padding: 16px;
-  animation: slideDown 0.5s ease-in-out forwards;
-  border-bottom: 2px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 49.99%, rgba(255, 255, 255, 0) 100%);
-
-  background: linear-gradient(
-    270deg,
-    rgba(0, 87, 255, 0) 0%,
-    rgba(0, 87, 255, 0.96) 18.75%,
-    rgba(0, 87, 255, 0.96) 81.25%,
-    rgba(0, 87, 255, 0) 100%
-  );
-
-  .header__authorization-button {
-    display: none;
-  }
-
-  .header__install-link-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .install-link {
-    background-color: $white;
-
-    &:active {
-      background-color: $active-white-link;
-    }
-  }
-
-  .header__install-close-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 2px solid $border-button;
-    background-image: url('@img/icons/icons.svg#close-icon');
-    background-repeat: no-repeat;
-    background-position: center;
+  @include tablet {
+    padding-top: 20px;
   }
 
   @include mobile {
-    .header__logo {
-      display: none;
-    }
-
-    .header__install-link-wrapper {
-      margin-left: auto;
-    }
+    padding-top: 1px;
   }
 }
+
+// .header--sticky {
+//   position: fixed;
+//   width: 100%;
+//   z-index: 10;
+//   backdrop-filter: blur(5%);
+//   padding: 16px;
+//   animation: slideDown 0.5s ease-in-out forwards;
+//   border-bottom: 2px solid;
+//   border-image-slice: 1;
+//   border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 49.99%, rgba(255, 255, 255, 0) 100%);
+
+//   background: linear-gradient(
+//     270deg,
+//     rgba(0, 87, 255, 0) 0%,
+//     rgba(0, 87, 255, 0.96) 18.75%,
+//     rgba(0, 87, 255, 0.96) 81.25%,
+//     rgba(0, 87, 255, 0) 100%
+//   );
+
+//   .header__authorization-button {
+//     display: none;
+//   }
+
+//   .header__install-link-wrapper {
+//     display: flex;
+//     align-items: center;
+//     gap: 16px;
+//   }
+
+//   .install-link {
+//     background-color: $white;
+
+//     &:active {
+//       background-color: $active-white-link;
+//     }
+//   }
+
+//   .header__install-close-icon {
+//     width: 60px;
+//     height: 60px;
+//     border-radius: 50%;
+//     border: 2px solid $border-button;
+//     background-image: url('@img/icons/icons.svg#close-icon');
+//     background-repeat: no-repeat;
+//     background-position: center;
+//   }
+
+//   @include mobile {
+//     .header__logo {
+//       display: none;
+//     }
+
+//     .header__install-link-wrapper {
+//       margin-left: auto;
+//     }
+//   }
+// }
 
 @keyframes slideDown {
   from {
@@ -87,10 +95,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
-  @include tablet {
-    padding-top: 20px;
-  }
 }
 
 .header__logo {

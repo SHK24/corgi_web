@@ -7,13 +7,13 @@
   @include tablet {
     flex-direction: column;
     justify-content: end;
-    padding-top: 94%;
-    padding-bottom: 192px;
+    padding-top: 99%;
+    padding-bottom: 195px;
   }
 
   @include mobile {
-    padding-top: 190px;
-    gap: 83px
+    padding: 150px 0 198px;
+    gap: 68px
   }
 }
 
@@ -35,26 +35,36 @@
 
   @include tablet {
     order: -1;
-    width: 133%;
-    background-position: top right 39px;
+    width: 138%;
+    background-position: top right 12px;
     background-size: contain;
   }
 
   @include mobile {
     position: static;
-    min-height: 293px;
-    background-position: top right -11px;
+    min-height: 85vw;
+    width: 100%;
+    background-position: top right 11px;
     background-size: cover;
   }
 }
 
 .app-install-content {
   flex-basis: 45%;
+
+  @include mobile {
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+  }
 }
 
 .app-install-section__title {
   color: $white;
   margin: 0;
   padding-bottom: 43px;
+
+  @include tablet {
+    padding-bottom: 39px;
+  }
 }
 
