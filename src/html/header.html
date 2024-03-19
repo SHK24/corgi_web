@@ -4,22 +4,30 @@
       <img
         src="@img/icons/icons.svg#logo-website"
         class="authorization-button__user-icon"
-        alt=""
+        alt="Corgi logo"
       />
     </a>
 
     <button
       class="header__authorization-button authorization-button authorization-button--in"
+      type="button" aria-label="Sign In"
     >
       <span class="authorization-button__text">Sign In</span>
       <span class="authorization-button__icon-wrapper">
         <img
           src="@img/icons/icons.svg#corgi-icon"
           class="authorization-button__user-icon"
+          width="44"
+          height="44"
           alt=""
         />
         <span class="authorization-button__icon"> </span>
       </span>
     </button>
+    <div class="header__install-link-wrapper">
+
+      @@include('./install-link.html', {'class': 'install-link--white'})
+      <span class="header__install-close-icon"></span>
+    </div>
   </div>
 </header>
