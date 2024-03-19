@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная</title>
-  <link rel="stylesheet" href="css/style.min.css?_v=20240315232835">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.3/lottie.min.js?_v=20240315232835"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Learn a new language simply by speaking it with your personalized ChatGPT-based tutor. Try it for free"
+  />
+  <title>Corgi AI: Your Language Teacher</title>
+  <link rel="stylesheet" href="css/style.min.css?_v=20240319160634" />
+  <link
+    rel="preload"
+    href="fonts/MullerRegular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/MullerMedium.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/MullerBold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/MullerExtraBold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.3/lottie.min.js?_v=20240319160634"></script>
 </head>
 
 
@@ -16,23 +48,41 @@
       <img
         src="img/icons/icons.svg#logo-website"
         class="authorization-button__user-icon"
-        alt=""
+        alt="Corgi logo"
       />
     </a>
 
     <button
       class="header__authorization-button authorization-button authorization-button--in"
+      type="button" aria-label="Sign In"
     >
       <span class="authorization-button__text">Sign In</span>
       <span class="authorization-button__icon-wrapper">
         <img
           src="img/icons/icons.svg#corgi-icon"
           class="authorization-button__user-icon"
+          width="44"
+          height="44"
           alt=""
         />
         <span class="authorization-button__icon"> </span>
       </span>
     </button>
+    <div class="header__install-link-wrapper">
+
+      <a href="https://chromewebstore.google.com/detail/corgi-ai-your-language-te/jgabolakboecklnmocdljjcdkkhjigck" class="install-link--white install-link " aria-label="install the application">
+  <span class="install-link__icon">
+    <svg width="24" height="24">
+      <use xlink:href="img/icons/icons.svg#google-icon"></use>
+    </svg>
+  </span>
+  <span class="install-link__text">
+    Install for <span class="install-link__text-bold">Chrome</span>
+  </span>
+</a>
+
+      <span class="header__install-close-icon"></span>
+    </div>
   </div>
 </header>
 
@@ -41,18 +91,18 @@
         <div class="promo__wrapper wrapper">
           <div class="promo__main-content">
             <div class="promo__text-content">
-              <span class="promo__text-wrapper"
-                >Powered by
+              <span class="promo__text-wrapper">
+                <span class="promo__text-light">Powered by</span>
                 <span class="promo__text-background">Chat GPT</span>
               </span>
               <h1 class="promo__title main-title">
                 Fluent in a flash with Corgi
               </h1>
               <p class="promo__text">
-                Harness the Power of&nbsp;AI for&nbsp;Fast and Effective Language
-                Learning
+                Harness the Power of&nbsp;AI for&nbsp;Fast and Effective
+                Language Learning
               </p>
-              <a href="#" class="@@class install-link " aria-label="install the application">
+              <a href="https://chromewebstore.google.com/detail/corgi-ai-your-language-te/jgabolakboecklnmocdljjcdkkhjigck" class="@@class install-link " aria-label="install the application">
   <span class="install-link__icon">
     <svg width="24" height="24">
       <use xlink:href="img/icons/icons.svg#google-icon"></use>
@@ -71,55 +121,31 @@
           </div>
           <ul class="promo__countries-list">
             <li>
-              <picture><source srcset="img/usa-flag.webp, img/usa-flag@2x.webp 2x" type="image/webp"><img src="img/usa-flag.png" srcset="img/usa-flag@2x.png 2x" /></picture>
+              <picture><source srcset="img/usa-flag.webp, img/usa-flag@2x.webp 2x" type="image/webp"><img src="img/usa-flag.png" srcset="img/usa-flag@2x.png 2x" width="80" height="80" alt="Learn English" loading="lazy"/></picture>
             </li>
             <li>
-              <img
-                src="img/italy-flag.png"
-                srcset="img/italy-flag@2x.png 2x"
-              />
+              <picture><source srcset="img/italy-flag.webp, img/italy-flag@2x.webp 2x" type="image/webp"><img src="img/italy-flag.png" srcset="img/italy-flag@2x.png 2x" width="80" height="80" alt="Learn Italian" loading="lazy"/></picture>
             </li>
             <li>
-              <img
-                src="img/france-flag.png"
-                srcset="img/france-flag@2x.png 2x"
-              />
+              <picture><source srcset="img/france-flag.webp, img/france-flag@2x.webp 2x" type="image/webp"><img src="img/france-flag.png" srcset="img/france-flag@2x.png 2x" width="80" height="80" alt="Learn French" loading="lazy"/></picture>
             </li>
             <li>
-              <img
-                src="img/spain-flag.png"
-                srcset="img/spain-flag@2x.png 2x"
-              />
+              <picture><source srcset="img/spain-flag.webp, img/spain-flag@2x.webp 2x" type="image/webp"><img src="img/spain-flag.png" srcset="img/spain-flag@2x.png 2x" width="80" height="80" alt="Learn Spanish" loading="lazy"/></picture>
             </li>
             <li>
-              <img
-                src="img/germany-flag.png"
-                srcset="img/germany-flag@2x.png 2x"
-              />
+              <picture><source srcset="img/germany-flag.webp, img/germany-flag@2x.webp 2x" type="image/webp"><img src="img/germany-flag.png" srcset="img/germany-flag@2x.png 2x" width="80" height="80" alt="Learn German" loading="lazy"/></picture>
             </li>
             <li>
-              <img
-                src="img/brazil-flag.png"
-                srcset="img/brazil-flag@2x.png 2x"
-              />
+              <picture><source srcset="img/brazil-flag.webp, img/brazil-flag@2x.webp 2x" type="image/webp"><img src="img/brazil-flag.png" srcset="img/brazil-flag@2x.png 2x" width="80" height="80" alt="Learn Portuguese" loading="lazy"/></picture>
             </li>
             <li>
-              <img
-                src="img/india-flag.png"
-                srcset="img/india-flag@2x.png 2x"
-              />
+              <picture><source srcset="img/india-flag.webp, img/india-flag@2x.webp 2x" type="image/webp"><img src="img/india-flag.png" srcset="img/india-flag@2x.png 2x" width="80" height="80" alt="Learn Hindi" loading="lazy" /></picture>
             </li>
             <li>
-              <img
-                src="img/russia-flags.png"
-                srcset="img/russia-flags@2x.png 2x"
-              />
+              <picture><source srcset="img/russia-flags.webp, img/russia-flags@2x.webp 2x" type="image/webp"><img src="img/russia-flags.png" srcset="img/russia-flags@2x.png 2x" width="80" height="80" alt="Learn Russian" loading="lazy" /></picture>
             </li>
             <li>
-              <img
-                src="img/china-flags.png"
-                srcset="img/china-flags@2x.png 2x"
-              />
+              <picture><source srcset="img/china-flags.webp, img/china-flags@2x.webp 2x" type="image/webp"><img src="img/china-flags.png" srcset="img/china-flags@2x.png 2x" width="80" height="80" alt="Learn Chinese" loading="lazy" /></picture>
             </li>
             <li class="promo__countries-item">
               <span
@@ -127,7 +153,8 @@
               >
                 +7
               </span>
-              <span class="promo__countries-text promo__countries-text--not-background"
+              <span
+                class="promo__countries-text promo__countries-text--not-background"
                 ><span
                   class="promo__countries-text promo__countries-text--light"
                 >
@@ -136,7 +163,7 @@
                 Other</span
               >
             </li>
-          </>
+          </ul>
         </div>
       </section>
       <section class="user-feedback">
@@ -147,19 +174,19 @@
           <ul class="user-feedback__list">
             <li class="user-feedback__item">
               <div class="user-feedback__image linear-gradient-bg">
-                <picture><source srcset="img/25k.webp, img/25k@2x.webp 2x" type="image/webp"><img src="img/25k.png" srcset="img/25k@2x.png 2x" /></picture>
+                <picture><source srcset="img/25k.webp, img/25k@2x.webp 2x" type="image/webp"><img src="img/25k.png" srcset="img/25k@2x.png 2x" width="374" height="374" alt=""  loading="lazy"/></picture>
               </div>
-              <div class="user-feedback__text">
-                <p>Users worldwide</p>
-                <p class="user-feedback__big-text">20.000+</p>
+              <div>
+                <p class="user-feedback__text">Users worldwide</p>
+                <p class="user-feedback__big-text">25.000+</p>
               </div>
             </li>
             <li class="user-feedback__item">
               <div class="user-feedback__image linear-gradient-bg">
-                <picture><source srcset="img/big-star.webp, img/big-star@2x.webp 2x" type="image/webp"><img src="img/big-star.png" srcset="img/big-star@2x.png 2x" /></picture>
+                <picture><source srcset="img/big-star.webp, img/big-star@2x.webp 2x" type="image/webp"><img src="img/big-star.png" srcset="img/big-star@2x.png 2x" width="374" height="374" alt="" loading="lazy" /></picture>
               </div>
-              <div class="user-feedback__text">
-                <p>Rating in Google Chrome</p>
+              <div>
+                <p class="user-feedback__text">Rating in Google Chrome</p>
                 <div class="user-feedback__rate-wrapper">
                   <p class="user-feedback__big-text">4.5+</p>
                   <p
@@ -207,13 +234,10 @@
             </li>
             <li class="user-feedback__item">
               <div class="user-feedback__image linear-gradient-bg">
-                <img
-                  src="img/big-google-icon.png"
-                  srcset="img/big-google-icon@2x.png 2x"
-                />
+                <picture><source srcset="img/big-google-icon.webp, img/big-google-icon@2x.webp 2x" type="image/webp"><img src="img/big-google-icon.png" srcset="img/big-google-icon@2x.png 2x" width="374" height="374" alt="" loading="lazy"/></picture>
               </div>
-              <div class="user-feedback__text">
-                <p>Editor's Choice</p>
+              <div>
+                <p class="user-feedback__text">Editor's Choice</p>
                 <p class="user-feedback__big-text">Google</p>
               </div>
             </li>
@@ -288,155 +312,143 @@
           </p>
           <ul class="review__list">
             <li class="review__item linear-gradient-bg">
-  <p class="review__name">Mr Crazy</p>
-  <p class="review__rate" aria-label="Rating is 5 out of 5">
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg  width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#679BFF" ></use>
-    </svg>
-  </p>
-  <p class="review__text">
-    Thank you so&nbsp;much to&nbsp;a&nbsp;team who made this such a&nbsp;helpful
-    application... thanks a&nbsp;lot :)
-  </p>
-</li>
-
+              <p class="review__name">Mr Crazy</p>
+              <p class="review__rate" aria-label="Rating is 5 out of 5">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg  width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF" ></use>
+                </svg>
+              </p>
+              <p class="review__text">
+                Super good If&nbsp;I&nbsp;can give 100 stars&nbsp;I would give&nbsp;it.&nbsp;it&nbsp;is&nbsp;a&nbsp;nice app
+              </p>
+            </li>
             <li class="review__item linear-gradient-bg">
-  <p class="review__name">Mr Crazy</p>
-  <p class="review__rate" aria-label="Rating is 5 out of 5">
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg  width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#679BFF" ></use>
-    </svg>
-  </p>
-  <p class="review__text">
-    Thank you so&nbsp;much to&nbsp;a&nbsp;team who made this such a&nbsp;helpful
-    application... thanks a&nbsp;lot :)
-  </p>
-</li>
-
+              <p class="review__name">MOHIT SHUKLA</p>
+              <p class="review__rate" aria-label="Rating is 5 out of 5">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg  width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF" ></use>
+                </svg>
+              </p>
+              <p class="review__text">
+                Thank you so&nbsp;much to&nbsp;a&nbsp;team who made this such a&nbsp;helpful application... thanks a&nbsp;lot :)
+              </p>
+            </li>
             <li class="review__item linear-gradient-bg">
-  <p class="review__name">Mr Crazy</p>
-  <p class="review__rate" aria-label="Rating is 5 out of 5">
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg  width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#679BFF" ></use>
-    </svg>
-  </p>
-  <p class="review__text">
-    Thank you so&nbsp;much to&nbsp;a&nbsp;team who made this such a&nbsp;helpful
-    application... thanks a&nbsp;lot :)
-  </p>
-</li>
-
+              <p class="review__name">Adalee Laizure</p>
+              <p class="review__rate" aria-label="Rating is 5 out of 5">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg  width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF" ></use>
+                </svg>
+              </p>
+              <p class="review__text">
+                Its like my&nbsp;best friend he&nbsp;is&nbsp;really cute
+              </p>
+            </li>
             <li class="review__item linear-gradient-bg">
-  <p class="review__name">Mr Crazy</p>
-  <p class="review__rate" aria-label="Rating is 5 out of 5">
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg  width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#679BFF" ></use>
-    </svg>
-  </p>
-  <p class="review__text">
-    Thank you so&nbsp;much to&nbsp;a&nbsp;team who made this such a&nbsp;helpful
-    application... thanks a&nbsp;lot :)
-  </p>
-</li>
-
+              <p class="review__name">Christian Ducharme</p>
+              <p class="review__rate" aria-label="Rating is 5 out of 5">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg  width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF" ></use>
+                </svg>
+              </p>
+              <p class="review__text">
+                Good! I&nbsp;use the translate button to&nbsp;understand, recommended!
+              </p>
+            </li>
             <li class="review__item linear-gradient-bg">
-  <p class="review__name">Mr Crazy</p>
-  <p class="review__rate" aria-label="Rating is 5 out of 5">
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg  width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#679BFF" ></use>
-    </svg>
-  </p>
-  <p class="review__text">
-    Thank you so&nbsp;much to&nbsp;a&nbsp;team who made this such a&nbsp;helpful
-    application... thanks a&nbsp;lot :)
-  </p>
-</li>
-
+              <p class="review__name">Taoufik EL KOM</p>
+              <p class="review__rate" aria-label="Rating is 4 out of 5">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg  width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#679BFF" ></use>
+                </svg>
+              </p>
+              <p class="review__text">
+                Thank you for this application i&nbsp;hope you add arabic language
+              </p>
+            </li>
             <li class="review__item linear-gradient-bg">
-  <p class="review__name">Mr Crazy</p>
-  <p class="review__rate" aria-label="Rating is 5 out of 5">
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
-    </svg>
-    <svg  width="24" height="24" viewBox="0 0 24 24">
-      <use xlink:href="#star" fill="#679BFF" ></use>
-    </svg>
-  </p>
-  <p class="review__text">
-    Thank you so&nbsp;much to&nbsp;a&nbsp;team who made this such a&nbsp;helpful
-    application... thanks a&nbsp;lot :)
-  </p>
-</li>
-
+              <p class="review__name">chulbd 1</p>
+              <p class="review__rate" aria-label="Rating is 5 out of 5">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
+                </svg>
+                <svg  width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF" ></use>
+                </svg>
+              </p>
+              <p class="review__text">
+                Excellent finally found what&nbsp;I needed 5/5
+              </p>
+            </li>
           </ul>
         </div>
       </section>
@@ -446,7 +458,7 @@
             <h2 class="app-install-section__title main-title">
               Begin your linguistic journey now
             </h2>
-            <a href="#" class="@@class install-link " aria-label="install the application">
+            <a href="https://chromewebstore.google.com/detail/corgi-ai-your-language-te/jgabolakboecklnmocdljjcdkkhjigck" class="app-install-link install-link " aria-label="install the application">
   <span class="install-link__icon">
     <svg width="24" height="24">
       <use xlink:href="img/icons/icons.svg#google-icon"></use>
@@ -470,10 +482,11 @@
         <li><a class="footer__link" href="#">Privacy Policy</a></li>
         <li><a class="footer__link" href="#">Terms of Use</a></li>
       </ul>
-      <a class="footer__link footer__link--icon" href="#">
+      <a class="footer__link footer__link--icon" href="https://twitter.com/JoinCorgi" alt="Official Twitter profile of the company">
         <svg width="32" height="32" viewBox="0 0 32 32">
           <use xlink:href="img/icons/icons.svg#x-icon"></use>
         </svg>
+        <span class="visually-hidden">Official Twitter profile of the company</span>
       </a>
     </div>
     <div class="footer__copyright-wrapper">
@@ -482,7 +495,9 @@
           src="img/icons/icons.svg#logo-website"
           width="108"
           height="48"
+          alt=""
         />
+        <span class="visually-hidden">Main Page</span>
       </a>
       <p class="footer__copyright">
         <span>Copyright 2024 Corgi.</span>
@@ -525,5 +540,5 @@
       </linearGradient>
     </defs>
   </svg>
-  <script src="js/app.min.js?_v=20240315232835"></script>
+  <script src="js/app.min.js?_v=20240319160634"></script>
 </html>
