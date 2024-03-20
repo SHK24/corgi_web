@@ -14,7 +14,6 @@ function handleTabletChange(e) {
   if (e.matches) {
     lottie.destroy();
     loadAnimation('promo-lottie-animation', 'files/promo-main.json');
-    loadAnimation('ai-lottie-animation', 'files/promo-main.json');
     loadAnimation('ai-lottie-animation', 'files/corgi-ai.json');
     loadAnimation('language-lottie-animation', 'files/language.json');
     loadAnimation('trainer-lottie-animation', 'files/practice.json');

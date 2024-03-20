@@ -3,9 +3,10 @@ html {
   scroll-behavior: smooth;
 }
 
-html, body {
-	position:relative;
-	overflow-x:hidden;
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
 }
 
 *,
@@ -23,51 +24,11 @@ html, body {
 
 body {
   margin: 0;
-  height: 100%;
   background-color: $blue;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    right: 50%;
-    width: 100%;
-    max-width: 1920px;
-    height: 100%;
-    transform: translate3d(50%, 0, 0);
-    background-size: 1920px;
-    background-repeat: no-repeat;
-    z-index: -5;
-  }
-
-  &::before {
-    background-image: url('@img/icons/icons.svg#bg-up');
-    background-position: top;
-    top: 0;
-  }
-
-  &::after {
-    background-image: url('@img/icons/icons.svg#bg-down');
-    background-position: bottom;
-    background-size: 100%;
-    bottom: 0;
-  }
-
-  @include desktop {
-    &::before,
-    &::after {
-      background-size: 122%;
-    }
-  }
-
-  @include tablet {
-    &::before {
-      background-size: 2231px;
-    }
-    &::after {
-      background-size: 1982px;
-    }
-  }
+  background-image: url('@img/bg-up.svg'), url('@img/bg-down.svg');
+  background-size: 1920px auto, 1989px auto;
+  background-position: top center, bottom center;
+  background-repeat: no-repeat;
 }
 
 img {

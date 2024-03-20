@@ -3,14 +3,15 @@
   flex-direction: column;
   color: $white;
   padding-bottom: 283px;
-  padding-top: 47px;
+  padding-top: 157px;
 
   @include tablet {
-    padding-top: 95px;
+    padding-top: 177px;
     padding-bottom: 186px;
   }
 
   @include mobile {
+    padding-top: 170px;
     padding-bottom: 185px;
   }
 }
@@ -146,6 +147,12 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  @include tablet {
+    &--tablet {
+      display: none;
+    }
+  }
 }
 
 .promo__countries-text {
@@ -154,13 +161,21 @@
   font-weight: $extra-bold;
 
   &--background {
+    position: relative;
     font-size: $text;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
     padding: 15px 24px;
+    min-height: 54px;
     background-color: $border-button;
     border-radius: 100px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      content: '+7';
+      vertical-align: bottom;
+    }
   }
 
   &--light {
@@ -171,9 +186,13 @@
   @include tablet {
     &--background {
       min-width: 60px;
-      height: 60px;
+      min-height: 60px;
       border-radius: 50%;
       padding: 0;
+
+      &::before {
+        content: '+10';
+      }
     }
 
     &--not-background {
