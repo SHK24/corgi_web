@@ -63,6 +63,8 @@
 
 .install-link--white {
   border: none;
+  min-width: 193px;
+  padding: 10px 16px;
 
   &::before {
     width: 100%;
