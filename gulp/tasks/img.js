@@ -21,7 +21,7 @@ export const img = () => {
     .pipe(app.plugins.if(app.isBuild, app.plugins.newer(app.path.build.img)))
     .pipe(
       app.plugins.if(
-        app.isBuild,
+        false,
         imagemin([
           optipng({ optimizationLevel: 5 }),
           mozjpeg({ quality: 75, progressive: true }),
