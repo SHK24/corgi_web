@@ -7,10 +7,10 @@
     content: '';
     position: absolute;
     top: 0;
-    right: -23%;
+    right: 0;
     width: 45%;
     height: 1000px;
-    transform: translate3d(0, -41%, 0);
+    transform: translate3d(450px, -41%, 0);
     background-image: url(@img/china.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -36,6 +36,25 @@
 }
 
 .corgi-trainer__animation-wrapper {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 0;
+    transform: translate3d(-20%, 25%, 0);
+    width: 500px;
+    height: 500px;
+    background-image: url(@img/solid-circle.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include retina {
+      background-image: url(@img/solid-circle@2x.png);
+    }
+  }
+
   &::before {
     transform: translate3d(4%, -29%, 0);
     height: 94%;
@@ -47,12 +66,19 @@
   }
 
   @include tablet {
+    &::after {
+      transform: translate3d(-17%, 25%, 0);
+    }
+
     &::before {
       transform: translate3d(5%, -30%, 0);
       height: 92%;
     }
   }
   @include mobile {
+    &::after {
+      transform: translate3d(-19%, 41%, 0);
+    }
 
     &::before {
       height: 83%;
