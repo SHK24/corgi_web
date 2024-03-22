@@ -31,6 +31,10 @@ body {
   background-repeat: no-repeat;
 }
 
+.error-page {
+  background-image: url('@img/bg-up.svg');
+}
+
 img {
   max-width: 100%;
   height: auto;
