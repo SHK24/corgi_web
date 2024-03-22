@@ -3,15 +3,45 @@
     <div class="footer__links-wrapper">
       <ul class="footer__list">
         <li><a class="footer__link" href="#">Plans</a></li>
+        <li><a class="footer__link" href="#">Blog</a></li>
         <li><a class="footer__link" href="#">Privacy Policy</a></li>
         <li><a class="footer__link" href="#">Terms of Use</a></li>
       </ul>
-      <a class="footer__link footer__link--icon" href="https://twitter.com/JoinCorgi" alt="Official Twitter profile of the company">
-        <svg width="32" height="32" viewBox="0 0 32 32">
-          <use xlink:href="@img/icons/icons.svg#x-icon"></use>
-        </svg>
-        <span class="visually-hidden">Official Twitter profile of the company</span>
-      </a>
+      <div class="footer__social-links">
+        <button
+          aria-label="copy email"
+          type="button"
+          id="copyButton"
+          class="footer__mail-button"
+        >
+          <span class="footer__mail-content footer__mail-content--copied">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <use xlink:href="@img/icons/icons.svg#mail-copied-icon"></use>
+            </svg>
+            E-mail copied
+          </span>
+          <span class="footer__mail-content footer__mail-content--mail">
+            hey@getcorgi.com
+          </span>
+          <span class="footer__mail-button-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <use xlink:href="@img/icons/icons.svg#mail-icon"></use>
+            </svg>
+          </span>
+        </button>
+        <a
+          class="footer__link footer__link--icon"
+          href="https://twitter.com/JoinCorgi"
+          alt="Official Twitter profile of the company"
+        >
+          <svg width="32" height="32" viewBox="0 0 32 32">
+            <use xlink:href="@img/icons/icons.svg#x-icon"></use>
+          </svg>
+          <span class="visually-hidden"
+            >Official Twitter profile of the company</span
+          >
+        </a>
+      </div>
     </div>
     <div class="footer__copyright-wrapper">
       <a class="footer__logo" href="#">
