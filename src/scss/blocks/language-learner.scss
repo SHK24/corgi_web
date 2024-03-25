@@ -69,10 +69,12 @@
   max-width: 429px;
   top: 50%;
   left: 0;
+  padding-right: 20px;
   transform: translate3d(12%, -35%, 10px);
 
   @include tablet {
     max-width: 505px;
+    padding-right: 0;
     position: static;
     order: 2;
     padding-top: 208px;
