@@ -4,6 +4,7 @@ import { path } from './gulp/config/path.js';
 import { plugins } from './gulp/config/plugins.js';
 
 import { copy } from './gulp/tasks/copy.js';
+import { robots } from './gulp/tasks/robots.js';
 import { reset } from './gulp/tasks/reset.js';
 import { html } from './gulp/tasks/html.js';
 import { server } from './gulp/tasks/server.js';
@@ -30,7 +31,7 @@ function watcher() {
   gulp.watch(path.watch.img, img);
 }
 
-const mainTasks = gulp.parallel(copy, ttfToWoff, ttfToWoff2, html, scss, js, img, sprite);
+const mainTasks = gulp.parallel(copy, robots, ttfToWoff, ttfToWoff2, html, scss, js, img, sprite);
 const serverTasks = gulp.parallel(watcher, server);
 
 const dev = gulp.series(reset, mainTasks, serverTasks);
