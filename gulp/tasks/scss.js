@@ -1,8 +1,9 @@
 /* global app, */
 
-import * as dartSass from 'sass'
+import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import rename from 'gulp-rename';
+import webpcss from 'gulp-webpcss';
 import csso from 'gulp-csso';
 
 import autoprefixer from 'gulp-autoprefixer';
@@ -28,6 +29,7 @@ export const scss = () => {
     )
     .pipe(app.plugins.if(app.isBuild, groupCssMediaQueries()))
     .pipe(app.plugins.replace(/@img\//g, '../img/'))
+    .pipe(app.plugins.if(app.isBuild, webpcss({})))
     .pipe(
       app.plugins.if(
         app.isBuild,
