@@ -19,9 +19,9 @@ export const img = () => {
     .pipe(app.plugins.if(app.isBuild, app.gulp.dest(app.path.build.img)))
     .pipe(app.plugins.if(app.isBuild, app.gulp.src(app.path.src.img)))
     .pipe(app.plugins.if(app.isBuild, app.plugins.newer(app.path.build.img)))
-    .pipe(
+    /*.pipe(
       app.plugins.if(
-        false,
+        app.isBuild,
         imagemin([
           optipng({ optimizationLevel: 5 }),
           mozjpeg({ quality: 75, progressive: true }),
@@ -39,7 +39,7 @@ export const img = () => {
           }),
         ])
       )
-    )
+    )*/
     .pipe(app.gulp.dest(app.path.build.img))
     .pipe(app.gulp.src(app.path.src.svg))
     .pipe(app.gulp.dest(app.path.build.img))
