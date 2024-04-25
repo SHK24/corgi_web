@@ -293,11 +293,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 327px;
+  max-width: 547px;
   padding: 0 16px;
 
   @include tablet {
-    max-width: 434px;
+    max-width: 574px;
   }
 
   @include mobile {
