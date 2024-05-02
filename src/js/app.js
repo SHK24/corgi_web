@@ -1,3 +1,4 @@
-import animation from './modules/animation.js';
-import stickyHeader from './modules/stickyHeader.js';
-import mailCopy from './modules/mailCopy.js';
+import './modules/animation.js';
+import './modules/stickyHeader.js';
+import './modules/mailCopy.js';
+import './modules/userPanel.js';
