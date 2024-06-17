@@ -1,34 +1,36 @@
 <footer class="footer">
   <div class="footer__wrapper wrapper">
     <div class="footer__links-wrapper">
-      <ul class="footer__list">
-        <li><a class="footer__link" href="/pricing">Plans</a></li>
-        <li><a class="footer__link" href="/en/blog">Blog</a></li>
-        <li><a class="footer__link" href="../privacy-policy">Privacy Policy</a></li>
-        <li><a class="footer__link" href="../conditions">Terms of Use</a></li>
-      </ul>
+      <button
+        aria-label="copy email"
+        type="button"
+        id="copyButton"
+        class="footer__mail-button"
+      >
+        <span class="footer__mail-content footer__mail-content--copied">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <use xlink:href="@img/icons/icons.svg#mail-copied-icon"></use>
+          </svg>
+          E-mail copied
+        </span>
+        <span class="footer__mail-content footer__mail-content--mail">
+          hey@getcorgi.com
+        </span>
+        <span class="footer__mail-button-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <use xlink:href="@img/icons/icons.svg#mail-icon"></use>
+          </svg>
+        </span>
+      </button>
       <div class="footer__social-links">
-        <button
-          aria-label="copy email"
-          type="button"
-          id="copyButton"
-          class="footer__mail-button"
-        >
-          <span class="footer__mail-content footer__mail-content--copied">
-            <svg width="24" height="24" viewBox="0 0 24 24">
-              <use xlink:href="@img/icons/icons.svg#mail-copied-icon"></use>
-            </svg>
-            E-mail copied
-          </span>
-          <span class="footer__mail-content footer__mail-content--mail">
-            hey@getcorgi.com
-          </span>
-          <span class="footer__mail-button-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24">
-              <use xlink:href="@img/icons/icons.svg#mail-icon"></use>
-            </svg>
-          </span>
-        </button>
+        <ul class="footer__list">
+          <li><a class="footer__link" href="/pricing">Pricing</a></li>
+          <li><a class="footer__link" href="/en/blog">Blog</a></li>
+          <li>
+            <a class="footer__link" href="../privacy-policy">Privacy Policy</a>
+          </li>
+          <li><a class="footer__link" href="../conditions">Terms of Use</a></li>
+        </ul>
         <a
           class="footer__link footer__link--icon"
           href="https://twitter.com/JoinCorgi"
@@ -54,9 +56,11 @@
         <span class="visually-hidden">Main Page</span>
       </a>
       <p class="footer__copyright">
-        <span>© 2024 Corgi Software Limited</span>
         <span>
-          111 Fulham Palace Road, London, United Kingdom, W6 8JA<br/>
+          111 Fulham Palace Road, London, United Kingdom, W6 8JA
+        </span>
+        <span>© 2024 Corgi Software Limited
+          <br />
           All rights reserved
         </span>
       </p>

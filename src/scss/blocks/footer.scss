@@ -6,14 +6,15 @@
     position: absolute;
     bottom: 0;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    width: 1900px;
     height: auto;
     background-image: url(@img/footer-bg.png);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: bottom;
+    background-position: bottom center;
     z-index: -1;
+    transform: translate3d(-50%, 0, 0);
 
     @include retina {
       background-image: url(@img/footer-bg@2x.png);
@@ -36,49 +37,52 @@
 }
 
 .footer__wrapper {
-  max-width: 1263px;
+  max-width: 1143px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 464px;
-  padding-bottom: 41px;
-  gap: 70px;
+  min-height: 418px;
+  padding-bottom: 42px;
+  gap: 37px;
   margin-top: -58px;
 
   @include tablet {
-    min-height: 614px;
-    justify-content: flex-start;
+    min-height: 744px;
+    justify-content: center;
     padding-left: 22px;
-    gap: 112px;
-    padding-bottom: 200px;
+    gap: 30px;
+    padding-bottom: 138px;
   }
 
   @include mobile {
+    justify-content: flex-start;
     padding-left: $mobile-padding;
     padding-right: $mobile-padding;
-    gap: 121px;
-    min-height: 854px;
+    gap: 29px;
+    min-height: 880px;
   }
 }
 
 .footer__links-wrapper {
   display: flex;
-  align-items: center;
-  padding-right: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 38px;
+  padding-bottom: 2px;
 
   @include tablet {
     flex-direction: column;
     align-items: flex-start;
     padding-right: 0;
     padding-top: 29px;
-    gap: 51px;
+    gap: 27px;
   }
 
   @include mobile {
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 22px;
-    gap: 50px;
+    gap: 27px;
   }
 }
 
@@ -89,21 +93,19 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 18px;
+  gap: 14px;
 
   @include tablet {
     gap: 21px;
   }
 
   @include mobile {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    row-gap: 13px;
+    flex-direction: column;
+    gap: 12px;
     width: 100%;
 
     li {
-      margin-left: 27px;
+      margin-left: 29px;
     }
   }
 }
@@ -133,8 +135,9 @@
   }
 
   &--icon {
-    min-width: 196px;
-    min-height: 88px;
+    margin-right: 12px;
+    min-width: 174px;
+    min-height: 73px;
     margin-left: auto;
     color: $white;
     border: 4px solid $border-button;
@@ -176,11 +179,10 @@
   }
 
   @include tablet {
-    font-size: $small-text;
     &--icon {
       flex-grow: 1;
-      margin-left: 35px;
-      width: 100%;
+      margin: 0 18px;
+      width: 97%;
     }
   }
 
@@ -193,22 +195,26 @@
     }
 
     &--icon {
-      margin-left: 0;
+      width: 100%;
+      margin: 0;
     }
   }
 }
 
 .footer__social-links {
-  display: contents;
+  display: flex;
+  width: 100%;
+  align-items: center;
 
   @include tablet {
-    display: flex;
-    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
   }
 
   @include mobile {
     flex-direction: column;
-    gap: 58px;
+    gap: 31px;
   }
 }
 
@@ -216,8 +222,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 28px;
   min-width: 250px;
+  margin-left: 12px;
   background-color: $transparent;
   border: none;
   cursor: pointer;
@@ -291,42 +297,52 @@
 
 .footer__copyright-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 547px;
+  align-items: flex-start;
+  justify-content: flex-start;
   padding: 0 16px;
+  gap: 37px;
 
   @include tablet {
     max-width: 574px;
+    gap: 40px;
   }
 
   @include mobile {
     flex-direction: column;
     align-items: flex-start;
     padding: 0;
+    gap: 17px;
   }
 }
 
 .footer__copyright {
   display: flex;
   flex-direction: column;
+  max-width: 190px;
+  margin: 0;
+  gap: 20px;
+
   span {
-    font-size: $small-text;
-    line-height: $medium-text-height;
+    font-size: $copyright-text;
+    line-height: $text;
     font-weight: $medium;
     color: $empty-star;
+  }
+
+  @include tablet {
+    padding-top: 7px;
   }
 }
 
 .footer__logo {
   img {
     height: 48px;
+    width: 100px;
     object-fit: cover;
   }
 
   @include tablet {
     img {
-      width: 135px;
       height: 60px;
     }
   }
