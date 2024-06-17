@@ -1,16 +1,16 @@
 .corgi-trainer__wrapper {
   display: flex;
   position: relative;
-  padding-bottom: 375px;
+  padding-bottom: 156px;
 
   &::after {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
-    width: 45%;
-    height: 1000px;
-    transform: translate3d(450px, -41%, 0);
+    width: 73%;
+    height: 1053px;
+    transform: translate3d(796px, -29%, 0);
     background-image: url(@img/china.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -23,7 +23,7 @@
   }
 
   @include tablet {
-    padding-bottom: 189px;
+    padding-bottom: 155px;
 
     &::after {
       display: none;
@@ -31,59 +31,16 @@
   }
 
   @include mobile {
-    padding-bottom: 184px;
+    padding-bottom: 155px;
   }
 }
 
-.corgi-trainer__animation-wrapper {
-  position: relative;
-
-  &::after {
-    position: absolute;
-    content: '';
-    bottom: 0;
-    right: 0;
-    transform: translate3d(-20%, 25%, 0);
-    width: 500px;
-    height: 500px;
-    background-image: url(@img/solid-circle.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    @include retina {
-      background-image: url(@img/solid-circle@2x.png);
-    }
-  }
-
-  &::before {
-    transform: translate3d(-3%, -29%, 0);
-    height: 90%;
-    width: 107%;
-    background-image: url(@img/corgi-suitcase.png);
-
-    @include retina {
-      background-image: url(@img/corgi-suitcase@2x.png);
-    }
-  }
+.corgi-trainer__text-content {
+  padding-bottom: 0;
 
   @include tablet {
-    &::after {
-      transform: translate3d(-17%, 25%, 0);
-    }
-
-    &::before {
-      transform: translate3d(5%, -30%, 0);
-      height: 92%;
-    }
-  }
-  @include mobile {
-    &::after {
-      transform: translate3d(-19%, 41%, 0);
-    }
-
-    &::before {
-      height: 83%;
-      transform: translate3d(-35%, 57%, 0);
+    .left-animation__title {
+      max-width: 285px;
     }
   }
 }

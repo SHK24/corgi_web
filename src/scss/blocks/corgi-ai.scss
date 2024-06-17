@@ -1,10 +1,30 @@
-.corgi-ai__animation-wrapper {
+.corgi-ai__wrapper {
+  position: relative;
 
   &::before {
-    background-image: url(@img/corgi-ai.png);
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -50%;
+    width: 55%;
+    height: 808px;
+    background-image: url(@img/background-ball1.png);
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    z-index: -4;
+    transform: translate3d(0, -61%, 0);
 
     @include retina {
-      background-image: url(@img/corgi-ai@2x.png);
+      background-image: url(@img/background-ball1@2x.png);
+    }
+  }
+
+  @include tablet {
+    padding-bottom: 158px;
+
+    &::before {
+      display: none;
     }
   }
 }
