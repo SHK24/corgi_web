@@ -1,0 +1,46 @@
+.language-select__button {
+  min-height: 56px;
+  background-color: $transparent;
+  border-radius: 30px;
+  border: 2px solid $border-button;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  padding: 8px;
+  cursor: pointer;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.language-select__selected-language {
+  display: inline-flex;
+  align-items: center;
+}
+
+.language-select__icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+  min-width: 28px;
+  min-height: 28px;
+  border-radius: 50%;
+}
+
+.language-select__icon {
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.language-select__icon {
+  transition-duration: 300ms;
+}
+
+.language-select__button.open .language-select__icon {
+  transform: scaleY(-1);
+}
