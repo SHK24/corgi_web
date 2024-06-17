@@ -3,7 +3,6 @@ html {
   scroll-behavior: smooth;
 }
 
-html,
 body {
   position: relative;
   overflow-x: hidden;
@@ -46,14 +45,19 @@ img {
   font-weight: $extra-bold;
   color: $white;
 
+  @include tablet {
+    font-size: $mobile-title;
+    line-height: $mobile-title-height;
+  }
+
   @include mobile {
-    font-size: $mobile-main-title-size;
-    line-height: $mobile-main-title-size;
+    font-size: $mobile-title;
+    line-height: $mobile-title-height;
   }
 }
 
 .linear-gradient-bg {
-  border-radius: 0 32px 32px 0;
+  border-radius: 0 48px 48px 0;
   background-image: linear-gradient(
     224.39deg,
     rgba(255, 255, 255, 0.28) 0%,
@@ -70,7 +74,7 @@ img {
     width: 100%;
     height: 100%;
     border: double 3px transparent;
-    border-radius: 0 32px 32px 0;
+    border-radius: 0 48px 48px 0;
     background: linear-gradient(
       226.98deg,
       #0185ff 0%,
@@ -82,4 +86,25 @@ img {
     background-clip: content-box, border-box;
     z-index: -2;
   }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 5;
+  display: none;
+  pointer-events: none;
+}
+
+.overlay--open {
+  display: block;
+}
+
+.unclickable {
+  pointer-events: none;
+  overflow: hidden;
 }

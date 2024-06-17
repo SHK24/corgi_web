@@ -4,6 +4,7 @@ $black: #000000;
 $transparent: transparent;
 $blue: #0167ff;
 $icon-blue: #0158ff;
+$border-blue: #3a7fff;
 $yellow: #ffba54;
 $star-blue: #0159ff;
 $light-blue: #dbe7fb;
@@ -13,9 +14,12 @@ $light-green: #e6f4d8;
 $grey: #5d6074;
 $light-grey: #a6a6a6;
 $dark-grey: #242732;
+$dark: #3d4154;
+$dark-light: rgba(61, 65, 84, 0.1);
 $border-button: rgba(255, 255, 255, 0.2);
 $empty-star: rgba(255, 255, 255, 0.4);
 $active-white-link: rgba(255, 255, 255, 0.6);
+$active-dark-link: rgba(0, 0, 0, 0.16);
 
 // Viewports
 $desktop-width: 1024px;
@@ -24,16 +28,19 @@ $mobile-width: 360px;
 
 //Font
 $family-muller: 'Muller', 'Arial', sans-serif;
-$main-title-size: 56px;
+$main-title-size: 52px;
 $mobile-main-title-size: 40px;
 $title: 48px;
+$medium-title: 44px;
 $mobile-title: 32px;
 $mobile-title-height: 36px;
 $text: 20px;
 $text-height: 28px;
+$medium-text-size: 18px;
 $medium-text: 16px;
 $medium-text-height: 24px;
 $small-text: 14px;
+$copyright-text: 12px;
 $extra-bold: 800;
 $bold: 700;
 $medium: 500;
