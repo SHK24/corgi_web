@@ -1,5 +1,5 @@
 .wrapper {
-  max-width: 1230px;
+  max-width: 1110px;
   min-width: 360px;
   width: 100%;
   margin: 0 auto;
@@ -10,10 +10,30 @@
     padding-left: $tablet-padding;
     padding-right: $tablet-padding;
     margin: 0;
+
+    &--left {
+      padding-left: 0;
+      padding-right: $tablet-padding;
+    }
+
+    &--right {
+      padding-left: $tablet-padding;
+      padding-right: 0;
+    }
   }
 
   @include mobile {
     padding-left: $mobile-padding;
     padding-right: $mobile-padding;
+
+    &--left {
+      padding-left: $mobile-padding;
+      padding-right: 0;
+    }
+
+    &--right {
+      padding-left: $mobile-padding;
+      padding-right: 0;
+    }
   }
 }
