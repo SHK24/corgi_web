@@ -6,54 +6,49 @@
     @@include('./html/header.html', {})
     <main>
       <section class="promo">
-        <div class="promo__wrapper wrapper">
-          <div class="promo__main-content">
+        <div class="promo__wrapper wrapper wrapper--right">
+          <div class="promo__main-content linear-gradient-bg">
             <div class="promo__text-content">
-              <span class="promo__text-wrapper">
-                <span class="promo__text-light">Powered by</span>
-                <span class="promo__text-background">Chat GPT</span>
-              </span>
               <h1 class="promo__title main-title">
-                Fluent in a flash with Corgi
+                Explore the Future of AI&nbsp;Language Learning
               </h1>
               <p class="promo__text">
-                Harness the Power of&nbsp;AI for&nbsp;Fast and Effective
-                Language Learning
+                Experience the magic of speaking with AI, just like how children naturally learn languages.
               </p>
-              @@include('./html/install-link.html', {})
+              @@include('./html/links.html', {})
             </div>
             <div
-              class="promo__animation-wrapper"
+              class="promo__animation-wrapper linear-gradient-bg"
               id="promo-lottie-animation"
             ></div>
           </div>
           <ul class="promo__countries-list">
             <li>
-              <img src="@img/usa-flag.png" srcset="@img/usa-flag@2x.png 2x" width="80" height="80" alt="Learn English" loading="lazy" />
+              <img src="@img/usa-flag.png" srcset="@img/usa-flag@2x.png 2x" width="72" height="72" alt="Learn English" loading="lazy" />
             </li>
             <li>
-              <img src="@img/italy-flag.png" srcset="@img/italy-flag@2x.png 2x" width="80" height="80" alt="Learn Italian" loading="lazy" />
+              <img src="@img/italy-flag.png" srcset="@img/italy-flag@2x.png 2x" width="72" height="72" alt="Learn Italian" loading="lazy" />
             </li>
             <li>
-              <img src="@img/france-flag.png" srcset="@img/france-flag@2x.png 2x" width="80" height="80" alt="Learn French" loading="lazy" />
+              <img src="@img/france-flag.png" srcset="@img/france-flag@2x.png 2x" width="72" height="72" alt="Learn French" loading="lazy" />
             </li>
             <li>
-              <img src="@img/spain-flag.png" srcset="@img/spain-flag@2x.png 2x" width="80" height="80" alt="Learn Spanish" loading="lazy" />
+              <img src="@img/spain-flag.png" srcset="@img/spain-flag@2x.png 2x" width="72" height="72" alt="Learn Spanish" loading="lazy" />
             </li>
             <li>
-              <img src="@img/germany-flag.png" srcset="@img/germany-flag@2x.png 2x" width="80" height="80" alt="Learn German" loading="lazy" />
+              <img src="@img/germany-flag.png" srcset="@img/germany-flag@2x.png 2x" width="72" height="72" alt="Learn German" loading="lazy" />
             </li>
             <li>
-              <img src="@img/brazil-flag.png" srcset="@img/brazil-flag@2x.png 2x" width="80" height="80" alt="Learn Portuguese" loading="lazy" />
+              <img src="@img/brazil-flag.png" srcset="@img/brazil-flag@2x.png 2x" width="72" height="72" alt="Learn Portuguese" loading="lazy" />
             </li>
             <li>
-              <img src="@img/india-flag.png" srcset="@img/india-flag@2x.png 2x" width="80" height="80" alt="Learn Hindi" loading="lazy" />
+              <img src="@img/india-flag.png" srcset="@img/india-flag@2x.png 2x" width="72" height="72" alt="Learn Hindi" loading="lazy" />
             </li>
             <li class="promo__countries-item promo__countries-item--tablet">
-              <img src="@img/russia-flags.png" srcset="@img/russia-flags@2x.png 2x" width="80" height="80" alt="Learn Russian" loading="lazy" />
+              <img src="@img/russia-flags.png" srcset="@img/russia-flags@2x.png 2x" width="72" height="72" alt="Learn Russian" loading="lazy" />
             </li>
             <li class="promo__countries-item promo__countries-item--tablet">
-              <img src="@img/china-flags.png" srcset="@img/china-flags@2x.png 2x" width="80" height="80" alt="Learn Chinese" loading="lazy" />
+              <img src="@img/china-flags.png" srcset="@img/china-flags@2x.png 2x" width="72" height="72" alt="Learn Chinese" loading="lazy" />
             </li>
             <li class="promo__countries-item">
               <span
@@ -74,24 +69,26 @@
         </div>
       </section>
       <section class="user-feedback">
-        <div class="user-feedback__wrapper wrapper">
-          <h2 class="user-feedback__title main-title">
-            Join thousands of learners on their way to fluency
-          </h2>
+        <div class="user-feedback__wrapper wrapper wrapper--right">
+          <div class="user-feedback__main-content">
+            <div class="user-feedback__text-content">
+              <h2 class="user-feedback__title main-title">
+                Join Thousands</br>of Happy Learners
+              </h2>
+              <p class="user-feedback__main-text">
+                Discover a fun and effective way to&nbsp;master a new language
+              </p>
+            </div>
+            <div class="user-feedback__image"></div>
+          </div>
           <ul class="user-feedback__list">
-            <li class="user-feedback__item">
-              <div class="user-feedback__image linear-gradient-bg">
-                <img src="@img/25k.png" srcset="@img/25k@2x.png 2x" width="374" height="374" alt="" loading="lazy" />
-              </div>
+            <li class="user-feedback__item user-feedback__item--worldwide linear-gradient-bg">
               <div>
                 <p class="user-feedback__text">Users worldwide</p>
                 <p class="user-feedback__big-text">25.000+</p>
               </div>
             </li>
-            <li class="user-feedback__item">
-              <div class="user-feedback__image linear-gradient-bg">
-                <img src="@img/big-star.png" srcset="@img/big-star@2x.png 2x" width="374" height="374" alt="" loading="lazy" />
-              </div>
+            <li class="user-feedback__item user-feedback__item--rating linear-gradient-bg">
               <div>
                 <p class="user-feedback__text">Rating in Google Chrome</p>
                 <div class="user-feedback__rate-wrapper">
@@ -139,10 +136,7 @@
                 </div>
               </div>
             </li>
-            <li class="user-feedback__item">
-              <div class="user-feedback__image linear-gradient-bg">
-                <img src="@img/big-google-icon.png" srcset="@img/big-google-icon@2x.png 2x" width="374" height="374" alt="" loading="lazy" />
-              </div>
+            <li class="user-feedback__item user-feedback__item--google linear-gradient-bg">
               <div>
                 <p class="user-feedback__text">Editor's Choice</p>
                 <p class="user-feedback__big-text">Google</p>
@@ -152,33 +146,30 @@
         </div>
       </section>
       <section class="left-animation corgi-ai">
-        <div class="left-animation__wrapper corgi-ai__wrapper">
+        <div class="left-animation__wrapper corgi-ai__wrapper wrapper wrapper--left">
           <div
             class="left-animation__animation-wrapper corgi-ai__animation-wrapper"
             id="ai-lottie-animation"
           ></div>
           <div class="left-animation__text-content corgi-ai__text-content">
             <h2 class="left-animation__title">
-              Master a language by speaking It
+              Practice Speaking in&nbsp;Real-Life Situations 
             </h2>
             <p class="left-animation__text">
-              Corgi AI&nbsp;is&nbsp;your very own language tutor, available
-              anytime, anywhere. Practice speaking on&nbsp;diverse topics and
-              receive immediate feedback.
+              With Corgi, you can role-play real-life scenarios and build confidence in&nbsp;your speaking skills.
+              From ordering a&nbsp;coffee to&nbsp;navigating a&nbsp;new city, we&rsquo;ve got you covered!
             </p>
           </div>
         </div>
       </section>
       <section class="language-learner">
-        <div class="language-learner__wrapper wrapper">
+        <div class="language-learner__wrapper wrapper wrapper--right">
           <div class="language-learner__text-content">
             <h2 class="language-learner__title main-title">
-              Read, translate, and&nbsp;memorize
+              Mistakes? No Worries, We’ve Got Your Back!
             </h2>
             <p class="language-learner__text">
-              Dive into a&nbsp;new language through news, blogs, tweets, and
-              more. Translate words and sentences effortlessly, incorporating
-              them into your daily study.
+              Our app gently corrects your slip-ups and boosts your grammar&nbsp;&mdash; kind of&nbsp;like a&nbsp;friendly grammar ninja.Get instant feedback on&nbsp;your language blunders and watch your grammar skills soar.
             </p>
           </div>
           <div
@@ -188,21 +179,36 @@
         </div>
       </section>
       <section class="left-animation corgi-trainer">
-        <div class="left-animation__wrapper corgi-trainer__wrapper">
+        <div class="left-animation__wrapper corgi-trainer__wrapper wrapper wrapper--left">
           <div
             class="left-animation__animation-wrapper corgi-trainer__animation-wrapper"
             id="trainer-lottie-animation"
           ></div>
-          <div class="left-animation__text-content">
+          <div class="left-animation__text-content corgi-trainer__text-content">
             <h2 class="left-animation__title main-title">
-              Learn at your convenience
+              Your Daily Word&nbsp;Workout
             </h2>
             <p class="left-animation__text">
-              Acquire new words effortlessly through
-              our browser extension, featuring innovative mechanics that speed up&nbsp;the
-              memorization process.
+              Expand your word bank without breaking a&nbsp;sweat.
+              Say goodbye to&nbsp;boring word lists and hello to&nbsp;a&nbsp;fun, interactive learning experience!
             </p>
           </div>
+        </div>
+      </section>
+      <section class="learning-efficiency">
+        <div class="learning-efficiency__wrapper wrapper wrapper--right">
+          <h2 class="learning-efficiency__title main-title">Speak to&nbsp;Learn, </br>Learn to&nbsp;Speak</h2>
+          <p class="learning-efficiency__text">Studies show speaking can boost your learning efficiency by&nbsp;up&nbsp;to&nbsp;75%*. It&rsquo;s the fast track to&nbsp;fluency!</p>
+          <div class="learning-efficiency__animation-wrapper">
+            <div class="learning-efficiency__image">
+            </div>
+            <div
+              class="learning-efficiency__animation linear-gradient-bg"
+              id="learning-efficiency-animation"
+            >
+          </div>
+        </div>
+        <p class="learning-efficiency__small-text">* Communicative Language Teaching: State of the Art. Savignon, S. J. (1991)</p>
         </div>
       </section>
       <section class="review">
@@ -221,19 +227,19 @@
             <li class="review__item linear-gradient-bg">
               <p class="review__name">Mr Crazy</p>
               <p class="review__rate" aria-label="Rating is 5 out of 5">
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
               </p>
@@ -245,19 +251,19 @@
             <li class="review__item linear-gradient-bg">
               <p class="review__name">MOHIT SHUKLA</p>
               <p class="review__rate" aria-label="Rating is 5 out of 5">
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
               </p>
@@ -269,19 +275,19 @@
             <li class="review__item linear-gradient-bg">
               <p class="review__name">Adalee Laizure</p>
               <p class="review__rate" aria-label="Rating is 5 out of 5">
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
               </p>
@@ -292,19 +298,19 @@
             <li class="review__item linear-gradient-bg">
               <p class="review__name">Christian Ducharme</p>
               <p class="review__rate" aria-label="Rating is 5 out of 5">
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
               </p>
@@ -316,19 +322,19 @@
             <li class="review__item linear-gradient-bg">
               <p class="review__name">Taoufik EL KOM</p>
               <p class="review__rate" aria-label="Rating is 4 out of 5">
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#679BFF"></use>
                 </svg>
               </p>
@@ -340,19 +346,19 @@
             <li class="review__item linear-gradient-bg">
               <p class="review__name">chulbd 1</p>
               <p class="review__rate" aria-label="Rating is 5 out of 5">
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
                 </svg>
               </p>
@@ -367,9 +373,11 @@
         <div class="app-install-section__wrapper wrapper">
           <div class="app-install-content">
             <h2 class="app-install-section__title main-title">
-              Begin your linguistic journey now
+              The Best Time to&nbsp;Start is NOW!
             </h2>
-            @@include('./html/install-link.html', {'class': 'app-install-link'})
+            <p class="app-install-section__text">Download Corgi and discover the most natural
+              way to&nbsp;learn a&nbsp;language: with your voice.</p>
+            @@include('./html/links.html', {})
           </div>
           <div class="app-install-section__image"></div>
         </div>
