@@ -7,12 +7,50 @@
         alt="Corgi logo"
       />
     </a>
-
+    <div class="header__navigation-wrapper">
+      <nav class="header__navigation">
+        <ul class="header__navigation-list">
+          <li class="header__navigation-item">
+            <a href="/" class="header__navigation-link">Pricing</a>
+          </li>
+          <li class="header__navigation-item">
+            <a href="/" class="header__navigation-link">Blog</a>
+          </li>
+        </ul>
+      </nav>
+      @@include('./install-link.html', {})
+      @@include('./language-selection.html', {'class': 'language-selection--header'})
+      <button
+        type="button"
+        class="header__navigation-button language-select__button"
+        alt="Select language to learn"
+      >
+        <span class="language-select__selected-language">
+          <img src="@img/usa-flag.png" srcset="@img/usa-flag@2x.png 2x" width="40" height="40" alt="Learn English" loading="lazy" />
+        </span>
+        <span class="language-select__icon-wrapper">
+          <span class="language-select__icon">
+            <img
+            src="@img/icons/icons.svg#select-icon"
+          />
+          </span>
+        </span>
+      </button>
+    </div>
     @@include('./profile-panel.html', {})
     <div class="header__install-link-wrapper">
-
-      @@include('./install-link.html', {'class': 'install-link--white'})
-      <button id="close-menu" aria-label="close menu" type="button" class="header__install-close-icon"></button>
+      @@include('./links.html', {'class': 'header__links'})
+      <button
+        id="close-menu"
+        aria-label="close menu"
+        type="button"
+        class="header__install-close-icon"
+      ></button>
     </div>
+    <button type="button" class="header__open-button-menu"></button>
   </div>
 </header>
+<div class="overlay"></div>
+<dialog class="language-selection-dialog"
+role="dialog"
+id="languageSelectionDialog">@@include('./language-selection.html', {})</dialog>
