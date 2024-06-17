@@ -1,0 +1,58 @@
+.links-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  > span {
+    color: $white;
+  }
+
+  @include tablet {
+     > span {
+      display: none;
+    }
+  }
+}
+
+.app-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 40px;
+  border: 2px solid $border-blue;
+  padding: 8px;
+  background-color: $icon-blue;
+  gap: 8px;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.app-links__item {
+  background-color: $white;
+  border-radius: 50%;
+  min-width: 56px;
+  min-height: 56px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  svg {
+    color: $icon-blue;
+  }
+
+  &:active {
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $active-dark-link;
+      border-radius: 50%;
+    }
+  }
+}

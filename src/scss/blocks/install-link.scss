@@ -1,124 +1,57 @@
 .install-link {
   text-decoration: none;
-  color: $white;
+  color: $grey;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   width: max-content;
-  min-width: 208px;
-  padding: 17px;
-  font-size: $medium-text;
-  line-height: $medium-text-height;
-  border: 2px solid $border-button;
+  min-width: 226px;
+  padding: 8px;
+  font-size: $medium-text-size;
+  line-height: $text;
   border-radius: 60px;
   position: relative;
   transition: color 500ms;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    right: 50%;
-    top: 50%;
-    transform: translate3d(50%, -50%, 0);
-    background-position: center;
-    border-radius: 100px;
-    z-index: -1;
-    transition: 500ms;
-  }
-
-  &::before {
-    width: 93%;
-    height: 87%;
-    background: linear-gradient(180deg, #b0ec71 0%, #83c83a 100%);
-  }
-
-  &::after {
-    background-color: $green;
-    width: 86%;
-    height: 70%;
-  }
-
-  &:hover,
-  &:focus {
-    &::before {
-      width: 100%;
-      height: 100%;
-    }
-
-    &::after {
-      width: 95%;
-      height: 90%;
-    }
-  }
+  background-color: $white;
 
   &:active {
-    color: $light-green;
-
-    &::after {
-      background-color: $transparent;
-    }
-  }
-}
-
-.install-link--white {
-  border: none;
-  min-width: 193px;
-  padding: 10px 16px;
-
-  &::before {
-    width: 100%;
-    height: 100%;
-    background: white;
-  }
-  &::after {
-    display: none;
-  }
-
-  .install-link__icon {
-    background-color: $icon-blue;
-    color: $white;
-  }
-
-  .install-link__text {
-    color: $grey;
-  }
-
-  .install-link__text-bold {
-    color: $dark-grey;
-  }
-
-  &:active {
-    color: $grey;
     &::before {
-      background: $light-grey;
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $active-dark-link;
+      border-radius: 60px;
     }
   }
 }
 
 .install-link__icon {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background-color: $white;
+  background-color: $icon-blue;
   border-radius: 50%;
   object-fit: contain;
-  color: $green;
+  color: $white;
 }
 
 .install-link__text {
   display: inline-flex;
   flex-direction: column;
-  font-weight: $bold;
-  color: $light-green;
+  font-weight: $medium;
+  font-size: inherit;
+  line-height: inherit;
 }
 
-.install-link__text-bold {
-  color: $white;
+.install-link__main-text {
+  color: $dark-grey;
   font-weight: $extra-bold;
-  font-size: $text;
-  line-height: $medium-text-height;
+  font-size: $medium-text-size;
+  line-height: $text-height;
   letter-spacing: $text-letter-spacing;
 }
