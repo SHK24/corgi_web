@@ -1,0 +1,123 @@
+.learning-efficiency__wrapper {
+  padding-bottom: 206px;
+
+  @include tablet {
+    padding-bottom: 158px;
+  }
+}
+
+.learning-efficiency__title {
+  margin: 0;
+  text-align: end;
+  padding-bottom: 25px;
+
+  @include tablet {
+    margin-right: $tablet-padding;
+  }
+
+  @include mobile {
+    margin-right: $mobile-padding;
+  }
+}
+
+.learning-efficiency__text,
+.learning-efficiency__small-text {
+  margin: 0;
+  color: $light-blue;
+  text-align: end;
+  margin-left: auto;
+}
+
+.learning-efficiency__text {
+  font-size: $medium-text-size;
+  line-height: $text-height;
+  max-width: 456px;
+
+  @include tablet {
+    margin-right: $tablet-padding;
+  }
+
+  @include mobile {
+    margin-right: $mobile-padding;
+  }
+}
+
+.learning-efficiency__small-text {
+  font-size: $small-text;
+  line-height: $medium-text-height;
+  max-width: 280px;
+  margin-top: -164px;
+  margin-right: 91px;
+
+  @include tablet {
+    margin: -230px 40px 0 auto;
+  }
+
+  @include mobile {
+    margin: 33px 0 0 16px;
+  }
+}
+
+.learning-efficiency__animation-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 88px;
+  gap: 81px;
+
+  @include tablet {
+    padding-top: 70px;
+    gap: 64px;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.learning-efficiency__animation {
+  flex-basis: 59%;
+  padding-top: 77px;
+  padding-right: 89px;
+  align-self: flex-start;
+
+  &.linear-gradient-bg {
+    border-radius: 48px;
+
+    &::before {
+      border-radius: 48px;
+    }
+  }
+
+  @include tablet {
+    flex-basis: 48%;
+    padding-top: 40px;
+    padding-right: 39px;
+  }
+
+  @include mobile {
+    padding-top: 28px;
+  }
+}
+
+.learning-efficiency__image {
+  background-image: url(@img/corgi-suitcase.png);
+  background-repeat: no-repeat;
+  min-height: 617px;
+  flex-grow: 1;
+  background-size: 200%;
+  background-position: top, right 36px;
+  margin-top: -92px;
+
+  @include retina {
+    background-image: url(@img/corgi-suitcase@2x.png);
+  }
+
+  @include tablet {
+    margin-top: -21px;
+  }
+
+  @include mobile {
+    min-height: 460px;
+    margin-top: -59px;
+  }
+}
