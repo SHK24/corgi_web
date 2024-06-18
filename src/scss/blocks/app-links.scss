@@ -4,6 +4,8 @@
   gap: 16px;
 
   > span {
+    font-size: $base-text-size;
+    line-height: $base-text-size;
     color: $white;
   }
 

@@ -49,11 +49,25 @@ img {
     font-size: $mobile-title;
     line-height: $mobile-title-height;
   }
+}
 
-  @include mobile {
-    font-size: $mobile-title;
-    line-height: $mobile-title-height;
+.title {
+  font-size: $mobile-main-title-size;
+  line-height: $medium-title;
+  font-weight: $extra-bold;
+  color: $white;
+
+  @include tablet {
+    font-size: $medium-text-height;
+    line-height: $base-text-height;
   }
+}
+
+.text {
+  font-size: $base-text-size;
+  line-height: $base-text-height;
+  font-weight: $medium;
+  color: $light-blue;
 }
 
 .linear-gradient-bg {

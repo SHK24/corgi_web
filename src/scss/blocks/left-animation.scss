@@ -1,6 +1,6 @@
 .left-animation__wrapper {
   display: flex;
-  padding-bottom: 166px;
+  padding-bottom: 158px;
 
   @include tablet {
     padding-bottom: 0;
@@ -59,29 +59,15 @@
 .left-animation__title {
   margin: 0;
   max-width: 460px;
-  font-size: $mobile-main-title-size;
-  line-height: $medium-title;
-  font-weight: $extra-bold;
-  color: $white;
   padding-bottom: 25px;
 
-  @include tablet {
-    font-size: $medium-text-height;
-    line-height: $text-height;
-  }
-
   @include mobile {
-    font-size: $medium-text-height;
-    line-height: $text-height;
     max-width: 270px;
   }
 }
 
 .left-animation__text {
   margin: 0;
-  color: $light-blue;
   max-width: 460px;
-  font-size: $medium-text-size;
-  line-height: $text-height;
   padding-bottom: 6px;
 }

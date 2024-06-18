@@ -7,7 +7,7 @@
 
   @include tablet {
     padding-top: 156px;
-    padding-bottom: 50px;
+    padding-bottom: 47px;
   }
 
   @include mobile {
@@ -77,17 +77,13 @@
 }
 
 .promo__text {
-  font-size: $text;
-  line-height: $text-height;
-  font-weight: $medium;
   margin: 0;
-  padding-bottom: 41px;
+  padding-bottom: 37px;
   align-self: center;
-  color: $light-blue;
 
   @include tablet {
-    font-size: $medium-text-size;
     max-width: 296px;
+    padding-bottom: 42px;
   }
 }
 

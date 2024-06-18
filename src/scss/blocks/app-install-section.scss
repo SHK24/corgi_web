@@ -9,7 +9,7 @@
   }
 
   @include mobile {
-    padding: 150px 0 178px;
+    padding: 150px 0 169px;
     gap: 68px;
     flex-direction: column;
   }
@@ -69,9 +69,6 @@
 
 .app-install-section__text {
   margin: 0;
-  font-size: $medium-text-size;
-  line-height: $text-height;
-  color: $light-blue;
   padding-bottom: 38px;
 
   @include tablet {

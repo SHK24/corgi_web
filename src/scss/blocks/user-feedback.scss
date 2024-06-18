@@ -7,7 +7,7 @@
   padding-top: 0;
 
   @include tablet {
-    padding-bottom: 156px;
+    padding-bottom: 153px;
   }
 
   @include mobile {
@@ -40,10 +40,7 @@
 }
 
 .user-feedback__main-text {
-  color: $light-blue;
   margin: 0;
-  font-size: $medium-text-size;
-  line-height: $text-height;
   max-width: 350px;
 }
 
@@ -79,7 +76,7 @@
 .user-feedback__list {
   list-style: none;
   margin: 0;
-  padding: 103px 0 0;
+  padding: 108px 0 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
@@ -109,11 +106,11 @@
   &::before {
     position: absolute;
     content: '';
-    top: -55%;
+    top: -57%;
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: contain;
+    background-size: 74%;
     background-repeat: no-repeat;
     border-radius: 0 32px 32px 0;
   }
@@ -171,12 +168,12 @@
 }
 
 .user-feedback__text {
-  color: $light-blue;
-  font-size: $medium-text-size;
-  line-height: $text-height;
-  font-weight: $medium;
   padding-top: 31px;
   margin: 0;
+
+  @include tablet {
+    padding-top: 26px;
+  }
 }
 
 .user-feedback__big-text {
@@ -192,7 +189,7 @@
 .user-feedback__rate-wrapper {
   display: flex;
   align-items: end;
-  gap: 16px;
+  gap: 9px;
 
   @include tablet {
     gap: 11px;
@@ -202,9 +199,9 @@
 .user-feedback__rate {
   background-color: $border-button;
   border-radius: 100px;
-  padding: 15px 20px;
+  padding: 10px 15px;
   width: max-content;
-  min-height: 56px;
+  min-height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -212,7 +209,6 @@
   margin: 0;
 
   @include tablet {
-    padding: 10px 15px;
     min-height: 38px;
   }
 }

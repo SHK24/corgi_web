@@ -44,14 +44,14 @@
   min-height: 418px;
   padding-bottom: 42px;
   gap: 37px;
-  margin-top: -58px;
+  margin-top: -47px;
 
   @include tablet {
     min-height: 744px;
     justify-content: center;
     padding-left: 22px;
     gap: 30px;
-    padding-bottom: 138px;
+    padding-bottom: 151px;
   }
 
   @include mobile {

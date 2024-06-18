@@ -7,7 +7,7 @@
   width: max-content;
   min-width: 226px;
   padding: 8px;
-  font-size: $medium-text-size;
+  font-size: $base-text-size;
   line-height: $text;
   border-radius: 60px;
   position: relative;
@@ -41,17 +41,14 @@
 }
 
 .install-link__text {
+  line-height: $medium-text-height;
   display: inline-flex;
   flex-direction: column;
-  font-weight: $medium;
-  font-size: inherit;
-  line-height: inherit;
+  color: $grey;
 }
 
 .install-link__main-text {
   color: $dark-grey;
   font-weight: $extra-bold;
-  font-size: $medium-text-size;
-  line-height: $text-height;
   letter-spacing: $text-letter-spacing;
 }

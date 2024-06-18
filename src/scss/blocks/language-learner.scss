@@ -60,22 +60,15 @@
 
 .language-learner__title {
   margin: 0;
-  font-size: $mobile-main-title-size;
-  line-height: $medium-title;
   padding-bottom: 27px;
 
   @include tablet {
-    font-size: $medium-text-height;
-    line-height: $text-height;
     padding-bottom: 24px;
   }
 }
 
 .language-learner__text {
   margin: 0;
-  font-size: $medium-text-size;
-  line-height: $text-height;
-  color: $light-blue;
 }
 
 .language-learner__animation-wrapper {
