@@ -19,7 +19,8 @@
         </ul>
       </nav>
       @@include('./install-link.html', {})
-      @@include('./language-selection.html', {'class': 'language-selection--header'})
+      @@include('./language-selection.html', {'class':
+      'language-selection--header'})
       <button
         type="button"
         class="header__navigation-button language-select__button"
@@ -31,8 +32,11 @@
         <span class="language-select__icon-wrapper">
           <span class="language-select__icon">
             <img
-            src="@img/icons/icons.svg#select-icon"
-          />
+              width="15"
+              height="15"
+              alt=""
+              src="@img/icons/icons.svg#select-icon"
+            />
           </span>
         </span>
       </button>
@@ -51,6 +55,10 @@
   </div>
 </header>
 <div class="overlay"></div>
-<dialog class="language-selection-dialog"
-role="dialog"
-id="languageSelectionDialog">@@include('./language-selection.html', {})</dialog>
+<dialog
+  class="language-selection-dialog"
+  role="dialog"
+  id="languageSelectionDialog"
+>
+  @@include('./language-selection.html', {})
+</dialog>
