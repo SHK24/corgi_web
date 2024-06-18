@@ -18,7 +18,10 @@
 .language-select__selected-language {
   display: inline-flex;
   align-items: center;
-  height: 40px;
+
+  picture {
+    display: inline-flex;
+  }
 }
 
 .language-select__icon-wrapper {
