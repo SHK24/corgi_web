@@ -134,6 +134,8 @@
 }
 
 .header__navigation-wrapper {
+  flex-basis: 45%;
+
   @include tablet {
     position: fixed;
     right: -100%;
@@ -188,7 +190,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  flex-basis: 45%;
   gap: 48px;
 
   .install-link,
