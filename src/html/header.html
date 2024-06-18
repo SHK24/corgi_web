@@ -8,20 +8,24 @@
       />
     </a>
     <div class="header__navigation-wrapper">
-      <nav class="header__navigation">
-        <ul class="header__navigation-list">
-          <li class="header__navigation-item">
-            <a href="/" class="header__navigation-link">Pricing</a>
-          </li>
-          <li class="header__navigation-item">
-            <a href="/" class="header__navigation-link">Blog</a>
-          </li>
-        </ul>
-      </nav>
-      @@include('./install-link.html', {})
-      @@include('./language-selection.html', {'class':
-      'language-selection--header'})
-      @@include('./language-select-button.html', {})
+      <div class="header__navigation-container">
+        <div class="header__navigation-content">
+          <nav class="header__navigation">
+            <ul class="header__navigation-list">
+              <li class="header__navigation-item">
+                <a href="/" class="header__navigation-link">Pricing</a>
+              </li>
+              <li class="header__navigation-item">
+                <a href="/" class="header__navigation-link">Blog</a>
+              </li>
+            </ul>
+          </nav>
+          @@include('./install-link.html', {})
+          @@include('./language-selection.html', {'class':
+          'language-selection--header'})
+          @@include('./language-select-button.html', {})
+        </div>
+      </div>
     </div>
     @@include('./profile-panel.html', {})
     <div class="header__install-link-wrapper">

@@ -1,5 +1,9 @@
 .language-select__wrapper {
   position: relative;
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .language-select__button {

@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -111,14 +112,12 @@ img {
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 5;
   display: none;
-  pointer-events: none;
 }
 
 .overlay--open {
   display: block;
 }
 
-.unclickable {
-  pointer-events: none;
+.scroll-lock {
   overflow: hidden;
 }

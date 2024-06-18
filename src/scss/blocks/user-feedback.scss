@@ -60,7 +60,7 @@
   @include tablet {
     height: 521px;
     background-position: center -22%;
-    background-size: 200%;
+    background-size: cover;
   }
 
   @include mobile {
@@ -158,6 +158,10 @@
       align-self: center;
       margin-top: 0;
       padding-top: 110px;
+    }
+
+    &::before {
+      background-size: contain;
     }
   }
 
