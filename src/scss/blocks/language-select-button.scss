@@ -1,3 +1,7 @@
+.language-select__wrapper {
+  position: relative;
+}
+
 .language-select__button {
   min-height: 56px;
   background-color: $transparent;
@@ -47,4 +51,26 @@
 
 .language-select__button.open .language-select__icon {
   transform: scaleY(-1);
+}
+
+.language-selection-dialog {
+  max-width: 1200px;
+  min-width: 236px;
+  width: max-content;
+  padding: 31px 4px 27px 32px;
+  border: none;
+  border-radius: 32px;
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+  margin: 0;
+  top: calc(100% + 10px);
+  left: 50%;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(-50px)  translateX(-50%);
+}
+
+.language-selection-dialog.show {
+  opacity: 1;
+  transform: translateY(0)  translateX(-50%);
 }

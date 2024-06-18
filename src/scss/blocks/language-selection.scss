@@ -45,7 +45,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  row-gap: 16px;
+  row-gap: 14px;
   width: auto;
   max-height: 600px;
 
@@ -55,7 +55,7 @@
 }
 
 .language-selection__item {
-  margin-right: 16px;
+  margin-right: 69px;
 }
 
 .language-selection__link {
@@ -78,30 +78,10 @@
   display: inline-flex;
   border: 4px solid $dark-light;
   border-radius: 50%;
-  padding: 6px;
+  padding: 4px;
 
   picture {
     display: inline-flex;
   }
 }
 
-.language-selection-dialog {
-  max-width: 1200px;
-  min-width: 236px;
-  padding: 20px 4px 20px 20px;
-  border: none;
-  border-radius: 32px;
-  position: absolute;
-  z-index: 10;
-  opacity: 0;
-  transform: translateY(-50px) translateX(40px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  top: 117px;
-  margin: 0;
-  left: 50%;
-}
-
-.language-selection-dialog.show {
-  opacity: 1;
-  transform: translateY(0) translateX(40px);
-}
