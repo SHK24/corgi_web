@@ -40,9 +40,14 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  transition: color 500ms, box-shadow 500ms;
 
   svg {
     color: $icon-blue;
+  }
+
+  &:hover {
+    box-shadow: 0px 20px 40px 0px #00000029;
   }
 
   &:active {

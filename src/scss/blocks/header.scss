@@ -70,11 +70,34 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
+    outline: none;
     border: 2px solid $border-button;
-    background-image: url('@img/icons/icons.svg#close-icon');
+    background: url('@img/icons/icons.svg#close-icon');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 24px;
+    position: relative;
+    transition: background-color 500ms;
+
+    &:hover {
+      background: url('@img/icons/icons.svg#close-icon-blue'), $white;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 24px;
+    }
+
+    &:active {
+      &::before {
+        position: absolute;
+        content: '';
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background-color: $active-dark-link;
+        border-radius: 50%;
+      }
+    }
   }
 
   @include mobile {
@@ -190,7 +213,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  gap: 48px;
+  gap: 30px;
 
   .install-link,
   .language-selection--header {
@@ -235,7 +258,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 39px;
+  gap: 16px;
 
   @include tablet {
     flex-direction: column;
@@ -246,6 +269,22 @@
 .header__navigation-link {
   text-decoration: none;
   color: $white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 46px;
+  transition-duration: 500ms;
+
+  &:hover,
+  &:focus {
+    background-color: $border-button;
+  }
+
+  &:active {
+    background-color: $transparent;
+    color: $active-white-link;
+  }
 
   @include tablet {
     font-size: $mobile-title;
