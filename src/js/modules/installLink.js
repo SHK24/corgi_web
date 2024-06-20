@@ -3,22 +3,21 @@ const appleLink = {
   iconHref: '../img/icons/icons.svg#apple-icon',
   textContent: 'App Store',
   href: '',
-}
+};
 
 const androidLink = {
   iconHref: '../img/icons/icons.svg#play-market-icon',
   textContent: 'Google Play',
   href: '',
-}
+};
 
 const chromeLink = {
   iconHref: '../img/icons/icons.svg#chrome-icon',
   textContent: 'Chrome Store',
   href: '',
-}
+};
 
 const installLinks = document.querySelectorAll('.install-link');
-
 
 const detectOS = () => {
   const userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -38,34 +37,47 @@ const detectOS = () => {
     return 'iOS';
   }
   return 'unknown';
-}
+};
 
-const userOs = detectOS()
+const changeLink = (installLink, href, iconHref, textContent) => {
+  const installLinkIcon = installLink.querySelector('.install-link__icon use');
+  const installLinkMainText = installLink.querySelector(
+    '.install-link__main-text'
+  );
+
+  installLink.href = href;
+  installLinkIcon.setAttribute('xlink:href', iconHref);
+  installLinkMainText.textContent = textContent;
+};
+
+const userOs = detectOS();
+let currentButton = 'chrome';
 
 const updateAppLinkBasedOnOS = () => {
   const isTabletOrSmaller = window.innerWidth <= tabletWidth;
 
-  installLinks.forEach((installLink) => {
-    const installLinkIcon = installLink.querySelector('.install-link__icon use');
-    const installLinkMainText = installLink.querySelector('.install-link__main-text');
-
-    if (isTabletOrSmaller) {
-      if (userOs === 'iOS') {
-        installLink.href = appleLink.href;
-        installLinkIcon.setAttribute('xlink:href', appleLink.iconHref);
-        installLinkMainText.textContent = appleLink.textContent;
-      } else if (userOs === 'Android') {
-        installLink.href = androidLink.href;
-        installLinkIcon.setAttribute('xlink:href', androidLink.iconHref);
-        installLinkMainText.textContent = androidLink.textContent;
-      }
-    } else {
-      installLink.href = chromeLink.href;
-      installLinkIcon.setAttribute('xlink:href', chromeLink.iconHref);
-      installLinkMainText.textContent = chromeLink.textContent;
+  if (isTabletOrSmaller) {
+    if (userOs === 'iOS' && currentButton !== 'apple') {
+      const { href, iconHref, textContent } = appleLink;
+      installLinks.forEach((installLink) => {
+        changeLink(installLink, href, iconHref, textContent);
+      });
+      currentButton = 'apple';
+    } else if (userOs === 'Android' && currentButton !== 'android') {
+      const { href, iconHref, textContent } = androidLink;
+      installLinks.forEach((installLink) => {
+        changeLink(installLink, href, iconHref, textContent);
+      });
+      currentButton = 'android';
     }
-   })
-}
+  } else {
+    const { href, iconHref, textContent } = chromeLink;
+    installLinks.forEach((installLink) => {
+      changeLink(installLink, href, iconHref, textContent);
+    });
+    currentButton = 'chrome';
+  }
+};
 
 document.addEventListener('DOMContentLoaded', updateAppLinkBasedOnOS);
 
