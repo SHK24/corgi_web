@@ -109,8 +109,6 @@ function createObserver(animation, isLoop) {
       if ((mobile && animation.mobile) || (desktop && animation.desktop)) {
         if (entry.isIntersecting) {
           playAnimation(animation, isLoop);
-        } else {
-          stopAnimation(animation);
         }
       }
     });
