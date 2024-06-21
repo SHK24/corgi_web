@@ -157,7 +157,7 @@
 }
 
 .header__navigation-wrapper {
-  flex-basis: 45%;
+  flex-basis: 46%;
 
   @include tablet {
     position: fixed;
@@ -213,7 +213,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  gap: 30px;
+  gap: 33px;
+  padding-right: 2px;
 
   .install-link,
   .language-selection--header {

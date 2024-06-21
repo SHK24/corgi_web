@@ -13,6 +13,7 @@
   @include mobile {
     padding-bottom: 161px;
     padding-top: 0;
+    padding-left: 0;
   }
 }
 
@@ -30,6 +31,7 @@
 
   @include mobile {
     align-self: flex-start;
+    padding-left: $mobile-padding;
   }
 }
 
@@ -66,10 +68,9 @@
   @include mobile {
     min-height: 406px;
     width: 103%;
-    background-position: bottom 44% left 58%;
+    background-position: center;
     background-size: 243%;
     max-width: 320px;
-    margin: 0 auto;
   }
 }
 
@@ -90,6 +91,7 @@
     grid-template-columns: 1fr;
     row-gap: 38px;
     padding-top: 81px;
+    padding-left: $mobile-padding;
   }
 }
 

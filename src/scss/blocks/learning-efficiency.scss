@@ -61,15 +61,14 @@
   display: flex;
   justify-content: space-between;
   padding-top: 88px;
-  gap: 81px;
 
   @include tablet {
     padding-top: 70px;
-    gap: 64px;
   }
 
   @include mobile {
     flex-direction: column;
+    gap: 64px;
   }
 }
 
@@ -103,8 +102,8 @@
   background-repeat: no-repeat;
   min-height: 617px;
   flex-grow: 1;
-  background-size: 200%;
-  background-position: top, right 36px;
+  background-size: 161%;
+  background-position: center right 31%;
   margin-top: -92px;
 
   @include retina {
@@ -118,6 +117,7 @@
   @include mobile {
     min-height: 460px;
     margin-top: -59px;
+    background-position: center;
     background-size: cover;
   }
 }

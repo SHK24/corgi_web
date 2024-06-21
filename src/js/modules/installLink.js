@@ -14,7 +14,7 @@ const androidLink = {
 const chromeLink = {
   iconHref: '../img/icons/icons.svg#chrome-icon',
   textContent: 'Chrome Store',
-  href: '',
+  href: 'https://chromewebstore.google.com/detail/corgi-ai-your-language-te/jgabolakboecklnmocdljjcdkkhjigck',
 };
 
 const installLinks = document.querySelectorAll('.install-link');

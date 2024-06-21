@@ -14,9 +14,32 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 16px;
-  padding: 8px;
+  gap: 14px;
+  padding: 6px 12px 6px 6px;
   cursor: pointer;
+  transition: scale 500ms ease-in;
+
+  &:hover {
+    .language-select__icon-wrapper {
+      scale: 1.2;
+    }
+  }
+
+  &:active {
+    .language-select__icon-wrapper {
+      scale: 1;
+      &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $active-dark-link;
+        border-radius: 50%;
+      }
+    }
+  }
 
   @include tablet {
     display: none;
@@ -40,6 +63,8 @@
   min-width: 28px;
   min-height: 28px;
   border-radius: 50%;
+  transition: scale 500ms ease-in;
+  position: relative;
 }
 
 .language-select__icon {

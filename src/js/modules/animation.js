@@ -51,21 +51,21 @@ const animation = {
   },
 };
 
-function loadAnimation(id, path) {
+function loadAnimation(id, path, isLoop) {
   return lottie.loadAnimation({
     container: document.getElementById(id),
     path,
     renderer: 'svg',
-    loop: true,
+    loop: isLoop,
     autoplay: true,
   });
 }
 
-function playAnimation(animation) {
+function playAnimation(animation, isLoop = true) {
   if (animation.instance) {
     animation.instance.play();
   } else {
-    animation.instance = loadAnimation(animation.name, animation.path);
+    animation.instance = loadAnimation(animation.name, animation.path, isLoop);
   }
 }
 
@@ -86,7 +86,7 @@ function loadAnimations({ mobile = false, desktop = false }) {
   Object.values(animation).forEach((animation) => {
     if ((mobile && animation.mobile) || (desktop && animation.desktop)) {
       if (animation.observable) {
-        createObserver(animation);
+        createObserver(animation, false);
       } else {
         playAnimation(animation);
       }
@@ -96,14 +96,22 @@ function loadAnimations({ mobile = false, desktop = false }) {
   });
 }
 
-function createObserver(animation) {
+function createObserver(animation, isLoop) {
   const element = document.getElementById(animation.name);
   if (!element) return;
 
   const observer = new IntersectionObserver((entries) => {
+    const mediaQuery = window.matchMedia('(min-width: 1024px)');
+    const desktop = mediaQuery.matches;
+    const mobile = !mediaQuery.matches;
+
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        playAnimation(animation);
+      if ((mobile && animation.mobile) || (desktop && animation.desktop)) {
+        if (entry.isIntersecting) {
+          playAnimation(animation, isLoop);
+        } else {
+          stopAnimation(animation);
+        }
       }
     });
   });
