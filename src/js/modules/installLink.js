@@ -2,7 +2,7 @@ const tabletWidth = 1024;
 const appleLink = {
   iconHref: '../img/icons/icons.svg#apple-icon',
   textContent: 'App Store',
-  href: '',
+  href: 'https://apps.apple.com/app/corgi-speak-learn-languages/id6502605623',
 };
 
 const androidLink = {
