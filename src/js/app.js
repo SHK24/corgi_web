@@ -5,3 +5,4 @@ import './modules/userPanel.js';
 import './modules/languageSelect.js';
 import './modules/navigationMenu.js';
 import './modules/installLink.js';
+import './modules/chatgpt.js';
