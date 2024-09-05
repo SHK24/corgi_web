@@ -1,5 +1,18 @@
 // https://testcorgi.com/corgi_ai_page.html
-let URL = "https://getcorgi.com:4443/corgi_chatgpt/"
+const URL = "https://getcorgi.com:4443/corgi_chatgpt/"
+
+const getMessageHtml = (text='', isUser=false) => {
+  return ''
+  + `<div class="chatgpt__message chatgpt__message_${isUser ? 'user' : 'chat'}">
+        <div class="chatgpt__message-inner">
+          <div class="chatgpt__avatar"></div>
+          <div class="chatgpt__message-text">
+            ${text}
+          </div>
+        </div>
+      </div>`
+}
+
 
 function startDialog() {
   var xhttp = new XMLHttpRequest();
@@ -208,3 +221,11 @@ function setLimit() {
     })
   );
 }
+
+const addMessage = () => {
+
+}
+
+window.addEventListener('load', () => {
+  // TODO
+})

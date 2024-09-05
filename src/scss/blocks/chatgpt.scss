@@ -11,8 +11,52 @@
   display: flex;
   flex-direction: column;
 
-  .chatgpt__content {
+  &__content {
     flex-grow: 2;
+    overflow: auto;
+    padding: 20px;
+  }
+
+  &__message {
+    margin-bottom: 25px;
+    &_user {
+      text-align: right;
+      .chatgpt__message-inner {
+        background: #dbe7fb;
+      }
+      .chatgpt__avatar {
+        background: url('@img/icons/icons.svg#avatar-default');
+      }
+    }
+    &_chat {
+      .chatgpt__avatar {
+        background: url('@img/icons/icons.svg#chatgpt');
+      }
+    }
+  }
+
+  &__message-inner {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: #e0e0e0;
+    padding: 10px;
+    max-width: 70%;
+    border-radius: 11px;
+  }
+
+  &__message-text {
+    flex-grow: 2;
+  }
+
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
 
   &__footer {
