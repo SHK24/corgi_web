@@ -11,10 +11,41 @@
   display: flex;
   flex-direction: column;
 
+  &__intro-text {
+    font-family: "Muller", sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 36px;
+    text-align: center;
+    margin-top: 24px;
+  }
+
+  &__logo {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #EFEFEF;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  &__logo-icon {
+    background: url('@img/icons/icons.svg#chatgpt-logo');
+    width: 32px;
+    height: 32px;
+  }
+
   &__content {
     flex-grow: 2;
     overflow: auto;
     padding: 20px;
+    &:has(.chatgpt__intro) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__message {
