@@ -8,7 +8,7 @@ const appleLink = {
 const androidLink = {
   iconHref: '../img/icons/icons.svg#play-market-icon',
   textContent: 'Google Play',
-  href: '',
+  href: 'https://play.google.com/store/apps/details?id=com.corgi_ai',
 };
 
 const chromeLink = {
