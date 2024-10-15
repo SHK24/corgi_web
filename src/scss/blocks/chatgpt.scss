@@ -4,7 +4,7 @@
   max-width: 1200px;
   width: 100%;
   background-color: #fff;
-  padding: 8px;
+  padding: 20px 8px 8px;
   border-radius: 39px;
   color: #242732;
   min-height: 500px;
@@ -41,6 +41,7 @@
     flex-grow: 2;
     overflow: auto;
     padding: 20px;
+    max-height: 70vh;
     &:has(.chatgpt__intro) {
       display: flex;
       justify-content: center;

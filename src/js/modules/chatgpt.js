@@ -7,9 +7,9 @@ const Utils = {
     div.innerHTML = htmlString.trim()
     return div.firstChild
   },
-  getMessageHtml ({text = '', isUser = false}) {
+  getMessageHtml ({text = '', isUser = false, loading = false}) {
     return ''
-      + `<div class="chatgpt__message chatgpt__message_${isUser ? 'user' : 'chat'}">
+      + `<div class="chatgpt__message chatgpt__message_${isUser ? 'user' : 'chat'} ${loading ? 'chatgpt__message_loading' : ''}">
         <div class="chatgpt__message-inner">
           <div class="chatgpt__avatar"></div>
           <div class="chatgpt__message-text">
@@ -224,25 +224,64 @@ const chatGptApi = {
 }
 
 const MessageManager = {
-  addMessage ({text = '', isUser = false}) {
+  addMessage ({text = '', isUser = false, loading = false}) {
     const messagesContainerEl = document.querySelector('.js-messages')
-    const messageHtmlStr = Utils.getMessageHtml({text, isUser})
+    const messageInputEl = document.querySelector('.js-message-input')
+    const messageHtmlStr = Utils.getMessageHtml({ text, isUser, loading })
     const messageEl = Utils.createElementFromHTML(messageHtmlStr)
     messagesContainerEl.appendChild(messageEl)
+    messagesContainerEl.scrollTo(0, messagesContainerEl.scrollHeight)
+    messageInputEl.value = ''
+    messageInputEl.focus()
   },
   clearMessages () {
     const messagesContainerEl = document.querySelector('.js-messages')
     messagesContainerEl.innerHTML = ''
   },
   init () {
-    document.querySelector('.js-send-message').addEventListener('click', function (e) {
-      e.preventDefault()
+    const sendMessageBtn = document.querySelector('.js-send-message')
+    const messageInputEl = document.querySelector('.js-message-input')
+
+    const sendUserMessage = () => {
+      const hasIntro = !!document.querySelector('.js-messages .js-chatgpt-intro')
+      if(hasIntro) {
+        MessageManager.clearMessages()
+      }
       const messageInputEl = document.querySelector('.js-message-input')
       if(messageInputEl.value) {
         MessageManager.addMessage({
           text: messageInputEl.value,
           isUser: true
         })
+
+        MessageManager.addMessage({
+          text: '...',
+          isUser: false,
+          loading: true
+        })
+
+        setTimeout(function () {
+          const messageLoading = document.querySelector('.chatgpt__message_loading')
+          messageLoading.remove()
+
+          MessageManager.addMessage({
+            text: 'Reply from ChatGPT',
+            isUser: false
+          })
+        }, 500)
+      }
+    }
+
+    sendMessageBtn.addEventListener('click', function (e) {
+      e.preventDefault()
+      sendUserMessage()
+    })
+
+
+    messageInputEl.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault()
+        sendUserMessage()
       }
     })
 
