@@ -4,12 +4,14 @@
   max-width: 1200px;
   width: 100%;
   background-color: #fff;
-  padding: 20px 8px 8px;
+  padding: 35px 0 8px;
   border-radius: 39px;
   color: #242732;
-  min-height: 500px;
+  height: 436px;
   display: flex;
   flex-direction: column;
+  gap: 8px;
+  justify-content: space-between;
 
   &__intro-text {
     font-family: "Muller", sans-serif;
@@ -40,8 +42,8 @@
   &__content {
     flex-grow: 2;
     overflow: auto;
-    padding: 20px;
-    max-height: 70vh;
+    padding: 20px 8px;
+    height: 352px;
     &:has(.chatgpt__intro) {
       display: flex;
       justify-content: center;
@@ -50,19 +52,49 @@
   }
 
   &__message {
-    margin-bottom: 25px;
+    margin-bottom: 32px;
+
+    &_chat {
+      .chatgpt__message-inner {
+        padding-left: 16px;
+      }
+    }
+
     &_user {
       text-align: right;
       .chatgpt__message-inner {
-        background: #dbe7fb;
+        max-width: 80%;
+        background: #DBE7FB;
+        @include mobile {
+          max-width: 100%;
+        }
+      }
+      .chatgpt__message-text {
+        text-align: left;
       }
       .chatgpt__avatar {
-        background: url('@img/icons/icons.svg#avatar-default');
+        display: none;
       }
     }
     &_chat {
+      .chatgpt__message-inner {
+        max-width: 100%;
+      }
+
       .chatgpt__avatar {
-        background: url('@img/icons/icons.svg#chatgpt');
+        width: 56px;
+        min-width: 56px;
+        height: 56px;
+        border: 2px solid #F0F0F0;
+        border-radius: 50px;
+
+        &::before {
+          content: '';
+          display: block;
+          background: url('@img/icons/icons.svg#chatgpt-logo');
+          width: 32px;
+          height: 32px;
+        }
       }
     }
   }
@@ -70,16 +102,20 @@
   &__message-inner {
     display: inline-flex;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
-    background: #e0e0e0;
-    padding: 10px;
+    align-items: flex-start;
+    gap: 16px;
+    background: transparent;
+    padding: 16px;
     max-width: 70%;
     border-radius: 11px;
   }
 
   &__message-text {
     flex-grow: 2;
+    font-family: "Muller", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
   }
 
   &__avatar {
@@ -93,6 +129,7 @@
 
   &__footer {
     position: relative;
+    padding: 0 8px;
   }
 
   &__btn {
@@ -101,11 +138,28 @@
     border-radius: 40px;
     position: absolute;
     bottom: 8px;
-    right: 8px;
-    background: white;
+    right: 16px;
+    background: #0158FF;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    path {
+      fill: white;
+    }
+
+    &:hover {
+      background: #6EA1F0;
+    }
+    &:active {
+      background: #B7D0F7;
+    }
+    &:disabled {
+      background: #B7D0F7;
+      path {
+        fill: #92B8F4;
+      }
+    }
   }
 
   &__input {

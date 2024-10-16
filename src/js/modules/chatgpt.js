@@ -243,14 +243,16 @@ const MessageManager = {
     const messageInputEl = document.querySelector('.js-message-input')
 
     const sendUserMessage = () => {
-      const hasIntro = !!document.querySelector('.js-messages .js-chatgpt-intro')
-      if(hasIntro) {
-        MessageManager.clearMessages()
-      }
       const messageInputEl = document.querySelector('.js-message-input')
       if(messageInputEl.value) {
+        const hasIntro = !!document.querySelector('.js-messages .js-chatgpt-intro')
+        if(hasIntro) {
+          MessageManager.clearMessages()
+        }
+
         MessageManager.addMessage({
           text: messageInputEl.value,
+          // text: 'Unlock the full potential of ChatGPT with free, no-signup access. Whether you\'re in school or at home, enjoy ChatGPT for all your conversational AI needs. Experience seamless interactions and explore endless possibilities with ChatGPT anytime, anywhere',
           isUser: true
         })
 
@@ -265,7 +267,7 @@ const MessageManager = {
           messageLoading.remove()
 
           MessageManager.addMessage({
-            text: 'Reply from ChatGPT',
+            text: 'ChatGPT works through a process called natural language processing (NLP). It uses a deep learning model known as a transformer to analyze and generate text. The model has been trained on a diverse dataset that includes books, websites, and other textual content, enabling it to understand context and respond appropriately. When you type a question or a statement, ChatGPT processes the input, generates a response based on its training data, and delivers a coherent and contextually relevant reply. The technology behind ChatGPT is continually refined to improve its accuracy, relevance, and fluency in conversations.',
             isUser: false
           })
         }, 500)
