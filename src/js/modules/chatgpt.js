@@ -241,6 +241,7 @@ const MessageManager = {
   init () {
     const sendMessageBtn = document.querySelector('.js-send-message')
     const messageInputEl = document.querySelector('.js-message-input')
+    const SEND_BTN_DISABLED_CLASS_NAME = 'chatgpt__btn_disabled'
 
     const sendUserMessage = () => {
       const messageInputEl = document.querySelector('.js-message-input')
@@ -276,14 +277,35 @@ const MessageManager = {
 
     sendMessageBtn.addEventListener('click', function (e) {
       e.preventDefault()
-      sendUserMessage()
+      if(!sendMessageBtn.classList.contains(SEND_BTN_DISABLED_CLASS_NAME)) {
+        sendUserMessage()
+      }
+
     })
 
 
     messageInputEl.addEventListener('keypress', function(e) {
       if (e.key === 'Enter') {
         e.preventDefault()
-        sendUserMessage()
+        if(!sendMessageBtn.classList.contains(SEND_BTN_DISABLED_CLASS_NAME)) {
+          sendUserMessage()
+        }
+      }
+    })
+
+    messageInputEl.addEventListener('keyup', function(e) {
+      if(messageInputEl.value) {
+        sendMessageBtn.classList.remove(SEND_BTN_DISABLED_CLASS_NAME)
+      } else {
+        sendMessageBtn.classList.add(SEND_BTN_DISABLED_CLASS_NAME)
+      }
+    })
+
+    messageInputEl.addEventListener('change', function(e) {
+      if(messageInputEl.value) {
+        sendMessageBtn.classList.remove(SEND_BTN_DISABLED_CLASS_NAME)
+      } else {
+        sendMessageBtn.classList.add(SEND_BTN_DISABLED_CLASS_NAME)
       }
     })
 

@@ -1,3 +1,58 @@
+.chatgpt-page {
+  .text-page__wrapper {
+    .main-title {
+      @include mobile {
+        font-family: "Muller", sans-serif;
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 36px;
+        margin-bottom: 23px;
+      }
+    }
+
+    h2 {
+      @include mobile {
+        font-family: "Muller", sans-serif;
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 36px;
+        text-align: left;
+        margin: 101px 0 57px;
+      }
+    }
+
+    h3 {
+      @include mobile {
+        font-family: "Muller", sans-serif;
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 28px;
+        letter-spacing: 0.2px;
+        text-align: left;
+      }
+    }
+
+    p {
+      @include mobile {
+        margin: 23px 0 65px;
+      }
+    }
+  }
+
+  .chatgpt__intro-text {
+    @include mobile {
+      font-family: "Muller", sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 28px;
+      letter-spacing: 0.2px;
+      text-align: center;
+    }
+  }
+
+}
+
+
 .chatgpt {
   min-width: 360px;
   margin: 0 auto;
@@ -154,7 +209,7 @@
     &:active {
       background: #B7D0F7;
     }
-    &:disabled {
+    &_disabled {
       background: #B7D0F7;
       path {
         fill: #92B8F4;
