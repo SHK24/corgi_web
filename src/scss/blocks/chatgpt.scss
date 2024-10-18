@@ -1,4 +1,45 @@
 .chatgpt-page {
+  min-width: 285px;
+
+  .main-description {
+    @include mobile {
+      margin-bottom: 29px !important;
+    }
+  }
+
+  section.text-page {
+    padding-left: 16px;
+    padding-right: 16px;
+
+    @include mobile {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+
+  .footer {
+    &::before {
+      display: none;
+    }
+    .footer__wrapper {
+      min-height: 409px !important;
+      padding-bottom: 41px;
+
+      @include desktop {
+        min-height: 409px !important;
+        padding-bottom: 41px;
+      }
+      @include tablet {
+        min-height: 409px !important;
+        padding-bottom: 41px;
+      }
+      @include mobile {
+        min-height: 200px !important;
+        padding-bottom: 80px;
+      }
+    }
+  }
+
   .text-page__wrapper {
     .main-title {
       @include mobile {
@@ -35,6 +76,7 @@
     p {
       @include mobile {
         margin: 23px 0 65px;
+        font-weight: 400;
       }
     }
   }
