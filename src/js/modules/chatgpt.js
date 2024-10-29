@@ -1,5 +1,5 @@
 // https://testcorgi.com/corgi_ai_page.html
-const URL = "https://getcorgi.com:4443/corgi_chatgpt/"
+const AI_API_BASE_URL = "http://dev.ai.getcorgi.com/corgi_chatgpt/"
 
 const Utils = {
   createElementFromHTML (htmlString) {
@@ -54,17 +54,36 @@ const chatGptApi = {
       })
     );
   },
-  sendMessage() {
+  sendMessage(user_id='', message='') {
+    if(!user_id) {
+      throw new Error('Can not send message: user id not found')
+    }
+    if(!message) {
+      throw new Error('Can not send message: message text not found')
+    }
+    return fetch(AI_API_BASE_URL, {
+      method: 'POST',
+      body: JSON.stringify({
+        entity: 'send_one_message',
+        user_id: userId,
+        message,
+        isSound: false,
+      })
+    })
+
+    return
+
+
+
     var xhttp = new XMLHttpRequest();
 
     document.getElementById("chatHistory").value = "";
 
-    xhttp.open("POST", URL, true);
+    xhttp.open('POST', URL, true)
     xhttp.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
 
     xhttp.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
-
+      if (this.readyState === 4 && this.status === 200) {
         for (let i = 0; i < JSON.parse(this.response).messages.length; i++) {
           document.getElementById("chatHistory").value += JSON.parse(this.response).messages[i].role + ":" + JSON.parse(this.response).messages[i].content + '\n';
         }
@@ -77,11 +96,10 @@ const chatGptApi = {
 
     xhttp.send(
       JSON.stringify({
-        entity: 'send_message',
+        entity: 'send_one_message',
         user_id: userId,
         message: userMessage,
         isSound: false,
-        tone: tone
       })
     );
   },

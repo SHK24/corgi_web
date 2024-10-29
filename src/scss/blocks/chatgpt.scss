@@ -1,15 +1,57 @@
 .chatgpt-page {
   min-width: 285px;
+  background-image: none;
+
+  .chatgpt {
+    margin-bottom: 128px;
+  }
+
+  .text-page__wrapper {
+    padding-top: 0;
+    padding-bottom: 41px;
+    h1 {
+      margin-bottom: 24px;
+    }
+    h2 {
+      margin-bottom: 64px;
+    }
+    h3 {
+      margin-top: 66px;
+      margin-bottom: 16px;
+    }
+    p+h3 {
+      margin-top: 66px;
+    }
+    h3 + h4 {
+      font-size: 19px;
+      margin-bottom: 8px;
+      @include mobile {
+        font-size: 17px;
+      }
+    }
+    p {
+      margin: 16px 0;
+    }
+
+
+
+  }
 
   .main-description {
+    max-width: 824px;
     @include mobile {
       margin-bottom: 29px !important;
     }
   }
 
   section.text-page {
+    padding-top: 165px;
     padding-left: 16px;
     padding-right: 16px;
+
+    @include tablet {
+      padding-top: 140px;
+    }
 
     @include mobile {
       padding-left: 8px;
@@ -18,19 +60,20 @@
   }
 
   .footer {
-    &::before {
-      display: none;
+    @include tablet {
+      padding-top: 34px;
     }
+
     .footer__wrapper {
-      min-height: 409px !important;
+      min-height: 484px !important;
       padding-bottom: 41px;
 
       @include desktop {
-        min-height: 409px !important;
+        min-height: 484px !important;
         padding-bottom: 41px;
       }
       @include tablet {
-        min-height: 409px !important;
+        min-height: 484px !important;
         padding-bottom: 41px;
       }
       @include mobile {
@@ -41,6 +84,11 @@
   }
 
   .text-page__wrapper {
+
+    @include tablet {
+      padding-bottom: 48px;
+    }
+
     .main-title {
       @include mobile {
         font-family: "Muller", sans-serif;
