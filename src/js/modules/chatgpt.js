@@ -1,5 +1,6 @@
 // https://testcorgi.com/corgi_ai_page.html
-const AI_API_BASE_URL = "http://dev.ai.getcorgi.com/corgi_chatgpt/"
+const AI_API_BASE_URL = 'https://dev.ai.getcorgi.com/corgi_chatgpt/'
+const TEMPORARY_MESSAGE_CLASS_NAME = 'js-message-temporary'
 
 const Utils = {
   createElementFromHTML (htmlString) {
@@ -7,9 +8,9 @@ const Utils = {
     div.innerHTML = htmlString.trim()
     return div.firstChild
   },
-  getMessageHtml ({text = '', isUser = false, loading = false}) {
+  getMessageHtml ({text = '', isUser = false, loading = false, classes=''}) {
     return ''
-      + `<div class="chatgpt__message chatgpt__message_${isUser ? 'user' : 'chat'} ${loading ? 'chatgpt__message_loading' : ''}">
+      + `<div class="chatgpt__message chatgpt__message_${isUser ? 'user' : 'chat'} ${loading ? 'chatgpt__message_loading' : ''} ${classes}">
         <div class="chatgpt__message-inner">
           <div class="chatgpt__avatar"></div>
           <div class="chatgpt__message-text">
@@ -17,6 +18,11 @@ const Utils = {
           </div>
         </div>
       </div>`
+  },
+  getRandomInt (min, max) {
+    min = Math.ceil(min)
+    max = Math.floor(max)
+    return Math.floor(Math.random() * (max - min + 1)) + min
   }
 }
 
@@ -54,9 +60,13 @@ const chatGptApi = {
       })
     );
   },
-  sendMessage(user_id='', message='') {
+  sendMessage(message='') {
+    let user_id = localStorage.getItem('aiUserId') || localStorage.getItem('userId')
     if(!user_id) {
-      throw new Error('Can not send message: user id not found')
+      user_id = Utils.getRandomInt(500, 100500)
+      localStorage.setItem('aiUserId', user_id)
+    } else {
+      user_id = parseInt(user_id)
     }
     if(!message) {
       throw new Error('Can not send message: message text not found')
@@ -65,43 +75,11 @@ const chatGptApi = {
       method: 'POST',
       body: JSON.stringify({
         entity: 'send_one_message',
-        user_id: userId,
+        user_id,
         message,
         isSound: false,
       })
-    })
-
-    return
-
-
-
-    var xhttp = new XMLHttpRequest();
-
-    document.getElementById("chatHistory").value = "";
-
-    xhttp.open('POST', URL, true)
-    xhttp.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
-
-    xhttp.onreadystatechange = function () {
-      if (this.readyState === 4 && this.status === 200) {
-        for (let i = 0; i < JSON.parse(this.response).messages.length; i++) {
-          document.getElementById("chatHistory").value += JSON.parse(this.response).messages[i].role + ":" + JSON.parse(this.response).messages[i].content + '\n';
-        }
-      }
-    };
-
-    var userId = document.getElementById('userId').value;
-    var userMessage = document.getElementById('userMessage').value;
-    var tone = document.getElementById('tone').value;
-
-    xhttp.send(
-      JSON.stringify({
-        entity: 'send_one_message',
-        user_id: userId,
-        message: userMessage,
-        isSound: false,
-      })
-    );
+    }).then(response => response.json())
   },
   clearDialog() {
     var xhttp = new XMLHttpRequest();
@@ -242,26 +220,38 @@ const chatGptApi = {
 }
 
 const MessageManager = {
-  addMessage ({text = '', isUser = false, loading = false}) {
+  addMessage ({text = '', isUser = false, loading = false, isTemporary=false}) {
     const messagesContainerEl = document.querySelector('.js-messages')
     const messageInputEl = document.querySelector('.js-message-input')
-    const messageHtmlStr = Utils.getMessageHtml({ text, isUser, loading })
+    const messageHtmlStr = Utils.getMessageHtml({
+      text,
+      isUser,
+      loading,
+      classes: isTemporary ? TEMPORARY_MESSAGE_CLASS_NAME : ''
+    })
     const messageEl = Utils.createElementFromHTML(messageHtmlStr)
     messagesContainerEl.appendChild(messageEl)
     messagesContainerEl.scrollTo(0, messagesContainerEl.scrollHeight)
     messageInputEl.value = ''
     messageInputEl.focus()
   },
-  clearMessages () {
-    const messagesContainerEl = document.querySelector('.js-messages')
-    messagesContainerEl.innerHTML = ''
+  clearMessages (temporaryOnly=false) {
+    if(temporaryOnly) {
+      const tmpMessages = document.querySelectorAll(`.${TEMPORARY_MESSAGE_CLASS_NAME}`)
+      tmpMessages.forEach(messageEl => {
+        messageEl.remove()
+      })
+    } else {
+      const messagesContainerEl = document.querySelector('.js-messages')
+      messagesContainerEl.innerHTML = ''
+    }
   },
   init () {
     const sendMessageBtn = document.querySelector('.js-send-message')
     const messageInputEl = document.querySelector('.js-message-input')
     const SEND_BTN_DISABLED_CLASS_NAME = 'chatgpt__btn_disabled'
 
-    const sendUserMessage = () => {
+    const sendUserMessage = async () => {
       const messageInputEl = document.querySelector('.js-message-input')
       if(messageInputEl.value) {
         const hasIntro = !!document.querySelector('.js-messages .js-chatgpt-intro')
@@ -269,44 +259,56 @@ const MessageManager = {
           MessageManager.clearMessages()
         }
 
+        const text = messageInputEl.value
+
         MessageManager.addMessage({
-          text: messageInputEl.value,
-          // text: 'Unlock the full potential of ChatGPT with free, no-signup access. Whether you\'re in school or at home, enjoy ChatGPT for all your conversational AI needs. Experience seamless interactions and explore endless possibilities with ChatGPT anytime, anywhere',
-          isUser: true
+          text,
+          isUser: true,
+          isTemporary: true,
         })
 
         MessageManager.addMessage({
           text: '...',
           isUser: false,
-          loading: true
+          loading: true,
+          isTemporary: true,
         })
 
-        setTimeout(function () {
-          const messageLoading = document.querySelector('.chatgpt__message_loading')
-          messageLoading.remove()
+        const response = await chatGptApi.sendMessage(text)
 
-          MessageManager.addMessage({
-            text: 'ChatGPT works through a process called natural language processing (NLP). It uses a deep learning model known as a transformer to analyze and generate text. The model has been trained on a diverse dataset that includes books, websites, and other textual content, enabling it to understand context and respond appropriately. When you type a question or a statement, ChatGPT processes the input, generates a response based on its training data, and delivers a coherent and contextually relevant reply. The technology behind ChatGPT is continually refined to improve its accuracy, relevance, and fluency in conversations.',
-            isUser: false
-          })
-        }, 500)
+        const messageLoading = document.querySelector('.chatgpt__message_loading')
+        messageLoading.remove()
+
+        if(response.success === 'OK') {
+          MessageManager.clearMessages(true)
+
+          for(let i=0, len = response.messages.length; i < len; i++) {
+            const {
+              content: text,
+              role,
+            } = response.messages[i]
+            MessageManager.addMessage({
+              text,
+              isUser: role === 'user'
+            })
+          }
+        }
       }
     }
 
-    sendMessageBtn.addEventListener('click', function (e) {
+    sendMessageBtn.addEventListener('click', async function (e) {
       e.preventDefault()
       if(!sendMessageBtn.classList.contains(SEND_BTN_DISABLED_CLASS_NAME)) {
-        sendUserMessage()
+        await sendUserMessage()
       }
-
     })
 
 
-    messageInputEl.addEventListener('keypress', function(e) {
+    messageInputEl.addEventListener('keypress', async function(e) {
       if (e.key === 'Enter') {
         e.preventDefault()
         if(!sendMessageBtn.classList.contains(SEND_BTN_DISABLED_CLASS_NAME)) {
-          sendUserMessage()
+          await sendUserMessage()
         }
       }
     })
