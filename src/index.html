@@ -10,10 +10,10 @@
           <div class="promo__main-content linear-gradient-bg">
             <div class="promo__text-content">
               <h1 class="promo__title main-title">
-                Explore the Future of AI&nbsp;Language Learning
+                {{index_title}}
               </h1>
               <p class="promo__text text">
-                Experience the magic of speaking with AI, just like how children naturally learn languages.
+                {{index_description}}
               </p>
               @@include('./html/links.html', {})
             </div>
@@ -24,31 +24,31 @@
           </div>
           <ul class="promo__countries-list">
             <li>
-              <img src="@img/usa-flag.png" srcset="@img/usa-flag@2x.png 2x" width="72" height="72" alt="Learn English" loading="lazy" />
+              <img src="@img/usa-flag.png" srcset="@img/usa-flag@2x.png 2x" width="72" height="72" alt="{{index_english_alt}}" loading="lazy" />
             </li>
             <li>
-              <img src="@img/italy-flag.png" srcset="@img/italy-flag@2x.png 2x" width="72" height="72" alt="Learn Italian" loading="lazy" />
+              <img src="@img/italy-flag.png" srcset="@img/italy-flag@2x.png 2x" width="72" height="72" alt="{{index_italian_alt}}" loading="lazy" />
             </li>
             <li>
-              <img src="@img/france-flag.png" srcset="@img/france-flag@2x.png 2x" width="72" height="72" alt="Learn French" loading="lazy" />
+              <img src="@img/france-flag.png" srcset="@img/france-flag@2x.png 2x" width="72" height="72" alt="{{index_french_alt}}" loading="lazy" />
             </li>
             <li>
-              <img src="@img/spain-flag.png" srcset="@img/spain-flag@2x.png 2x" width="72" height="72" alt="Learn Spanish" loading="lazy" />
+              <img src="@img/spain-flag.png" srcset="@img/spain-flag@2x.png 2x" width="72" height="72" alt="{{index_spanish_alt}}" loading="lazy" />
             </li>
             <li>
-              <img src="@img/germany-flag.png" srcset="@img/germany-flag@2x.png 2x" width="72" height="72" alt="Learn German" loading="lazy" />
+              <img src="@img/germany-flag.png" srcset="@img/germany-flag@2x.png 2x" width="72" height="72" alt="{{index_german_alt}}" loading="lazy" />
             </li>
             <li>
-              <img src="@img/brazil-flag.png" srcset="@img/brazil-flag@2x.png 2x" width="72" height="72" alt="Learn Portuguese" loading="lazy" />
+              <img src="@img/brazil-flag.png" srcset="@img/brazil-flag@2x.png 2x" width="72" height="72" alt="{{index_portuguese_alt}}" loading="lazy" />
             </li>
             <li>
-              <img src="@img/india-flag.png" srcset="@img/india-flag@2x.png 2x" width="72" height="72" alt="Learn Hindi" loading="lazy" />
+              <img src="@img/india-flag.png" srcset="@img/india-flag@2x.png 2x" width="72" height="72" alt="{{index_hindi_alt}}" loading="lazy" />
             </li>
             <li class="promo__countries-item promo__countries-item--tablet">
-              <img src="@img/russia-flags.png" srcset="@img/russia-flags@2x.png 2x" width="72" height="72" alt="Learn Russian" loading="lazy" />
+              <img src="@img/russia-flags.png" srcset="@img/russia-flags@2x.png 2x" width="72" height="72" alt="{{index_russian_alt}}" loading="lazy" />
             </li>
             <li class="promo__countries-item promo__countries-item--tablet">
-              <img src="@img/china-flags.png" srcset="@img/china-flags@2x.png 2x" width="72" height="72" alt="Learn Chinese" loading="lazy" />
+              <img src="@img/china-flags.png" srcset="@img/china-flags@2x.png 2x" width="72" height="72" alt="{{index_chinese_alt}}" loading="lazy" />
             </li>
             <li class="promo__countries-item">
               <span
@@ -60,9 +60,9 @@
                 ><span
                   class="promo__countries-text promo__countries-text--light"
                 >
-                  And
+                  {{index_language_and}}
                 </span>
-                Other</span
+                {{index_language_other}}</span
               >
             </li>
           </ul>
@@ -73,10 +73,10 @@
           <div class="user-feedback__main-content">
             <div class="user-feedback__text-content">
               <h2 class="user-feedback__title main-title">
-                Join Thousands</br>of Happy Learners
+                {{index_join_thousands_of_happy_learners}}
               </h2>
               <p class="user-feedback__main-text text">
-                Discover a fun and effective way to&nbsp;master a new language
+                {{index_discover_a_fun_and_effective_way}}
               </p>
             </div>
             <div class="user-feedback__image"></div>
@@ -84,13 +84,17 @@
           <ul class="user-feedback__list">
             <li class="user-feedback__item user-feedback__item--worldwide linear-gradient-bg">
               <div>
-                <p class="user-feedback__text text">Users worldwide</p>
+                <p class="user-feedback__text text">
+                  {{index_users_worldwide}}
+                </p>
                 <p class="user-feedback__big-text">25.000+</p>
               </div>
             </li>
             <li class="user-feedback__item user-feedback__item--rating linear-gradient-bg">
               <div>
-                <p class="user-feedback__text text">Rating in Google Chrome</p>
+                <p class="user-feedback__text text">
+                  {{index_rating_in_google_chrome}}
+                </p>
                 <div class="user-feedback__rate-wrapper">
                   <p class="user-feedback__big-text">4.5+</p>
                   <p
@@ -138,8 +142,12 @@
             </li>
             <li class="user-feedback__item user-feedback__item--google linear-gradient-bg">
               <div>
-                <p class="user-feedback__text text">Editor's Choice</p>
-                <p class="user-feedback__big-text">Google</p>
+                <p class="user-feedback__text text">
+                  {{index_editors_choice}}
+                </p>
+                <p class="user-feedback__big-text">
+                  {{index_google}}
+                </p>
               </div>
             </li>
           </ul>
@@ -153,11 +161,10 @@
           ></div>
           <div class="left-animation__text-content corgi-ai__text-content">
             <h2 class="left-animation__title title">
-              Practice Speaking in&nbsp;Real-Life Situations 
+              {{index_practice_speaking_in-real_life}}
             </h2>
             <p class="left-animation__text text">
-              With Corgi, you can role-play real-life scenarios and build confidence in&nbsp;your speaking skills.
-              From ordering a&nbsp;coffee to&nbsp;navigating a&nbsp;new city, we&rsquo;ve got you covered!
+              {{index_with_corgi_you_can_role_play}}
             </p>
           </div>
         </div>
@@ -166,10 +173,10 @@
         <div class="language-learner__wrapper wrapper wrapper--right">
           <div class="language-learner__text-content">
             <h2 class="language-learner__title title">
-              Mistakes? No Worries, We’ve Got Your Back!
+              {{index_mistakes_no_worries}}
             </h2>
             <p class="language-learner__text text">
-              Our app gently corrects your slip-ups and boosts your grammar&nbsp;&mdash; kind of&nbsp;like a&nbsp;friendly grammar ninja.Get instant feedback on&nbsp;your language blunders and watch your grammar skills soar.
+              {{index_our_app_gently_corrects}}
             </p>
           </div>
           <div
@@ -186,19 +193,22 @@
           ></div>
           <div class="left-animation__text-content corgi-trainer__text-content">
             <h2 class="left-animation__title title">
-              Your Daily Word&nbsp;Workout
+              {{index_your_daily_word_workout}}
             </h2>
             <p class="left-animation__text text">
-              Expand your word bank without breaking a&nbsp;sweat.
-              Say goodbye to&nbsp;boring word lists and hello to&nbsp;a&nbsp;fun, interactive learning experience!
+              {{index_expand_your_word_bank}}
             </p>
           </div>
         </div>
       </section>
       <section class="learning-efficiency">
         <div class="learning-efficiency__wrapper wrapper wrapper--right">
-          <h2 class="learning-efficiency__title main-title">Speak to&nbsp;Learn, </br>Learn to&nbsp;Speak</h2>
-          <p class="learning-efficiency__text text">Studies show speaking can boost your learning efficiency by&nbsp;up&nbsp;to&nbsp;75%*. It&rsquo;s the fast track to&nbsp;fluency!</p>
+          <h2 class="learning-efficiency__title main-title">
+            {{index_speak_to_learn_learn_to_speak}}
+          </h2>
+          <p class="learning-efficiency__text text">
+            {{index_studies_show_speaking_can_boost}}
+          </p>
           <div class="learning-efficiency__animation-wrapper">
             <div class="learning-efficiency__image">
             </div>
@@ -208,24 +218,31 @@
             >
           </div>
         </div>
-        <p class="learning-efficiency__small-text">* Communicative Language Teaching: State of the Art. Savignon, S. J. (1991)</p>
+        <p class="learning-efficiency__small-text">
+          {{index_communicative_language_teaching}}
+        </p>
         </div>
       </section>
       <section class="review">
         <div class="review__wrapper wrapper">
-          <h2 class="review__title main-title">Wall of&nbsp;Love</h2>
+          <h2 class="review__title main-title">
+            {{index_wall_of_love}}
+          </h2>
           <p class="review__score-wrapper">
             <span class="review__score">
               <span class="">4.5</span>
             </span>
             <span
-              ><span class="review__text-light">Rating in</span> Google
-              Chrome</span
+              ><span class="review__text-light">
+              {{index_rating_in}}</span>
+              {{index_google_chrome}}</span
             >
           </p>
           <ul class="review__list">
             <li class="review__item linear-gradient-bg">
-              <p class="review__name">Mr Crazy</p>
+              <p class="review__name">
+                Mr Crazy
+              </p>
               <p class="review__rate" aria-label="Rating is 5 out of 5">
                 <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
@@ -244,12 +261,13 @@
                 </svg>
               </p>
               <p class="review__text">
-                Super good If&nbsp;I&nbsp;can give 100 stars&nbsp;I would
-                give&nbsp;it.&nbsp;it&nbsp;is&nbsp;a&nbsp;nice app
+                {{index_review_1_text}}
               </p>
             </li>
             <li class="review__item linear-gradient-bg">
-              <p class="review__name">MOHIT SHUKLA</p>
+              <p class="review__name">
+                {{index_review_2_name}}
+              </p>
               <p class="review__rate" aria-label="Rating is 5 out of 5">
                 <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
@@ -268,12 +286,13 @@
                 </svg>
               </p>
               <p class="review__text">
-                Thank you so&nbsp;much to&nbsp;a&nbsp;team who made this such
-                a&nbsp;helpful application... thanks a&nbsp;lot :)
+                {{index_review_2_text}}
               </p>
             </li>
             <li class="review__item linear-gradient-bg">
-              <p class="review__name">Adalee Laizure</p>
+              <p class="review__name">
+                {{index_review_3_name}}
+              </p>
               <p class="review__rate" aria-label="Rating is 5 out of 5">
                 <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
@@ -292,11 +311,13 @@
                 </svg>
               </p>
               <p class="review__text">
-                Its like my&nbsp;best friend he&nbsp;is&nbsp;really cute
+                {{index_review_3_text}}
               </p>
             </li>
             <li class="review__item linear-gradient-bg">
-              <p class="review__name">Christian Ducharme</p>
+              <p class="review__name">
+                {{index_review_4_name}}
+              </p>
               <p class="review__rate" aria-label="Rating is 5 out of 5">
                 <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
@@ -315,12 +336,13 @@
                 </svg>
               </p>
               <p class="review__text">
-                Good! I&nbsp;use the translate button to&nbsp;understand,
-                recommended!
+                {{index_review_4_text}}
               </p>
             </li>
             <li class="review__item linear-gradient-bg">
-              <p class="review__name">Taoufik EL KOM</p>
+              <p class="review__name">
+                {{index_review_5_name}}
+              </p>
               <p class="review__rate" aria-label="Rating is 4 out of 5">
                 <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
@@ -339,12 +361,13 @@
                 </svg>
               </p>
               <p class="review__text">
-                Thank you for this application i&nbsp;hope you add arabic
-                language
+                {{index_review_5_text}}
               </p>
             </li>
             <li class="review__item linear-gradient-bg">
-              <p class="review__name">chulbd 1</p>
+              <p class="review__name">
+                {{index_review_6_name}}
+              </p>
               <p class="review__rate" aria-label="Rating is 5 out of 5">
                 <svg width="20" height="20" viewBox="0 0 24 24">
                   <use xlink:href="#star" fill="#FFBA54" stroke="#0159FF"></use>
@@ -363,7 +386,7 @@
                 </svg>
               </p>
               <p class="review__text">
-                Excellent finally found what&nbsp;I needed 5/5
+                {{index_review_6_text}}
               </p>
             </li>
           </ul>
@@ -373,10 +396,11 @@
         <div class="app-install-section__wrapper wrapper">
           <div class="app-install-content">
             <h2 class="app-install-section__title main-title">
-              The Best Time to&nbsp;Start is NOW!
+              {{index_the_best_time_to_start_is_now}}
             </h2>
-            <p class="app-install-section__text text">Download Corgi and discover the most natural
-              way to&nbsp;learn a&nbsp;language: with your voice.</p>
+            <p class="app-install-section__text text">
+              {{index_download_corgi_and_discover_the_most_natural_way}}
+            </p>
             @@include('./html/links.html', {})
           </div>
           <div class="app-install-section__image"></div>
