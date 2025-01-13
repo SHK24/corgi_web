@@ -296,7 +296,7 @@ const MessageManager = {
       }
     }
 
-    sendMessageBtn.addEventListener('click', async function (e) {
+    sendMessageBtn && sendMessageBtn.addEventListener('click', async function (e) {
       e.preventDefault()
       if(!sendMessageBtn.classList.contains(SEND_BTN_DISABLED_CLASS_NAME)) {
         await sendUserMessage()
@@ -304,7 +304,7 @@ const MessageManager = {
     })
 
 
-    messageInputEl.addEventListener('keypress', async function(e) {
+    messageInputEl && messageInputEl.addEventListener('keypress', async function(e) {
       if (e.key === 'Enter') {
         e.preventDefault()
         if(!sendMessageBtn.classList.contains(SEND_BTN_DISABLED_CLASS_NAME)) {
@@ -313,7 +313,7 @@ const MessageManager = {
       }
     })
 
-    messageInputEl.addEventListener('keyup', function(e) {
+    messageInputEl && messageInputEl.addEventListener('keyup', function(e) {
       if(messageInputEl.value) {
         sendMessageBtn.classList.remove(SEND_BTN_DISABLED_CLASS_NAME)
       } else {
@@ -321,7 +321,7 @@ const MessageManager = {
       }
     })
 
-    messageInputEl.addEventListener('change', function(e) {
+    messageInputEl && messageInputEl.addEventListener('change', function(e) {
       if(messageInputEl.value) {
         sendMessageBtn.classList.remove(SEND_BTN_DISABLED_CLASS_NAME)
       } else {
