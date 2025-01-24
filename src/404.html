@@ -15,12 +15,12 @@
         <img src="@img/404.png" srcset="@img/404@2x.png 2x" width="700" height="344" alt="" loading="lazy" class="error-page__img" />
         <div class="error-page__content">
           <h1 class="error-page__title">
-            Something
+            {{ error_404_title_part1 }}
             <span class="error-page__title error-page__title--bold"
-              >Went Wrong</span> ...
+              >{{ error_404_title_part2 }}</span> ...
           </h1>
           <a href="/" class="error-page__link install-link">
-            Go Home
+            {{ error_404_go_home }}
           </a>
         </div>
       </div>

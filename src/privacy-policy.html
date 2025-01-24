@@ -1,442 +1,715 @@
 <!DOCTYPE html>
 <html lang="en">
-  @@include('./html/head.html', { 'title': 'Corgi AI: Your Language Teacher', link: '' })
-  <body class="webp">
-    @@include('./html/header.html', {})
-    <main>
-      <section class="text-page">
-        <div class="text-page__wrapper wrapper">
-          <h1 class="main-title">
-            {{ privacy_policy_title }}
-          </h1>
-          <p>
-            {{ privacy_policy_last_updated }}
-          </p>
-          <p>
-            {{ privacy_this_privacy_policy_describes }}
-          </p>
-          <p>
-            {{ privacy_we_use_your_personal_data_to_provide }}
-          </p>
-          <h2>
-            {{ privacy_policy_interpretation_and_definitions }}
-          </h2>
-          <h3>
-            {{ privacy_policy_interpretation }}
-          </h3>
-          <p>
-            {{ privacy_policy_the_words_of_which_the_initial_letter }}
-          </p>
-          <h3>
-            {{ privacy_policy_definitions }}
-          </h3>
-          <p>
-            {{ privacy_policy_for_the_purposes_of_this_privacy_policy }}
-          </p>
-          <ul>
-            <li>
-              <b>
-                {{ privacy_policy_account }}
-              </b>
-              {{ privacy_policy_account_means }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_affiliate }}
-              </b>
-              {{ privacy_policy_affiliate_means }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_company }}
-              </b>
-              {{ privacy_policy_company_refers }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_cookies }}
-              </b>
-              {{ privacy_policy_cookies_definition }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_country }}
-              </b>
-              {{ privacy_policy_country_refers }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_device }}
-              </b>
-              {{ privacy_policy_device_means }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_personal_data }}
-              </b>
-              {{ privacy_policy_personal_data_definition }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_service }}
-              </b>
-              {{ privacy_policy_service_refers }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_service_provider }}
-              </b>
-              {{ privacy_policy_service_provider_definition }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_usage_data }}
-              </b>
-              {{ privacy_policy_usage_data_definition }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_website }}
-              </b>
-              {{ privacy_policy_website_definition }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_you }}
-              </b>
-              {{ privacy_policy_you_definition }}
-            </li>
-          </ul>
-          <h2>
-            {{ privacy_policy_collection_and_using_your_personal_data }}
-          </h2>
-          <h3>
-            {{ privacy_policy_types_of_data_collected }}
-          </h3>
-          <h4>
-            {{ privacy_policy_personal_data }}
-          </h4>
-          <p>
-            {{ privacy_policy_while_using_our_service }}
-          </p>
-          <ul>
-            <li>
-              {{ privacy_policy_email_address }}
-            </li>
-            <li>
-              {{ privacy_policy_usage_data }}
-            </li>
-          </ul>
-          <h4>
-            {{ privacy_policy_usage_data_title }}
-          </h4>
-          <p>
-            {{ privacy_policy_usage_data_is_collected_automatically }}
-          </p>
-          <p>
-            {{ privacy_policy_usage_data_may_include_information }}
-          </p>
-          <p>
-            {{ privacy_policy_when_you_access_the_service }}
-          </p>
-          <p>
-            {{ privacy_policy_we_may_also_collect_information }}
-          </p>
-          <h4>
-            {{ privacy_policy_tracking_technologies_and_cookies }}
-          </h4>
-          <p>
-            {{ privacy_policy_we_use_cookies_and_similar_tracking }}
-          </p>
-          <ul>
-            <li>
-              <b>
-                {{ privacy_policy_cookies_or_browser_cookies }}
-              </b>
-              {{ privacy_policy_cookie_is_small_file }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_web_beacons }}
-              </b>
-              {{ privacy_policy_certain_sections_of_our_service_and_our_emails }}
-            </li>
-          </ul>
-          <p>
-            {{ privacy_policy_cookies_can_be_persistent_or_session }}
-          </p>
-          <p>
-            {{ privacy_policy_we_use_both_session_and_persistent_cookies }}
-          </p>
-          <ul>
-            <li>
-              <b>
-                {{ privacy_policy_necessary_essential_cookies }}
-              </b>
-            </li>
-          </ul>
-          <span>
-            {{ privacy_policy_type_session_cookies }}
+@@include('./html/head.html', { 'title': 'Corgi AI: Your Language Teacher', link: '' })
+<body class="webp">
+@@include('./html/header.html', {})
+<main>
+  <section class="text-page">
+    <div class="text-page__wrapper wrapper">
+      <h1 data-i18n="privacy_policy_title" class="main-title">
+        Privacy Policy
+      </h1>
+      <p data-i18n="privacy_policy_last_updated">
+        Last updated: January&nbsp;11, 2024
+      </p>
+      <p data-i18n="privacy_this_privacy_policy_describes">
+        This Privacy Policy describes Our policies and procedures
+        on&nbsp;the collection, use and disclosure of&nbsp;Your information
+        when You use the Service and tells You about Your privacy rights and
+        how the law protects You.
+      </p>
+      <p data-i18n="privacy_we_use_your_personal_data_to_provide">
+        We&nbsp;use Your Personal data to&nbsp;provide and improve the
+        Service. By&nbsp;using the Service, You agree to&nbsp;the collection
+        and use of&nbsp;information in&nbsp;accordance with this Privacy
+        Policy.
+      </p>
+      <h2 data-i18n="privacy_policy_interpretation_and_definitions">
+        Interpretation and Definitions
+      </h2>
+      <h3 data-i18n="privacy_policy_interpretation">
+        Interpretation
+      </h3>
+      <p data-i18n="privacy_policy_the_words_of_which_the_initial_letter">
+        The words of&nbsp;which the initial letter is&nbsp;capitalized have
+        meanings defined under the following conditions. The following
+        definitions shall have the same meaning regardless of&nbsp;whether
+        they appear in&nbsp;singular or&nbsp;in&nbsp;plural.
+      </p>
+      <h3 data-i18n="privacy_policy_definitions">
+        Definitions
+      </h3>
+      <p data-i18n="privacy_policy_for_the_purposes_of_this_privacy_policy">
+        For the purposes of&nbsp;this Privacy Policy:
+      </p>
+      <ul>
+        <li>
+          <b data-i18n="privacy_policy_account">
+            Account
+          </b>
+          <span data-i18n="privacy_policy_account_means">
+                 means a&nbsp;unique account created for You
+                 to&nbsp;access our Service or&nbsp;parts of&nbsp;our Service.
+              </span>
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_affiliate">
+            Affiliate
+          </b>
+          <span data-i18n="privacy_policy_affiliate_means">
+                means an&nbsp;entity that controls,
+                is&nbsp;controlled by&nbsp;or&nbsp;is&nbsp;under common control
+                with a&nbsp;party, where &laquo;control&raquo; means ownership
+                of&nbsp;50% or&nbsp;more of&nbsp;the shares, equity interest
+                or&nbsp;other securities entitled to&nbsp;vote for election
+                of&nbsp;directors or&nbsp;other managing authority.
+              </span>
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_company">
+            Company
+          </b>
+          <span data-i18n="privacy_policy_company_refers">
+                (referred to&nbsp;as&nbsp;either &laquo;the
+                Company&raquo;, &laquo;We&raquo;, &laquo;Us&raquo;
+                or&nbsp;&laquo;Our&raquo; in&nbsp;this Agreement) refers
+                to&nbsp;Corgi Software Limited.
+              </span>
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_cookies">
+            Cookies
+          </b>
+          <span data-i18n="privacy_policy_cookies_definition">
+                are small files that are placed on&nbsp;Your
+                computer, mobile device or&nbsp;any other device
+                by&nbsp;a&nbsp;website, containing the details of&nbsp;Your
+                browsing history on&nbsp;that website among its many uses.
+              </span>
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_country">
+            Country
+          </b>
+          <span data-i18n="privacy_policy_country_refers">
+                 refers&nbsp;to: Cyprus
+              </span>
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_device">
+            Device
+          </b>
+          <span data-i18n="privacy_policy_device_means">
+                means any device that can access the Service such
+                as&nbsp;a&nbsp;computer, a&nbsp;cellphone or&nbsp;a&nbsp;digital
+                tablet.
+              </span>
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_personal_data">
+            Personal Data
+          </b>
+          <span data-i18n="privacy_policy_personal_data_definition">
+                is&nbsp;any information that relates
+                to&nbsp;an&nbsp;identified or&nbsp;identifiable individual.
+              </span>
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_service">
+            Service
+          </b>
+          <span data-i18n="privacy_policy_service_refers">
+                refers to&nbsp;the Website.
+              </span>
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_service_provider">
+            Service Provider
+          </b>
+          <span data-i18n="privacy_policy_service_provider_definition">
+                means any natural or&nbsp;legal person who
+                processes the data on&nbsp;behalf of&nbsp;the Company.
+                It&nbsp;refers to&nbsp;third-party companies or&nbsp;individuals
+                employed by&nbsp;the Company to&nbsp;facilitate the Service,
+                to&nbsp;provide the Service on&nbsp;behalf of&nbsp;the Company,
+                to&nbsp;perform services related to&nbsp;the Service
+                or&nbsp;to&nbsp;assist the Company in&nbsp;analyzing how the
+                Service is&nbsp;used.
+              </span>
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_usage_data">
+            Usage Data
+          </b>
+          <span data-i18n="privacy_policy_usage_data_definition">
+                refers to&nbsp;data collected automatically,
+                either generated by&nbsp;the use of&nbsp;the Service or&nbsp;from
+                the Service infrastructure itself (for example, the duration
+                of&nbsp;a&nbsp;page visit).
+              </span>
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_website">
+            Website
+          </b>
+          <span data-i18n="privacy_policy_website_definition">
+                refers to&nbsp;Corgi Software Limited, accessible from getcorgi.com
+              </span>
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_you">
+            You
+          </b>
+          <span data-i18n="privacy_policy_you_definition">
+                means the individual accessing or&nbsp;using the
+                Service, or&nbsp;the company, or&nbsp;other legal entity
+                on&nbsp;behalf of&nbsp;which such individual is&nbsp;accessing
+                or&nbsp;using the Service, as&nbsp;applicable.
+              </span>
+        </li>
+      </ul>
+      <h2 data-i18n="privacy_policy_collection_and_using_your_personal_data">
+        Collecting and Using Your Personal Data
+      </h2>
+      <h3 data-i18n="privacy_policy_types_of_data_collected">
+        Types of Data Collected
+      </h3>
+      <h4 data-i18n="privacy_policy_personal_data">
+        Personal Data
+      </h4>
+      <p data-i18n="privacy_policy_while_using_our_service">
+        While using Our Service, We&nbsp;may ask You to&nbsp;provide&nbsp;Us
+        with certain personally identifiable information that can
+        be&nbsp;used to&nbsp;contact or&nbsp;identify You. Personally
+        identifiable information may include, but is&nbsp;not
+        limited&nbsp;to:
+      </p>
+      <ul>
+        <li data-i18n="privacy_policy_email_address">
+          Email address
+        </li>
+        <li data-i18n="privacy_policy_usage_data">
+          Usage Data
+        </li>
+      </ul>
+      <h4 data-i18n="privacy_policy_usage_data_title">
+        Usage Data
+      </h4>
+      <p data-i18n="privacy_policy_usage_data_is_collected_automatically">
+        Usage Data is&nbsp;collected automatically when using the Service.
+      </p>
+      <p data-i18n="privacy_policy_usage_data_may_include_information">
+        Usage Data may include information such as&nbsp;Your Device&rsquo;s
+        Internet Protocol address (e.g. IP&nbsp;address), browser type,
+        browser version, the pages of&nbsp;our Service that You visit, the
+        time and date of&nbsp;Your visit, the time spent on&nbsp;those
+        pages, unique device identifiers and other diagnostic data.
+      </p>
+      <p data-i18n="privacy_policy_when_you_access_the_service">
+        When You access the Service by&nbsp;or&nbsp;through a&nbsp;mobile
+        device, We&nbsp;may collect certain information automatically,
+        including, but not limited&nbsp;to, the type of&nbsp;mobile device
+        You use, Your mobile device unique&nbsp;ID, the&nbsp;IP address
+        of&nbsp;Your mobile device, Your mobile operating system, the type
+        of&nbsp;mobile Internet browser You use, unique device identifiers
+        and other diagnostic data.
+      </p>
+      <p data-i18n="privacy_policy_we_may_also_collect_information">
+        We&nbsp;may also collect information that Your browser sends
+        whenever You visit our Service or&nbsp;when You access the Service
+        by&nbsp;or&nbsp;through a&nbsp;mobile device.
+      </p>
+      <h4 data-i18n="privacy_policy_tracking_technologies_and_cookies">
+        Tracking Technologies and Cookies
+      </h4>
+      <p data-i18n="privacy_policy_we_use_cookies_and_similar_tracking">
+        We&nbsp;use Cookies and similar tracking technologies to&nbsp;track
+        the activity on&nbsp;Our Service and store certain information.
+        Tracking technologies used are beacons, tags, and scripts
+        to&nbsp;collect and track information and to&nbsp;improve and
+        analyze Our Service. The technologies&nbsp;We use may include:
+      </p>
+      <ul>
+        <li>
+          <b data-i18n="privacy_policy_cookies_or_browser_cookies">
+            Cookies or&nbsp;Browser Cookies.
+          </b>
+          <span data-i18n="privacy_policy_cookie_is_small_file">
+                A&nbsp;cookie
+                is&nbsp;a&nbsp;small file placed on&nbsp;Your Device. You can
+                instruct Your browser to&nbsp;refuse all Cookies
+                or&nbsp;to&nbsp;indicate when a&nbsp;Cookie is&nbsp;being sent.
+                However, if&nbsp;You do&nbsp;not accept Cookies, You may not
+                be&nbsp;able to&nbsp;use some parts of&nbsp;our Service. Unless
+                you have adjusted Your browser setting so&nbsp;that it&nbsp;will
+                refuse Cookies, our Service may use Cookies.
+              </span>
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_web_beacons">
+            Web Beacons.
+          </b>
+          <span data-i18n="privacy_policy_certain_sections_of_our_service_and_our_emails">
+            Certain sections of&nbsp;our Service and our
+            emails may contain small electronic files known as&nbsp;web
+            beacons (also referred to&nbsp;as&nbsp;clear gifs, pixel tags, and
+            single-pixel gifs) that permit the Company, for example,
+            to&nbsp;count users who have visited those pages or&nbsp;opened
+            an&nbsp;email and for other related website statistics (for
+            example, recording the popularity of&nbsp;a&nbsp;certain section
+            and verifying system and server integrity).
           </span>
-          <span>
-            {{ privacy_policy_administered_by_us }}
-
+        </li>
+      </ul>
+      <p data-i18n="privacy_policy_cookies_can_be_persistent_or_session">
+        Cookies can be&nbsp;&laquo;Persistent&raquo;
+        or&nbsp;&laquo;Session&raquo; Cookies. Persistent Cookies remain
+        on&nbsp;Your personal computer or&nbsp;mobile device when You
+        go&nbsp;offline, while Session Cookies are deleted as&nbsp;soon
+        as&nbsp;You close Your web browser. You can learn more about cookies
+        on&nbsp;TermsFeed website article.
+      </p>
+      <p data-i18n="privacy_policy_we_use_both_session_and_persistent_cookies">
+        We&nbsp;use both Session and Persistent Cookies for the purposes set
+        out below:
+      </p>
+      <ul>
+        <li>
+          <b data-i18n="privacy_policy_necessary_essential_cookies">
+            Necessary&nbsp;/ Essential Cookies
+          </b>
+        </li>
+      </ul>
+      <span data-i18n="privacy_policy_type_session_cookies">
+        Type: Session Cookies
+      </span>
+      <span data-i18n="privacy_policy_administered_by_us">
+        Administered by: Us
+      </span>
+      <span data-i18n="privacy_policy_purpose_these_cookies_are_essential_to_provide">
+        Purpose: These Cookies are essential to&nbsp;provide You with
+        services available through the Website and to&nbsp;enable You
+        to&nbsp;use some of&nbsp;its features. They help
+        to&nbsp;authenticate users and prevent fraudulent use of&nbsp;user
+        accounts. Without these Cookies, the services that You have asked
+        for cannot be&nbsp;provided, and&nbsp;We only use these Cookies
+        to&nbsp;provide You with those services.
+      </span>
+      <ul>
+        <li>
+          <b data-i18n="privacy_policy_cookies_policy_notice_acceptance_cookies">
+            Cookies Policy&nbsp;/ Notice Acceptance Cookies
+          </b>
+        </li>
+      </ul>
+      <span data-i18n="privacy_policy_type_persistent_cookies">
+        Type: Persistent Cookies
+      </span>
+      <span data-i18n="privacy_policy_administered_by_us">
+       Administered by: Us
+      </span>
+      <span data-i18n="privacy_policy_purpose_these_cookies_identify_if_users_have_accepted">
+        Purpose: These Cookies identify if&nbsp;users have accepted the use
+        of&nbsp;cookies on&nbsp;the Website.
+      </span>
+      <ul>
+        <li>
+          <b data-i18n="privacy_policy_functionality_cookies">
+            Functionality Cookies
+          </b>
+        </li>
+      </ul>
+      <span data-i18n="privacy_policy_type_persistent_cookies">
+        Type: Persistent Cookies
+      </span>
+      <span data-i18n="privacy_policy_administered_by_us">
+        Administered by: Us
+      </span>
+      <span data-i18n="privacy_policy_purpose_these_cookies_allow_us_to_remember">
+        Purpose: These Cookies allow&nbsp;us to&nbsp;remember choices You
+        make when You use the Website, such as&nbsp;remembering your login
+        details or&nbsp;language preference. The purpose of&nbsp;these
+        Cookies is&nbsp;to&nbsp;provide You with a&nbsp;more personal
+        experience and to&nbsp;avoid You having to&nbsp;re-enter your
+        preferences every time You use the Website.
+      </span>
+      <p data-i18n="privacy_policy_for_more_information_about_the_cookies">
+        For more information about the cookies we&nbsp;use and your choices
+        regarding cookies, please visit our Cookies Policy or&nbsp;the
+        Cookies section of&nbsp;our Privacy Policy.
+      </p>
+      <h3 data-i18n="privacy_policy_use_of_your_personal_data">
+        Use of Your Personal Data
+      </h3>
+      <p data-i18n="privacy_policy_the_company_may_use_personal_data">
+        The Company may use Personal Data for the following purposes:
+      </p>
+      <ul>
+        <li>
+          <b data-i18n="privacy_policy_to_provide_and_maintain_our_service">
+            To&nbsp;provide and maintain our Service,
+          </b>
+          <span data-i18n="privacy_policy_including_to_monitor_the_usage">
+             including to&nbsp;monitor the usage of&nbsp;our Service.
           </span>
-          <span>
-            {{ privacy_policy_purpose_these_cookies_are_essential_to_provide }}
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_to_manage_your_account">
+            To&nbsp;manage Your Account:
+          </b>
+          <span data-i18n="privacy_policy_to_manage_your_registration">
+            to&nbsp;manage Your registration as&nbsp;a&nbsp;user of&nbsp;the Service. The Personal
+            Data You provide can give You access to&nbsp;different
+            functionalities of&nbsp;the Service that are available to&nbsp;You
+            as&nbsp;a&nbsp;registered user.
           </span>
-          <ul>
-            <li><b>
-              {{ privacy_policy_cookies_policy_notice_acceptance_cookies }}
-            </b></li>
-          </ul>
-          <span>
-            {{ privacy_policy_type_persistent_cookies }}
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_for_the_performance_of_contract">
+            For the performance of&nbsp;a&nbsp;contract:
+          </b>
+          <span data-i18n="privacy_policy_the_development_compliance">
+            the development, compliance and undertaking of&nbsp;the purchase
+            contract for the products, items or&nbsp;services You have
+            purchased or&nbsp;of&nbsp;any other contract with&nbsp;Us through
+            the Service.
           </span>
-          <span>
-            {{ privacy_policy_administered_by_us }}
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_to_contact_you">
+            To&nbsp;contact You:
+          </b>
+          <span data-i18n="privacy_policy_to_contact_you_by_email">
+            To&nbsp;contact You by&nbsp;email,
+            telephone calls, SMS, or&nbsp;other equivalent forms
+            of&nbsp;electronic communication, such as&nbsp;a&nbsp;mobile
+            application&rsquo;s push notifications regarding updates
+            or&nbsp;informative communications related to&nbsp;the
+            functionalities, products or&nbsp;contracted services, including
+            the security updates, when necessary or&nbsp;reasonable for their
+            implementation.
           </span>
-          <span>
-            {{ privacy_policy_purpose_these_cookies_identify_if_users_have_accepted }}
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_to_provide_you">
+            To&nbsp;provide You
+          </b>
+          <span data-i18n="privacy_policy_with_news_special_offers_and_general">
+            with news, special offers and general
+            information about other goods, services and events which
+            we&nbsp;offer that are similar to&nbsp;those that you have already
+            purchased or&nbsp;enquired about unless You have opted not
+            to&nbsp;receive such information.
           </span>
-          <ul>
-            <li><b>
-              {{ privacy_policy_functionality_cookies }}
-            </b></li>
-          </ul>
-          <span>
-            {{ privacy_policy_type_persistent_cookies }}
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_to_manage_your_requests">
+            To&nbsp;manage Your requests:
+          </b>
+          <span data-i18n="privacy_policy_to_attend_and_manage">
+           To&nbsp;attend and manage Your requests to&nbsp;Us.
           </span>
-          <span>
-            {{ privacy_policy_administered_by_us }}
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_for_business_transfers">
+            For business transfers:
+          </b>
+          <span data-i18n="privacy_policy_we_may_use_your_information">
+            We&nbsp;may use Your information
+            to&nbsp;evaluate or&nbsp;conduct a&nbsp;merger, divestiture,
+            restructuring, reorganization, dissolution, or&nbsp;other sale
+            or&nbsp;transfer of&nbsp;some or&nbsp;all of&nbsp;Our assets,
+            whether as&nbsp;a&nbsp;going concern or&nbsp;as&nbsp;part
+            of&nbsp;bankruptcy, liquidation, or&nbsp;similar proceeding,
+            in&nbsp;which Personal Data held by&nbsp;Us about our Service
+            users is&nbsp;among the assets transferred.
           </span>
-          <span>
-            {{ privacy_policy_purpose_these_cookies_allow_us_to_remember }}
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_for_other_purpose">
+            For other purposes:
+          </b>
+          <span data-i18n="privacy_policy_we_may_use_your_information_for_other">
+            We&nbsp;may use Your information for
+            other purposes, such as&nbsp;data analysis, identifying usage
+            trends, determining the effectiveness of&nbsp;our promotional
+            campaigns and to&nbsp;evaluate and improve our Service, products,
+            services, marketing and your experience.
           </span>
-          <p>
-            {{ privacy_policy_functionality_cookies }}
-          </p>
-          <h3>
-            {{ privacy_policy_use_of_your_personal_data }}
-          </h3>
-          <p>
-            {{ privacy_policy_the_company_may_use_personal_data }}
-          </p>
-          <ul>
-            <li>
-              <b>
-                {{ privacy_policy_to_provide_and_maintain_our_service }}
-              </b>
-              {{ privacy_policy_including_to_monitor_the_usage }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_to_manage_your_account }}
-              </b>
-              {{ privacy_policy_to_manage_your_registration }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_for_the_performance_of_contract }}
-              </b>
-              {{ privacy_policy_the_development_compliance }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_to_contact_you }}
-              </b>
-              {{ privacy_policy_to_contact_you_by_email }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_to_provide_you }}
-              </b>
-              {{ privacy_policy_with_news_special_offers_and_general }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_to_manage_your_requests }}
-              </b>
-              {{ privacy_policy_to_attend_and_manage }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_for_business_transfers }}
-              </b>
-              {{ privacy_policy_we_may_use_your_information }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_for_other_purpose }}
-              </b>
-              {{ privacy_policy_we_may_use_your_information_for_other }}
-            </li>
-          </ul>
-          <p>
-            {{ privacy_policy_we_may_share_your_personal_information }}
-          </p>
-          <ul>
-            <li>
-              <b>
-                {{ privacy_policy_with_service_providers }}
-              </b>
-              {{ privacy_policy_we_may_share_your_personal }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_for_business_transfers }}
-              </b>
-              {{ privacy_policy_we_may_share_or_transfer }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_with_affiliates }}
-              </b>
-              {{ privacy_policy_we_may_share_your_information_with }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_with_business_partners }}
-              </b>
-              {{ privacy_policy_we_may_share_your_information }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_with_other_users }}
-              </b>
-              {{ privacy_policy_when_you_share_personal_information }}
-            </li>
-            <li>
-              <b>
-                {{ privacy_policy_with_your_consent }}
-              </b>
-              {{ privacy_policy_we_may_disclose_your_personal_information }}
-            </li>
-          </ul>
-          <h3>
-            {{ privacy_policy_retention_of_your_personal_data }}
-          </h3>
-          <p>
-            {{ privacy_policy_the_company_will_retain_your_personal_data }}
-          </p>
-          <p>
-            {{ privacy_policy_the_company_will_also_retain_usage_data }}
-          </p>
-          <h3>
-            {{ privacy_policy_transfer_of_your_personal_data }}
-          </h3>
-          <p>
-            {{ privacy_policy_your_information_including_personal_data }}
-          </p>
-          <p>
-            {{ privacy_policy_your_consent_to_this_privacy_policy }}
-          </p>
-          <p>
-            {{ privacy_policy_the_company_will_take_all_steps }}
-          </p>
-          <h3>
-            {{ privacy_policy_delete_your_personal_data }}
-          </h3>
-          <p>
-            {{ privacy_policy_you_have_the_right_to_delete }}
-          </p>
-          <p>
-            {{ privacy_policy_our_service_may_give_you_the_ability }}
-          </p>
-          <p>
-            {{ privacy_policy_you_may_update_amend_or_delete_your_information }}
-          </p>
-          <p>
-            {{ privacy_policy_please_note_however_that_we_may_need_to_retain }}
-          </p>
-          <h3>
-            {{ privacy_policy_disclosure_of_your_personal_data }}
-          </h3>
-          <h4>
-            {{ privacy_policy_business_transactions }}
-          </h4>
-          <p>
-            {{ privacy_policy_if_the_company_is_involved_in_merger }}
-          </p>
-          <h4>
-            {{ privacy_policy_law_enforcement }}
-          </h4>
-          <p>
-            {{ privacy_policy_under_certain_circumstances }}
-          </p>
-          <h4>
-            {{ privacy_policy_other_legal_requirements }}
-          </h4>
-          <p>
-            {{ privacy_policy_the_company_may_disclose_your_personal_data }}
-          </p>
-          <ul>
-            <li>
-              {{ privacy_policy_comply_with_legal_obligation }}
-            </li>
-            <li>
-              {{ privacy_policy_protect_and_defend_the_rights }}
-            </li>
-            <li>
-              {{ privacy_policy_prevent_of_investigate_possible }}
-            </li>
-            <li>
-              {{ privacy_policy_protect_the_personal_safety_of_users }}
-            </li>
-            <li>
-              {{ privacy_policy_protect_against_legal_liability }}
-            </li>
-          </ul>
-          <h3>
-            {{ privacy_policy_security_of_your_personal_data }}
-          </h3>
-          <p>
-            {{ privacy_policy_the_security_of_your_personal_data }}
-          </p>
-          <h2>
-            {{ privacy_policy_children_privacy }}
-          </h2>
-          <p>
-            {{ privacy_policy_our_service_does_not_address_anyone }}
-          </p>
-          <p>
-            {{ privacy_policy_if_we_need_to_rely_on_consent }}
-          </p>
-          <h2>
-            {{ privacy_policy_links_to_other_websites }}
-          </h2>
-          <p>
-            {{ privacy_policy_security_of_your_personal_data }}
-          </p>
-          <p>
-            {{ privacy_policy_we_have_no_control_over_and_assume }}
-          </p>
-          <h2>
-            {{ privacy_policy_changes_to_this_privacy_policy }}
-          </h2>
-          <p>
-            {{ privacy_policy_we_may_update_our_privacy_policy }}
-          </p>
-          <p>
-            {{ privacy_policy_we_will_let_you_know_via_email }}
-          </p>
-          <p>
-            {{ privacy_policy_you_are_advised_to_review_this }}
-          </p>
-          <h2>
-            {{ privacy_policy_contact_us }}
-          </h2>
-          <p>
-            {{ privacy_policy_if_you_have_any_questions_about_this_privacy_policy }}
-          </p>
-          <ul>
-            <li>
-              {{ privacy_policy_by_email }}
-            </li>
-          </ul>
-        </div>
-      </section>
-    </main>
-    @@include('./html/footer.html', {})
-  </body>
+        </li>
+      </ul>
+      <p data-i18n="privacy_policy_we_may_share_your_personal_information">
+        We&nbsp;may share Your personal information in&nbsp;the following
+        situations:
+      </p>
+      <ul>
+        <li>
+          <b data-i18n="privacy_policy_with_service_providers">
+            With Service Providers:
+          </b>
+          <span data-i18n="privacy_policy_we_may_share_your_personal">
+            We&nbsp;may share Your personal
+            information with Service Providers to&nbsp;monitor and analyze the
+            use of&nbsp;our Service, to&nbsp;contact You.
+          </span>
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_for_business_transfers">
+            For business transfers:
+          </b>
+          <span data-i18n="privacy_policy_we_may_share_or_transfer">
+            We&nbsp;may share or&nbsp;transfer
+            Your personal information in&nbsp;connection with, or&nbsp;during
+            negotiations&nbsp;of, any merger, sale of&nbsp;Company assets,
+            financing, or&nbsp;acquisition of&nbsp;all or&nbsp;a&nbsp;portion
+            of&nbsp;Our business to&nbsp;another company.
+          </span>
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_with_affiliates">
+            With Affiliates:
+          </b>
+          <span data-i18n="privacy_policy_we_may_share_your_information_with">
+            We&nbsp;may share Your information with
+            Our affiliates, in&nbsp;which case we&nbsp;will require those
+            affiliates to&nbsp;honor this Privacy Policy. Affiliates include
+            Our parent company and any other subsidiaries, joint venture
+            partners or&nbsp;other companies that&nbsp;We control or&nbsp;that
+            are under common control with Us.
+          </span>
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_with_business_partners">
+            With business partners:
+          </b>
+          <span data-i18n="privacy_policy_we_may_share_your_information">
+            We&nbsp;may share Your information
+            with Our business partners to&nbsp;offer You certain products,
+            services or&nbsp;promotions.
+          </span>
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_with_other_users">
+            With other users:
+          </b>
+          <span data-i18n="privacy_policy_when_you_share_personal_information">
+            when You share personal information
+            or&nbsp;otherwise interact in&nbsp;the public areas with other
+            users, such information may be&nbsp;viewed by&nbsp;all users and
+            may be&nbsp;publicly distributed outside.
+          </span>
+        </li>
+        <li>
+          <b data-i18n="privacy_policy_with_your_consent">
+            With Your consent:
+          </b>
+          <span data-i18n="privacy_policy_we_may_disclose_your_personal_information">
+            We&nbsp;may disclose Your personal
+            information for any other purpose with Your consent.
+          </span>
+        </li>
+      </ul>
+      <h3 data-i18n="privacy_policy_retention_of_your_personal_data">
+        Retention of Your Personal Data
+      </h3>
+      <p data-i18n="privacy_policy_the_company_will_retain_your_personal_data">
+        The Company will retain Your Personal Data only for as&nbsp;long
+        as&nbsp;is&nbsp;necessary for the purposes set out in&nbsp;this
+        Privacy Policy. We&nbsp;will retain and use Your Personal Data
+        to&nbsp;the extent necessary to&nbsp;comply with our legal
+        obligations (for example, if&nbsp;we&nbsp;are required
+        to&nbsp;retain your data to&nbsp;comply with applicable laws),
+        resolve disputes, and enforce our legal agreements and policies.
+      </p>
+      <p data-i18n="privacy_policy_the_company_will_also_retain_usage_data">
+        The Company will also retain Usage Data for internal analysis
+        purposes. Usage Data is&nbsp;generally retained for a&nbsp;shorter
+        period of&nbsp;time, except when this data is&nbsp;used
+        to&nbsp;strengthen the security or&nbsp;to&nbsp;improve the
+        functionality of&nbsp;Our Service, or&nbsp;We are legally obligated
+        to&nbsp;retain this data for longer time periods.
+      </p>
+      <h3 data-i18n="privacy_policy_transfer_of_your_personal_data">
+        Transfer of Your Personal Data
+      </h3>
+      <p data-i18n="privacy_policy_your_information_including_personal_data">
+        Your information, including Personal Data, is&nbsp;processed
+        at&nbsp;the Company&rsquo;s operating offices and in&nbsp;any other
+        places where the parties involved in&nbsp;the processing are
+        located. It&nbsp;means that this information may be&nbsp;transferred
+        to&nbsp;&mdash; and maintained on&nbsp;&mdash; computers located
+        outside of&nbsp;Your state, province, country or&nbsp;other
+        governmental jurisdiction where the data protection laws may differ
+        than those from Your jurisdiction.
+      </p>
+      <p data-i18n="privacy_policy_your_consent_to_this_privacy_policy">
+        Your consent to&nbsp;this Privacy Policy followed by&nbsp;Your
+        submission of&nbsp;such information represents Your agreement
+        to&nbsp;that transfer.
+      </p>
+      <p data-i18n="privacy_policy_the_company_will_take_all_steps">
+        The Company will take all steps reasonably necessary to&nbsp;ensure
+        that Your data is&nbsp;treated securely and in&nbsp;accordance with
+        this Privacy Policy and no&nbsp;transfer of&nbsp;Your Personal Data
+        will take place to&nbsp;an&nbsp;organization or&nbsp;a&nbsp;country
+        unless there are adequate controls in&nbsp;place including the
+        security of&nbsp;Your data and other personal information.
+      </p>
+      <h3 data-i18n="privacy_policy_delete_your_personal_data">
+        Delete Your Personal Data
+      </h3>
+      <p data-i18n="privacy_policy_you_have_the_right_to_delete">
+        You have the right to&nbsp;delete or&nbsp;request that&nbsp;We
+        assist in&nbsp;deleting the Personal Data that&nbsp;We have
+        collected about You.
+      </p>
+      <p data-i18n="privacy_policy_our_service_may_give_you_the_ability">
+        Our Service may give You the ability to&nbsp;delete certain
+        information about You from within the Service.
+      </p>
+      <p data-i18n="privacy_policy_you_may_update_amend_or_delete_your_information">
+        You may update, amend, or&nbsp;delete Your information at&nbsp;any
+        time by&nbsp;signing in&nbsp;to&nbsp;Your Account, if&nbsp;you have
+        one, and visiting the account settings section that allows you
+        to&nbsp;manage Your personal information. You may also
+        contact&nbsp;Us to&nbsp;request access&nbsp;to, correct,
+        or&nbsp;delete any personal information that You have provided
+        to&nbsp;Us.
+      </p>
+      <p data-i18n="privacy_policy_please_note_however_that_we_may_need_to_retain">
+        Please note, however, that&nbsp;We may need to&nbsp;retain certain
+        information when we&nbsp;have a&nbsp;legal obligation or&nbsp;lawful
+        basis to&nbsp;do&nbsp;so.
+      </p>
+      <h3 data-i18n="privacy_policy_disclosure_of_your_personal_data">
+        Disclosure of Your Personal Data
+      </h3>
+      <h4 data-i18n="privacy_policy_business_transactions">
+        Business Transactions
+      </h4>
+      <p data-i18n="privacy_policy_if_the_company_is_involved_in_merger">
+        If&nbsp;the Company is&nbsp;involved in&nbsp;a&nbsp;merger,
+        acquisition or&nbsp;asset sale, Your Personal Data may
+        be&nbsp;transferred. We&nbsp;will provide notice before Your
+        Personal Data is&nbsp;transferred and becomes subject
+        to&nbsp;a&nbsp;different Privacy Policy.
+      </p>
+      <h4 data-i18n="privacy_policy_law_enforcement">
+        Law enforcement
+      </h4>
+      <p data-i18n="privacy_policy_under_certain_circumstances">
+        Under certain circumstances, the Company may be&nbsp;required
+        to&nbsp;disclose Your Personal Data if&nbsp;required
+        to&nbsp;do&nbsp;so&nbsp;by&nbsp;law or&nbsp;in&nbsp;response
+        to&nbsp;valid requests by&nbsp;public authorities
+        (e.g.&nbsp;a&nbsp;court or&nbsp;a&nbsp;government agency).
+      </p>
+      <h4 data-i18n="privacy_policy_other_legal_requirements">
+        Other legal requirements
+      </h4>
+      <p data-i18n="privacy_policy_the_company_may_disclose_your_personal_data">
+        The Company may disclose Your Personal Data in&nbsp;the good faith
+        belief that such action is&nbsp;necessary&nbsp;to:
+      </p>
+      <ul>
+        <li data-i18n="privacy_policy_comply_with_legal_obligation">
+          Comply with a&nbsp;legal obligation
+        </li>
+        <li data-i18n="privacy_policy_protect_and_defend_the_rights">
+          Protect and defend the rights or&nbsp;property of&nbsp;the Company
+        </li>
+        <li data-i18n="privacy_policy_prevent_of_investigate_possible">
+          Prevent or&nbsp;investigate possible wrongdoing in&nbsp;connection
+          with the Service
+        </li>
+        <li data-i18n="privacy_policy_protect_the_personal_safety_of_users">
+          Protect the personal safety of&nbsp;Users of&nbsp;the Service
+          or&nbsp;the public
+        </li>
+        <li data-i18n="privacy_policy_protect_against_legal_liability">
+          Protect against legal liability
+        </li>
+      </ul>
+      <h3 data-i18n="privacy_policy_security_of_your_personal_data">
+        Security of&nbsp;Your Personal Data
+      </h3>
+      <p data-i18n="privacy_policy_the_security_of_your_personal_data">
+        The security of&nbsp;Your Personal Data is&nbsp;important
+        to&nbsp;Us, but remember that no&nbsp;method of&nbsp;transmission
+        over the Internet, or&nbsp;method of&nbsp;electronic storage
+        is&nbsp;100% secure. While We&nbsp;strive to&nbsp;use commercially
+        acceptable means to&nbsp;protect Your Personal Data, We&nbsp;cannot
+        guarantee its absolute security.
+      </p>
+      <h2 data-i18n="privacy_policy_children_privacy">
+        Children's Privacy
+      </h2>
+      <p data-i18n="privacy_policy_our_service_does_not_address_anyone">
+        Our Service does not address anyone under the age of&nbsp;13.
+        We&nbsp;do&nbsp;not knowingly collect personally identifiable
+        information from anyone under the age of&nbsp;13. If&nbsp;You are
+        a&nbsp;parent or&nbsp;guardian and You are aware that Your child has
+        provided&nbsp;Us with Personal Data, please contact Us.
+        If&nbsp;We&nbsp;become aware that&nbsp;We have collected Personal
+        Data from anyone under the age of&nbsp;13&nbsp;without verification
+        of&nbsp;parental consent, We&nbsp;take steps to&nbsp;remove that
+        information from Our servers.
+      </p>
+      <p data-i18n="privacy_policy_if_we_need_to_rely_on_consent">
+        If&nbsp;We&nbsp;need to&nbsp;rely on&nbsp;consent
+        as&nbsp;a&nbsp;legal basis for processing Your information and Your
+        country requires consent from a&nbsp;parent, We&nbsp;may require
+        Your parent&rsquo;s consent before&nbsp;We collect and use that
+        information.
+      </p>
+      <h2 data-i18n="privacy_policy_links_to_other_websites">
+        Links to&nbsp;Other Websites
+      </h2>
+      <p data-i18n="privacy_policy_security_of_your_personal_data">
+        Security of&nbsp;Your Personal Data Our Service may contain links
+        to&nbsp;other websites that are not operated by&nbsp;Us. If&nbsp;You
+        click on&nbsp;a&nbsp;third party link, You will be&nbsp;directed
+        to&nbsp;that third party&rsquo;s site. We&nbsp;strongly advise You
+        to&nbsp;review the Privacy Policy of&nbsp;every site You visit.
+      </p>
+      <p data-i18n="privacy_policy_we_have_no_control_over_and_assume">
+        We&nbsp;have no&nbsp;control over and assume no&nbsp;responsibility
+        for the content, privacy policies or&nbsp;practices of&nbsp;any
+        third party sites or&nbsp;services.
+      </p>
+      <h2 data-i18n="privacy_policy_changes_to_this_privacy_policy">
+        Changes to&nbsp;this Privacy Policy
+      </h2>
+      <p data-i18n="privacy_policy_we_may_update_our_privacy_policy">
+        We&nbsp;may update Our Privacy Policy from time to&nbsp;time.
+        We&nbsp;will notify You of&nbsp;any changes by&nbsp;posting the new
+        Privacy Policy on&nbsp;this page.
+      </p>
+      <p data-i18n="privacy_policy_we_will_let_you_know_via_email">
+        We&nbsp;will let You know via email and/or a&nbsp;prominent notice
+        on&nbsp;Our Service, prior to&nbsp;the change becoming effective and
+        update the &laquo;Last updated&raquo; date at&nbsp;the top
+        of&nbsp;this Privacy Policy.
+      </p>
+      <p data-i18n="privacy_policy_you_are_advised_to_review_this">
+        You are advised to&nbsp;review this Privacy Policy periodically for
+        any changes. Changes to&nbsp;this Privacy Policy are effective when
+        they are posted on&nbsp;this page.
+      </p>
+      <h2 data-i18n="privacy_policy_contact_us">
+        Contact Us
+      </h2>
+      <p data-i18n="privacy_policy_if_you_have_any_questions_about_this_privacy_policy">
+        If&nbsp;you have any questions about this Privacy Policy, You can contact&nbsp;us:
+      </p>
+      <ul>
+        <li data-i18n="privacy_policy_by_email">
+          By&nbsp;email: hey@getcorgi.com
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+@@include('./html/footer.html', {})
+</body>
 </html>
