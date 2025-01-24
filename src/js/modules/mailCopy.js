@@ -5,7 +5,7 @@ export async function copyTextToClipboard(text) {
   return navigator.clipboard.writeText(text);
 }
 
-copyButton.addEventListener('click', () => {
+copyButton?.addEventListener('click', () => {
   copyTextToClipboard(textToCopy);
   copyButton.classList.add("footer__mail-button--copied")
 

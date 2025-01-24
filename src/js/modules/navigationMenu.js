@@ -19,12 +19,12 @@ function changeHeaderNavigationVisibility() {
   isOpen = !isOpen;
 }
 
-headerOpenMenuButton.addEventListener(
+headerOpenMenuButton?.addEventListener(
   'click',
   changeHeaderNavigationVisibility
 );
 
-overlay.addEventListener('click', () => {
+overlay?.addEventListener('click', () => {
   if (isOpen) {
     changeHeaderNavigationVisibility();
   }

@@ -13,7 +13,7 @@ const onHeaderSticky = () => {
   }
 };
 
-closeMenuButton.addEventListener('click', () => {
+closeMenuButton?.addEventListener('click', () => {
   headerElement.classList.remove('header--sticky');
   window.removeEventListener('scroll', onHeaderSticky);
 });

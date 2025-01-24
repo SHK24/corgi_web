@@ -46,8 +46,8 @@ const changeLink = (installLink, href, iconHref, textContent) => {
   );
 
   installLink.href = href;
-  installLinkIcon.setAttribute('xlink:href', iconHref);
-  installLinkMainText.textContent = textContent;
+  installLinkIcon?.setAttribute('xlink:href', iconHref);
+  installLinkMainText && (installLinkMainText.textContent = textContent);
 };
 
 const userOs = detectOS();

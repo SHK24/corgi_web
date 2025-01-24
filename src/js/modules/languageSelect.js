@@ -10,9 +10,9 @@ const overlay = document.querySelector('.overlay');
 let isOpen = false;
 
 function changeLanguageSelectionVisibility() {
-  htmlElement.classList.toggle('scroll-lock');
-  languageSelectButton.classList.toggle('open');
-  overlay.classList.toggle('overlay--open');
+  htmlElement?.classList.toggle('scroll-lock');
+  languageSelectButton?.classList.toggle('open');
+  overlay?.classList.toggle('overlay--open');
 
   if (!languageSelectionDialog.open) {
     languageSelectionDialog.show();
@@ -28,12 +28,12 @@ function changeLanguageSelectionVisibility() {
   }
 }
 
-languageSelectButton.addEventListener(
+languageSelectButton?.addEventListener(
   'click',
   changeLanguageSelectionVisibility
 );
 
-overlay.addEventListener('click', () => {
+overlay?.addEventListener('click', () => {
   if (isOpen) {
     changeLanguageSelectionVisibility();
   }
