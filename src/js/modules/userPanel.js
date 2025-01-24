@@ -13,22 +13,22 @@ const refreshUserPanel = () => {
   const USER_PANEL_TYPE_SIGN_IN_TEXT = 'Sign In'
 
   if (token && userId && email) {
-    userPanelEl.classList.remove(USER_PANEL_TYPE_SIGN_IN_CLASS_NAME)
-    userPanelEl.classList.add(USER_PANEL_TYPE_SIGN_OUT_CLASS_NAME)
-    userPanelTextEl.innerText = email
+    userPanelEl?.classList.remove(USER_PANEL_TYPE_SIGN_IN_CLASS_NAME)
+    userPanelEl?.classList.add(USER_PANEL_TYPE_SIGN_OUT_CLASS_NAME)
+    userPanelTextEl && (userPanelTextEl.innerText = email)
   } else {
-    userPanelEl.classList.remove(USER_PANEL_TYPE_SIGN_OUT_CLASS_NAME)
-    userPanelEl.classList.add(USER_PANEL_TYPE_SIGN_IN_CLASS_NAME)
-    userPanelTextEl.innerText = USER_PANEL_TYPE_SIGN_IN_TEXT
+    userPanelEl?.classList.remove(USER_PANEL_TYPE_SIGN_OUT_CLASS_NAME)
+    userPanelEl?.classList.add(USER_PANEL_TYPE_SIGN_IN_CLASS_NAME)
+    userPanelTextEl && (userPanelTextEl.innerText = USER_PANEL_TYPE_SIGN_IN_TEXT)
   }
-  userPanelEl.classList.remove(USER_PANEL_HIDDEN_CLASS_NAME)
+  userPanelEl?.classList.remove(USER_PANEL_HIDDEN_CLASS_NAME)
 }
 
 const init = () => {
   refreshUserPanel()
 
   const userPanelEl = document.querySelector(`.${USER_PANEL_CLASS_NAME}`)
-  userPanelEl.addEventListener('click', function () {
+  userPanelEl?.addEventListener('click', function () {
     const token = localStorage.getItem('authToken')
     const userId = localStorage.getItem('userId')
     if(token && userId) {
