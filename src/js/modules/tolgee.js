@@ -1,6 +1,9 @@
-const initTolgee = () => {
+const initTolgee = async () => {
   const { Tolgee, InContextTools, FormatSimple, BackendFetch } =
     window['@tolgee/web'];
+
+  const en = await fetch('/i18n/en.json').then(res => res.json())
+  const es = await fetch('/i18n/es.json').then(res => res.json())
 
   const tolgee = Tolgee()
     .use(InContextTools())
@@ -14,41 +17,26 @@ const initTolgee = () => {
       apiKey: '',
       apiUrl: 'https://app.tolgee.io',
       defaultLanguage: 'en',
-      observerType: 'text',
-      observerOptions: { inputPrefix: '{{', inputSuffix: '}}' },
+      staticData: {
+        en,
+        es,
+      }
     });
 
   tolgee.run().then(() => {
-    document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
-      const placeholder = tolgee.t(el.dataset.i18nPlaceholder, { noWrap: true })
-      if(placeholder) {
-        el.setAttribute('placeholder', placeholder)
-      }
-    })
-
-    document.querySelectorAll('[data-i18n-alt]').forEach((el) => {
-      const alt = tolgee.t(el.dataset.i18nAlt, { noWrap: true })
-      if(alt) {
-        el.setAttribute('alt', alt)
-      }
-    })
-
-    document.querySelectorAll('[data-i18n]').forEach((el) => {
-      const localizedText = tolgee.t(el.dataset.i18n, { noWrap: true })
-      if(localizedText) {
-        el.textContent = localizedText
-      }
-    })
+    langSwitcher.localizeAll()
   });
 
   tolgee.on('update', () => {
     console.log('Records')
-    console.log([...tolgee.getAllRecords()[0].data].map(item => item[0]))
+    console.log(tolgee.getAllRecords())
   });
+
+  window.tolgee = tolgee
+  await langSwitcher.init()
 }
 
-window.addEventListener('load', () => {
-  initTolgee();
+document.addEventListener('DOMContentLoaded', async () => {
+  await initTolgee()
 });
-
 

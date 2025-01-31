@@ -1,20 +1,42 @@
 <nav class="language-selection @@class">
-  <h2>Website language</h2>
+  <h2 data-i18n="language_website_language">
+    Website language
+  </h2>
   <ul class="language-selection__list">
     <li class="language-selection__item">
-      <a class="language-selection__link">
+      <a class="js-lang-item language-selection__link" href="" data-lang="en">
         <span class="language-selection__image">
-          <img src="@img/usa-flag.png" srcset="@img/usa-flag@2x.png 2x" width="40" height="40" alt="Learn English" loading="lazy" />
+          <img
+            src="@img/usa-flag.png"
+            srcset="@img/usa-flag@2x.png 2x"
+            width="40"
+            height="40"
+            alt="Learn English"
+            data-i18n-alt="language_learn_english"
+            loading="lazy"
+          />
         </span>
-        English
+        <span class="js-lang-name" data-i18n="language_english">
+          English
+        </span>
       </a>
     </li>
     <li class="language-selection__item">
-      <a class="language-selection__link" href="">
+      <a class="js-lang-item language-selection__link" href="" data-lang="es">
         <span class="language-selection__image">
-          <img src="@img/spain-flag.png" srcset="@img/spain-flag@2x.png 2x" width="40" height="40" alt="Learn Spanish" loading="lazy" />
+          <img
+            src="@img/spain-flag.png"
+            srcset="@img/spain-flag@2x.png 2x"
+            width="40"
+            height="40"
+            alt="Learn Spanish"
+            data-i18n-alt="language_learn_spanish"
+            loading="lazy"
+          />
         </span>
-        Spanish
+        <span class="js-lang-name" data-i18n="language_spanish">
+          Spanish
+        </span>
       </a>
     </li>
   </ul>

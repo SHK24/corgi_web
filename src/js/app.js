@@ -6,4 +6,5 @@ import './modules/languageSelect.js';
 import './modules/navigationMenu.js';
 import './modules/installLink.js';
 import './modules/chatgpt.js';
+import './modules/langSwitcher.js';
 import './modules/tolgee.js';

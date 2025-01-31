@@ -3,9 +3,19 @@
     type="button"
     class="header__navigation-button language-select__button"
     alt="Select language to learn"
+    data-i18n-alt="language_select_language_to_learn"
   >
     <span class="language-select__selected-language">
-      <img src="@img/usa-flag.png" srcset="@img/usa-flag@2x.png 2x" width="40" height="40" alt="Learn English" loading="lazy" />
+      <img
+        class="js-selected-lang-flag"
+        src="@img/usa-flag.png"
+        srcset="@img/usa-flag@2x.png 2x"
+        width="40"
+        height="40"
+        alt="Learn English"
+        loading="lazy"
+        data-i18n="language_learn_english"
+      />
     </span>
     <span class="language-select__icon-wrapper">
       <span class="language-select__icon">

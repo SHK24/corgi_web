@@ -11,9 +11,14 @@
           <svg width="24" height="24" viewBox="0 0 24 24">
             <use xlink:href="@img/icons/icons.svg#mail-copied-icon"></use>
           </svg>
-          E-mail copied
+          <span data-i18n="footer_email_copied">
+            E-mail copied
+          </span>
         </span>
-        <span class="footer__mail-content footer__mail-content--mail">
+        <span
+          data-i18n="footer_email_address"
+          class="footer__mail-content footer__mail-content--mail"
+        >
           hey@getcorgi.com
         </span>
         <span class="footer__mail-button-icon">
@@ -24,23 +29,49 @@
       </button>
       <div class="footer__social-links">
         <ul class="footer__list">
-          <li><a class="footer__link" href="/pricing">Plans</a></li>
           <li>
-            <a class="footer__link" href="../privacy-policy">Privacy Policy</a>
+            <a
+              data-i18n="footer_plans"
+              class="footer__link"
+              href="/pricing"
+            >
+              Plans
+            </a>
           </li>
-          <li><a class="footer__link" href="../conditions">Terms of Use</a></li>
+          <li>
+            <a
+              class="footer__link"
+              href="../privacy-policy"
+              data-i18n="footer_privacy_policy"
+            >
+              Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a
+              class="footer__link"
+              href="../conditions"
+              data-i18n="footer_terms_of_use"
+            >
+              Terms of Use
+            </a>
+          </li>
         </ul>
         <a
           class="footer__link footer__link--icon"
           href="https://twitter.com/JoinCorgi"
           alt="Official Twitter profile of the company"
+          data-i18n-alt="footer_official_twitter_profile_of_the_company"
         >
           <svg width="32" height="32" viewBox="0 0 32 32">
             <use xlink:href="@img/icons/icons.svg#x-icon"></use>
           </svg>
-          <span class="visually-hidden"
-            >Official Twitter profile of the company</span
+          <span
+            data-i18n="footer_official_twitter_profile_of_the_company"
+            class="visually-hidden"
           >
+            Official Twitter profile of the company
+          </span>
         </a>
       </div>
     </div>
@@ -52,12 +83,22 @@
           height="48"
           alt=""
         />
-        <span class="visually-hidden">Main Page</span>
+        <span
+          data-i18n="footer_main_page"
+          class="visually-hidden"
+        >
+          Main Page
+        </span>
       </a>
       <p class="footer__copyright">
-        <span>© 2024 Corgi Software Limited
+        <span>
+          <span data-i18n="footer_copyright">
+            © 2025 Corgi Software Limited
+          </span>
           <br />
-          All rights reserved
+          <span data-i18n="footer_all_rights_reserved">
+            All rights reserved
+          </span>
         </span>
       </p>
     </div>
