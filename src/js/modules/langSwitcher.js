@@ -62,22 +62,25 @@ window.langSwitcher = (() => {
 
   const localizeAll = () => {
     document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
-      const placeholder = tolgee.t(el.dataset.i18nPlaceholder, { noWrap: true })
-      if(placeholder) {
+      const key = el.dataset.i18nPlaceholder
+      const placeholder = tolgee.t(key, { noWrap: true })
+      if(placeholder !== key) {
         el.setAttribute('placeholder', placeholder)
       }
     })
 
     document.querySelectorAll('[data-i18n-alt]').forEach((el) => {
-      const alt = tolgee.t(el.dataset.i18nAlt, { noWrap: true })
-      if(alt) {
+      const key = el.dataset.i18nAlt
+      const alt = tolgee.t(key, { noWrap: true })
+      if(alt !== key) {
         el.setAttribute('alt', alt)
       }
     })
 
     document.querySelectorAll('[data-i18n]').forEach((el) => {
-      const localizedText = tolgee.t(el.dataset.i18n, { noWrap: true })
-      if(localizedText) {
+      const key = el.dataset.i18n
+      const localizedText = tolgee.t(key, { noWrap: true })
+      if(localizedText !== key) {
         el.textContent = localizedText
       }
     })
