@@ -7,7 +7,7 @@ const initTolgee = async () => {
   const es = await fetch('/i18n/es.json').then(res => res.json())
   const fr = await fetch('/i18n/fr.json').then(res => res.json())
   const ja = await fetch('/i18n/ja.json').then(res => res.json())
-  const ptBR = await fetch('/i18n/pt-BR.json').then(res => res.json())
+  const ptBR = await fetch('/i18n/pt-br.json').then(res => res.json())
   const ru = await fetch('/i18n/ru.json').then(res => res.json())
   const vi = await fetch('/i18n/vi.json').then(res => res.json())
 
@@ -29,7 +29,7 @@ const initTolgee = async () => {
         es,
         fr,
         ja,
-        'pt-BR': ptBR,
+        'pt-br': ptBR,
         ru,
         vi,
       }

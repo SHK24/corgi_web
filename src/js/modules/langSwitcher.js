@@ -1,15 +1,28 @@
 window.langSwitcher = (() => {
-  const LANGUAGE_STORAGE_KEY = 'langCode'
   const LANGUAGE_LINK_CLASS_NAME = 'js-lang-item'
   const ACTIVE_CLASS_NAME = 'language-selection__link_active'
   const SELECTED_LANG_FLAG_IMAGE_CLASS_NAME = 'js-selected-lang-flag'
   const LANGUAGE_ITEM_NAME_CLASS_NAME = 'js-lang-name'
 
-  const setLanguage = async (langKey='en') => {
-    selectLangButtonsByLang(langKey)
-    await tolgee.changeLanguage(langKey)
-    localStorage.setItem(LANGUAGE_STORAGE_KEY, langKey)
-    localizeAll()
+  const setLanguage = async (langKey='') => {
+    const allLangsList = tolgee.getAllRecords().map(r => r.language)
+    if(!allLangsList.includes(langKey.toLowerCase())) {
+      return
+    }
+    if(window.location.pathname === '/' && langKey !== 'en') {
+      window.location.pathname = `/${langKey}/`
+      return
+    }
+
+    const pathParts = location.pathname.split('/').filter(i => !!i)
+
+    if(pathParts.length > 0) {
+      if(allLangsList.includes(pathParts[pathParts.length - 1])) {
+        window.location.pathname = `/${langKey}/`
+        return
+      }
+      window.location.pathname = `/${langKey}/${pathParts[pathParts.length - 1]}`
+    }
   }
 
   const selectLangButtonsByLang = (langKey='en') => {
@@ -41,7 +54,12 @@ window.langSwitcher = (() => {
   }
 
   const loadLang = async function () {
-    const langKey = localStorage.getItem(LANGUAGE_STORAGE_KEY) || 'en'
+    const allLangsList = tolgee.getAllRecords().map(r => r.language)
+    let langKey = 'en'
+    const pathParts = location.pathname.split('/')
+    if(pathParts.length > 0 && allLangsList.includes(pathParts[1].toLowerCase())) {
+      langKey = pathParts[1].toLowerCase()
+    }
     selectLangButtonsByLang(langKey)
     await tolgee.changeLanguage(langKey)
     localizeAll()
@@ -82,6 +100,14 @@ window.langSwitcher = (() => {
       const localizedText = tolgee.t(key, { noWrap: true })
       if(localizedText !== key) {
         el.textContent = localizedText
+      }
+    })
+
+    document.querySelectorAll('[data-href]').forEach((el) => {
+      const hrefTemplate = el.dataset.href
+      const langKey = tolgee.getPendingLanguage()
+      if(langKey !== 'en') {
+        el.href = hrefTemplate.replace('%lang%', langKey)
       }
     })
   }
