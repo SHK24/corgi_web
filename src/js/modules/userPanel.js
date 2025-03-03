@@ -37,7 +37,8 @@ const init = () => {
       localStorage.removeItem('email')
       refreshUserPanel()
     } else {
-      window.location.href = '/auth'
+      const langKey = tolgee.getPendingLanguage()
+      window.location.href = !langKey || langKey === 'en' ? '/auth' : `/${langKey}/auth`
     }
   })
 }

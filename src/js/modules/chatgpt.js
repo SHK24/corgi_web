@@ -1,5 +1,5 @@
 // https://testcorgi.com/corgi_ai_page.html
-const AI_API_BASE_URL = 'https://dev.ai.getcorgi.com/corgi_chatgpt/'
+const AI_API_BASE_URL = 'https://ai.getcorgi.com/corgi_chatgpt/'
 const TEMPORARY_MESSAGE_CLASS_NAME = 'js-message-temporary'
 
 const Utils = {
