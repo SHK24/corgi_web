@@ -70,6 +70,17 @@
 }
 
 .error-page__link {
+  text-decoration: none;
+  color: $grey;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: max-content;
+  padding: 8px;
+  border-radius: 60px;
+  position: relative;
+  transition: color 500ms, box-shadow 500ms;
+  background-color: $white;
   font-size: $text;
   line-height: $medium-text-height;
   font-weight: $extra-bold;
@@ -77,4 +88,20 @@
   min-height: 88px;
   min-width: 184px;
 
+  &:hover {
+    box-shadow: 0 20px 40px 0 #00000029;
+  }
+
+  &:active {
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $active-dark-link;
+      border-radius: 60px;
+    }
+  }
 }

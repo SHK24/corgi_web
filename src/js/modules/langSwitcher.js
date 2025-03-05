@@ -27,7 +27,10 @@ window.langSwitcher = (() => {
 
   const selectLangButtonsByLang = (langKey='en') => {
     const selectedLangItemEl = document.querySelector(`.${LANGUAGE_LINK_CLASS_NAME}[data-lang="${langKey}"]`)
-    const flagImgEl = selectedLangItemEl.querySelector('img')
+    if(!selectedLangItemEl) {
+      return
+    }
+    const flagImgEl = selectedLangItemEl?.querySelector('img')
     const langName = selectedLangItemEl
       .querySelector(`.${LANGUAGE_ITEM_NAME_CLASS_NAME}`)?.textContent.trim()
 
@@ -35,7 +38,6 @@ window.langSwitcher = (() => {
       src,
       srcset,
     } = flagImgEl || {}
-
 
     document.querySelectorAll(`.${ACTIVE_CLASS_NAME}`)
       .forEach((el) => {
