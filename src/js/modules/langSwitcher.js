@@ -80,6 +80,14 @@ window.langSwitcher = (() => {
     })
   }
 
+  const localizeMeta = () => {
+    if(window.pagei18nKey) {
+      document.title = tolgee.t(`meta_${window.pagei18nKey}_title`, { noWrap: true })
+      document.querySelector('meta[name="description"]')
+        .setAttribute('content',  tolgee.t(`meta_${window.pagei18nKey}_description`, { noWrap: true }))
+    }
+  }
+
   const localizeAll = () => {
     document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
       const key = el.dataset.i18nPlaceholder
@@ -112,6 +120,8 @@ window.langSwitcher = (() => {
         el.href = hrefTemplate.replace('%lang%', langKey)
       }
     })
+
+    localizeMeta()
   }
 
   return {

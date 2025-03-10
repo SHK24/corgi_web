@@ -99,6 +99,8 @@
   "login_message_error_invalid_password": "Error - Contraseña inválida",
   "login_password_field_label": "Contraseña",
   "login_title": "Iniciar sesión",
+  "meta_index_title": "Title ES",
+  "meta_index_description": "Description ES",
   "new_password_description": "Introducir una nueva contraseña",
   "new_password_message_error_checking_recovery_code": "Error al verificar el código de recuperación",
   "new_password_message_error_code_verification": "Error de verificación del código de recuperación",

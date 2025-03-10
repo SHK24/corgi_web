@@ -99,6 +99,8 @@
   "login_message_error_invalid_password": "Error - Invalid password",
   "login_password_field_label": "Password",
   "login_title": "Log in",
+  "meta_index_title": "Title ENG",
+  "meta_index_description": "Description ENG",
   "new_password_description": "Enter a new password",
   "new_password_message_error_checking_recovery_code": "Error checking recovery code",
   "new_password_message_error_code_verification": "Recovery code verification error",
