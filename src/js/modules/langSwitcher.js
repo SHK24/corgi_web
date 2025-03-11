@@ -3,8 +3,10 @@ window.langSwitcher = (() => {
   const ACTIVE_CLASS_NAME = 'language-selection__link_active'
   const SELECTED_LANG_FLAG_IMAGE_CLASS_NAME = 'js-selected-lang-flag'
   const LANGUAGE_ITEM_NAME_CLASS_NAME = 'js-lang-name'
+  const LANGUAGE_STORAGE_KEY = 'lang'
 
   const setLanguage = async (langKey='') => {
+    localStorage.setItem(LANGUAGE_STORAGE_KEY, langKey)
     const allLangsList = tolgee.getAllRecords().map(r => r.language)
     if(!allLangsList.includes(langKey.toLowerCase())) {
       return
@@ -55,13 +57,43 @@ window.langSwitcher = (() => {
     })
   }
 
-  const loadLang = async function () {
+  const getBrowserLang = () => {
+    if (navigator.languages !== undefined) {
+      return navigator.languages[0]
+    }
+    return navigator.language
+  }
+
+  const getLang = () => {
     const allLangsList = tolgee.getAllRecords().map(r => r.language)
-    let langKey = 'en'
-    const pathParts = location.pathname.split('/')
+    const defaultLang = 'en'
+
+    const langFromStorage = localStorage.getItem(LANGUAGE_STORAGE_KEY)
+    if(langFromStorage && allLangsList.includes(langFromStorage)) {
+      return langFromStorage
+    }
+
+    let langFromBrowser = getBrowserLang().toLowerCase()
+    if(langFromBrowser === 'pt-br') {
+      return 'pt-br'
+    }
+
+    if(langFromBrowser && langFromBrowser.includes('-')) {
+      langFromBrowser = langFromBrowser.split('-')[0]
+      if(allLangsList.includes(langFromBrowser)) {
+        return langFromBrowser
+      }
+    }
+    return defaultLang
+  }
+
+  const loadLang = async function () {
+    const langKey = getLang()
+
+    /*const pathParts = location.pathname.split('/')
     if(pathParts.length > 0 && allLangsList.includes(pathParts[1].toLowerCase())) {
       langKey = pathParts[1].toLowerCase()
-    }
+    }*/
     selectLangButtonsByLang(langKey)
     await tolgee.changeLanguage(langKey)
     localizeAll()
