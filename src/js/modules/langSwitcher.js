@@ -88,12 +88,17 @@ window.langSwitcher = (() => {
   }
 
   const loadLang = async function () {
+    const allLangsList = tolgee.getAllRecords().map(r => r.language)
     const langKey = getLang()
-
-    /*const pathParts = location.pathname.split('/')
+    const pathParts = location.pathname.split('/')
+    let langKeyFromRoute = 'en'
     if(pathParts.length > 0 && allLangsList.includes(pathParts[1].toLowerCase())) {
-      langKey = pathParts[1].toLowerCase()
-    }*/
+      langKeyFromRoute = pathParts[1].toLowerCase()
+    }
+    if(langKey !== langKeyFromRoute) {
+      await setLanguage(langKey)
+    }
+
     selectLangButtonsByLang(langKey)
     await tolgee.changeLanguage(langKey)
     localizeAll()
