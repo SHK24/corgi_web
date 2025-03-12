@@ -20,10 +20,10 @@ window.langSwitcher = (() => {
 
     if(pathParts.length > 0) {
       if(allLangsList.includes(pathParts[pathParts.length - 1])) {
-        window.location.pathname = `/${langKey}/`
+        window.location.pathname = langKey === 'en' ? '/' : `/${langKey}/`
         return
       }
-      window.location.pathname = `/${langKey}/${pathParts[pathParts.length - 1]}`
+      window.location.pathname = langKey === 'en' ? `/${pathParts[pathParts.length - 1]}` : `/${langKey}/${pathParts[pathParts.length - 1]}`
     }
   }
 
