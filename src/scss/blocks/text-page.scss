@@ -4,6 +4,20 @@
   @include tablet {
     padding-top: 130px;
   }
+
+  table {
+    border-collapse: collapse;
+    border-radius: 15px;
+
+    th, td {
+      border: 1px solid;
+      padding: 10px;
+    }
+
+    th {
+      font-weight: bold;
+    }
+  }
 }
 
 .text-page__wrapper {
