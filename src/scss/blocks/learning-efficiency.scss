@@ -104,7 +104,7 @@
   background-repeat: no-repeat;
   min-height: 617px;
   flex-grow: 1;
-  background-size: 161%;
+  background-size: 100%;
   background-position: center right 31%;
   margin-top: -92px;
 
@@ -117,8 +117,7 @@
   }
 
   @include mobile {
-    min-height: 460px;
-    margin-top: -59px;
+    min-height: 740px;
     background-position: center;
     background-size: cover;
   }

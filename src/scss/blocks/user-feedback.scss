@@ -49,9 +49,9 @@
 .user-feedback__image {
   flex-basis: 58%;
   width: 65%;
-  height: 650px;
+  height: 665px;
   background-image: url(@img/corgi-laptop.png);
-  background-size: 150%;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: top left 14%;
 
@@ -60,17 +60,23 @@
   }
 
   @include tablet {
-    height: 521px;
-    background-position: center -22%;
+    height: 653px;
     background-size: cover;
   }
 
   @include mobile {
-    min-height: 406px;
-    width: 103%;
+    min-height: 860px;
+    width: 100%;
     background-position: center;
-    background-size: 243%;
-    max-width: 320px;
+    background-size: 100%;
+  }
+
+  @media (max-width: 600px) {
+    min-height: 710px;
+  }
+
+  @media (max-width: 370px) {
+    min-height: 460px;
   }
 }
 

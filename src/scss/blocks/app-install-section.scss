@@ -24,7 +24,7 @@
   background-image: url(@img/corgi-coconut.png);
   background-repeat: no-repeat;
   background-position: top 21px right -17px;
-  background-size: 79% auto;
+  background-size: 42% auto;
   z-index: -1;
 
   @include retina {
@@ -40,9 +40,9 @@
 
   @include mobile {
     position: static;
-    min-height: 85vw;
+    min-height: 881px;
     width: 100%;
-    background-position: top right 11px;
+    background-position: 40px 0;
     background-size: cover;
     order: 2;
   }
