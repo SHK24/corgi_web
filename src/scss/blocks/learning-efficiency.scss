@@ -113,12 +113,21 @@
   }
 
   @include tablet {
+    min-height: 620px;
     margin-top: -21px;
+    margin-left: -32px;
   }
 
   @include mobile {
-    min-height: 740px;
+    min-height: 815px;
     background-position: center;
     background-size: cover;
+  }
+
+  @media (max-width: 580px) {
+    min-height: 668px;
+  }
+  @media (max-width: 500px) {
+    min-height: 578px;
   }
 }

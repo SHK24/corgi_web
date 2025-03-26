@@ -40,11 +40,24 @@
 
   @include mobile {
     position: static;
-    min-height: 881px;
+    min-height: 940px;
     width: 100%;
-    background-position: 40px 0;
+    background-position: 10px 0;
     background-size: cover;
     order: 2;
+  }
+
+  @media (max-width: 600px) {
+    min-height: 765px;
+    background-size: contain;
+  }
+
+  @media (max-width: 550px) {
+    min-height: 710px;
+  }
+
+  @media (max-width: 450px) {
+    min-height: 560px;
   }
 }
 
