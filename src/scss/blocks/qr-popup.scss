@@ -1,0 +1,102 @@
+.qr-popup {
+  position: fixed;
+  top: calc(50% - 330px);
+  left: calc(50% - 350px);
+  display: none;
+  z-index: 10;
+  background: linear-gradient(90deg, #0284FC 0%, #0158FF 100%);
+  width: 700px;
+  border-radius: 40px;
+  border-width: 1.5px;
+  padding: 8px 8px 20px;
+
+  &__head {
+    padding: 20px 20px 20px 40px;
+  }
+
+  &__title {
+    color: white;
+    font-family: "Muller", sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 0;
+    vertical-align: middle;
+    margin: 0;
+  }
+
+  &__description {
+    font-family: "Muller", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0;
+    vertical-align: middle;
+    color: #DBE7FB;
+  }
+
+  &__list {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__qr-code {
+    width: 338px;
+  }
+
+  &__item-title {
+    font-family: "Muller", sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+    vertical-align: middle;
+    color: white;
+    padding-left: 57px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    outline: 0;
+    border: 2px solid rgba(255, 255, 255, .2);
+    background-image: url('@img/icons/icons.svg#close-icon');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+    transition: background-color 500ms;
+
+    &:hover {
+      background-image: url('@img/icons/icons.svg#close-icon-blue');
+      background-color: $white;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 24px;
+    }
+  }
+
+  &_visible {
+    display: block;
+  }
+
+  .install-link {
+    margin: 0 auto;
+  }
+}
+
+.qr-popup-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  &_hidden {
+    display: none;
+  }
+}

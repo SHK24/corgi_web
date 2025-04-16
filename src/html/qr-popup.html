@@ -1,0 +1,34 @@
+<div class="js-qr-popup-wrapper">
+  <div class="js-qr-popup-mask qr-popup-mask qr-popup-mask_hidden"></div>
+  <div class="js-qr-popup qr-popup">
+    <div class="qr-popup__head">
+      <h1 class="qr-popup__title">Get Corgi on Your Phone</h1>
+      <p class="qr-popup__description">Scan the QR code or tap the button below</p>
+    </div>
+    <div class="qr-popup__list">
+      <div class="qr-popup__list-item">
+        <img
+          class="qr-popup__qr-code"
+          src="@img/qr-code_app-store@2x.png"
+        />
+        <h2 class="qr-popup__item-title">
+          App Store
+        </h2>
+        @@include('./install-link-app-store.html', {})
+      </div>
+      <div class="qr-popup__list-item">
+        <img
+          class="qr-popup__qr-code"
+          src="@img/qr-code_google-play@2x.png"
+        />
+        <h2 class="qr-popup__item-title">
+          Google Play
+        </h2>
+        @@include('./install-link-google-play.html', {})
+      </div>
+    </div>
+    <a href="" class="js-close-qr-popup qr-popup__close">
+    </a>
+  </div>
+</div>
+
