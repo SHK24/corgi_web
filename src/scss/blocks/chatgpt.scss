@@ -143,7 +143,7 @@
 
 .chatgpt {
   min-width: 360px;
-  margin: 0 auto;
+  margin: 40px auto 0;
   max-width: 1068px;
   width: 100%;
 
@@ -414,6 +414,10 @@
 }
 
 @media (max-width: 960px) {
+  .chatgpt {
+    margin-top: 0;
+  }
+
   .chatgpt__header {
     flex-direction: column;
     height: 345px;
