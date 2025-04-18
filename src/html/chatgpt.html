@@ -1,28 +1,52 @@
 <div class="chatgpt">
-  <div class="js-messages chatgpt__content">
-    <div class="js-chatgpt-intro chatgpt__intro">
-      <div class="chatgpt__logo">
-        <div class="chatgpt__logo-icon"></div>
-      </div>
-      <div class="chatgpt__intro-text">
-        Hi! How can I help you?
+  <div class="chatgpt__header">
+    <div class="chatgpt__dog">
+      <div class="chatgpt__dog-image"></div>
+    </div>
+    <div class="chatgpt__text">
+      <h3 class="chatgpt__title">
+        Tried Duolingo? Now try this
+      </h3>
+      <h4 class="chatgpt__description">
+        A whole new way to learn — through real AI conversations
+      </h4>
+    </div>
+    <div class="chatgpt__button">
+      <div class="links-wrapper">
+        @@include('./install-mobile-popup-link.html', {})
+        @@include('./install-link.html', {
+          class: 'mobile-only',
+        })
       </div>
     </div>
   </div>
-  <div class="chatgpt__footer">
+  <div class="chatgpt__content">
+    <div class="js-messages chatgpt__content">
+      <div class="js-chatgpt-intro chatgpt__intro">
+        <div class="chatgpt__logo">
+          <div class="chatgpt__logo-icon"></div>
+        </div>
+        <div class="chatgpt__intro-text">
+          Hi! How can I help you?
+        </div>
+      </div>
+    </div>
+    <div class="chatgpt__footer">
         <textarea
           placeholder="Type here..."
           class="js-message-input chatgpt__input"
         ></textarea>
-    <a
-      href=""
-      class="js-send-message chatgpt__btn chatgpt__btn_disabled"
-    >
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M19.0647 12.0609C18.7645 12.3786 18.3843 12.5269 18.004 12.5269C17.6237 12.5269 17.2435 12.3786 16.9433 12.0609L13.501 8.41748V19.4113C13.501 20.2798 12.8205 21 12 21C11.1795 21 10.499 20.2798 10.499 19.4113V8.41748L7.0567 12.0609C6.47632 12.6752 5.51568 12.6752 4.93529 12.0609C4.3549 11.4466 4.3549 10.4298 4.93529 9.81554L10.9393 3.46072C11.5197 2.84643 12.4803 2.84643 13.0607 3.46072L19.0647 9.81554C19.6451 10.4298 19.6451 11.4466 19.0647 12.0609Z"
-          fill="#92B8F4"/>
-      </svg>
-    </a>
+      <a
+        href=""
+        class="js-send-message chatgpt__btn chatgpt__btn_disabled"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M19.0647 12.0609C18.7645 12.3786 18.3843 12.5269 18.004 12.5269C17.6237 12.5269 17.2435 12.3786 16.9433 12.0609L13.501 8.41748V19.4113C13.501 20.2798 12.8205 21 12 21C11.1795 21 10.499 20.2798 10.499 19.4113V8.41748L7.0567 12.0609C6.47632 12.6752 5.51568 12.6752 4.93529 12.0609C4.3549 11.4466 4.3549 10.4298 4.93529 9.81554L10.9393 3.46072C11.5197 2.84643 12.4803 2.84643 13.0607 3.46072L19.0647 9.81554C19.6451 10.4298 19.6451 11.4466 19.0647 12.0609Z"
+            fill="#92B8F4"/>
+        </svg>
+      </a>
+    </div>
   </div>
+  @@include('./qr-popup.html', {})
 </div>

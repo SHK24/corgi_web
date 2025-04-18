@@ -139,24 +139,72 @@
       text-align: center;
     }
   }
-
 }
-
 
 .chatgpt {
   min-width: 360px;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1068px;
   width: 100%;
-  background-color: #fff;
-  padding: 35px 0 8px;
-  border-radius: 39px;
-  color: #242732;
-  height: 436px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  justify-content: space-between;
+
+  &__content {
+    background-color: #fff;
+    padding: 35px 0 8px;
+    border-radius: 39px;
+    color: #242732;
+    height: 436px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 152px;
+    background: linear-gradient(230.55deg, #0185ff 0, rgba(1, 133, 255, 0) 16.72%);
+    border-style: solid;
+    border-color: rgba(62, 159, 254, 0.3);
+    border-radius: 104px;
+    padding-right: 40px;
+    border-width: 2px 2px 0 0;
+  }
+
+  &__title {
+    font-family: "Muller", sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 0;
+    vertical-align: middle;
+    color: white;
+    margin: 0;
+  }
+
+  &__description {
+    font-family: "Muller", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0;
+    text-align: left;
+    vertical-align: middle;
+    color: #DBE7FB;
+    margin: 0;
+  }
+
+  &__dog-image {
+    background: url('@img/corgi-ai@2x.png') no-repeat;
+    background-size: cover;
+    width: 247px;
+    height: 304px;
+    bottom: -22px;
+    left: -9px;
+  }
 
   &__intro-text {
     font-family: "Muller", sans-serif;
@@ -275,6 +323,7 @@
   &__footer {
     position: relative;
     padding: 0 8px;
+    width: 100%;
   }
 
   &__btn {
@@ -334,6 +383,107 @@
     &:focus-visible {
       outline: 2px solid #cadfff;
     }
+  }
 
+  .install-link {
+    min-width: 190px;
+  }
+
+  .install-link.desktop-only {
+    display: none;
+  }
+
+  .install-link.mobile-only {
+    display: none;
+  }
+}
+
+@media (max-width: 1060px) {
+  .chatgpt__description {
+    font-size: 16px;
+  }
+  .chatgpt__title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .chatgpt {
+    max-width: 922px;
+  }
+}
+
+@media (max-width: 960px) {
+  .chatgpt__header {
+    flex-direction: column;
+    height: 345px;
+    border-radius: 47px;
+    padding-top: 41px;
+
+    .chatgpt__text {
+      margin-bottom: 40px;
+      width: 100%;
+      padding-left: 33px;
+    }
+
+    .chatgpt__dog {
+      order: 3;
+    }
+    .chatgpt__text {
+      order: 1;
+    }
+    .chatgpt__button {
+      order: 2;
+      width: 100%;
+      padding-left: 33px;
+    }
+    .chatgpt__dog-image {
+      position: relative;
+      left: 0;
+      top: -79px;
+      bottom: auto;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .chatgpt__header {
+    height: 455px;
+
+    .chatgpt__dog-image {
+      position: relative;
+      left: 0;
+      top: 24px;
+    }
+  }
+}
+
+@media (max-width: 524px) {
+  .chatgpt__header {
+    height: 475px;
+  }
+}
+
+@media (max-width: 524px) {
+  .chatgpt__header {
+    height: 475px;
+  }
+}
+
+@media (max-width: 488px) {
+  .chatgpt__header {
+    height: 521px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .chatgpt .install-link.desktop-only {
+    display: flex;
+  }
+}
+
+@media all and (max-width:768px) {
+  .chatgpt .install-link.mobile-only {
+    display: flex;
   }
 }
